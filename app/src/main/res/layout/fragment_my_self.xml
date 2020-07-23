@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <View
+        android:id="@+id/v_statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/base_red"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/v_statusbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_head_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_120"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_myself" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_15"
+                    android:layout_marginRight="@dimen/dimen_15"
+                    android:layout_marginTop="@dimen/dimen_75"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/dimen_15"
+                            android:paddingLeft="@dimen/dimen_10"
+                            android:paddingRight="@dimen/dimen_10"
+                            android:paddingTop="@dimen/dimen_15">
+
+                            <LinearLayout
+                                android:id="@+id/layout_personal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/civ_headimg"
+                                    android:layout_width="@dimen/dimen_60"
+                                    android:layout_height="@dimen/dimen_60"
+                                    android:background="@drawable/icon_not_login"
+                                    android:scaleType="centerCrop"
+                                    app:civ_border_color="@color/white"
+                                    app:civ_border_width="@dimen/dimen_1" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dimen_10"
+                                    android:layout_marginRight="@dimen/dimen_10"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_name"
+                                        style="@style/color_17_size_14"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:minWidth="@dimen/dimen_160"
+                                        android:text="登录源音塘" />
+
+                                    <TextView
+                                        android:id="@+id/tv_sign"
+                                        style="@style/color_a6_size_11"
+                                        android:layout_marginTop="@dimen/dimen_14"
+                                        android:ellipsize="end"
+                                        android:hint="这个人很懒，什么都没有留下"
+                                        android:maxLines="1"
+                                        android:textColorHint="@color/grey_a6_text" />
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/home_index_more" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_12"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/layout_follow"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_follow_num"
+                                        style="@style/color_17_size_14"
+                                        android:gravity="center_horizontal"
+                                        android:minWidth="@dimen/dimen_24"
+                                        android:text="-" />
+
+                                    <TextView
+                                        style="@style/color_a6_size_11"
+                                        android:text="关注" />
+                                </LinearLayout>
+
+                                <View style="@style/view_line_v" />
+
+                                <LinearLayout
+                                    android:id="@+id/layout_fans"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_fans_num"
+                                        style="@style/color_17_size_14"
+                                        android:gravity="center_horizontal"
+                                        android:minWidth="@dimen/dimen_24"
+                                        android:text="-" />
+
+                                    <TextView
+                                        style="@style/color_a6_size_11"
+                                        android:text="粉丝" />
+                                </LinearLayout>
+
+                                <View style="@style/view_line_v" />
+
+                                <LinearLayout
+                                    android:id="@+id/layout_doughnut"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_doughnut_num"
+                                        style="@style/color_17_size_14"
+                                        android:gravity="center_horizontal"
+                                        android:minWidth="@dimen/dimen_24"
+                                        android:singleLine="true"
+                                        android:text="-" />
+
+                                    <TextView
+                                        style="@style/color_a6_size_11"
+                                        android:text="甜甜圈" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:id="@+id/rl_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></RelativeLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        app:cardBackgroundColor="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/dimen_15"
+                            android:paddingLeft="@dimen/dimen_10"
+                            android:paddingRight="@dimen/dimen_10"
+                            android:paddingTop="@dimen/dimen_15">
+
+                            <TextView
+                                style="@style/color_66_size_14"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="我的相关" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/my_recyclerview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_14"
+                                android:overScrollMode="never"
+                                android:scrollbars="none" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_50"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        app:cardBackgroundColor="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/dimen_15"
+                            android:paddingLeft="@dimen/dimen_10"
+                            android:paddingRight="@dimen/dimen_10"
+                            android:paddingTop="@dimen/dimen_15">
+
+                            <TextView
+                                style="@style/color_66_size_14"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="音乐人" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/music_recyclerview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_14"
+                                android:overScrollMode="never"
+                                android:scrollbars="none" />
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_75"
+        android:layout_below="@id/v_statusbar"
+        android:background="@color/base_red"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dimen_25">
+
+        <RelativeLayout
+            android:id="@+id/rl_msg_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:paddingRight="@dimen/dimen_12">
+
+            <ImageView
+                android:id="@+id/iv_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_6"
+                android:src="@drawable/home_icon_message" />
+
+            <TextView
+                android:id="@+id/tv_msg_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/iv_msg"
+                android:background="@drawable/oval_4c_bg_white_line_1dp"
+                android:paddingBottom="@dimen/dimen_1"
+                android:paddingLeft="@dimen/dimen_6"
+                android:paddingRight="@dimen/dimen_6"
+                android:paddingTop="@dimen/dimen_1"
+                android:text="0"
+                android:textColor="@color/white_text"
+                android:textSize="@dimen/size_8" />
+        </RelativeLayout>
+
+    </FrameLayout>
+</RelativeLayout>

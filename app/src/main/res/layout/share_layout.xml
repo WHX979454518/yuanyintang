@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_share_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_share_layout"
+
+
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/nickName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_head_share"
+            android:layout_width="@dimen/dimen_52"
+            android:layout_height="@dimen/dimen_52"
+            android:layout_alignBottom="@+id/nickName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/nickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="109dp"
+        android:paddingLeft="@dimen/dimen_22"
+        android:singleLine="true"
+        android:text="nickname"
+        android:textColor="@color/text_color" />
+
+    <ImageView
+        android:id="@+id/qr_code"
+        android:layout_width="@dimen/dimen_90"
+        android:layout_height="@dimen/dimen_90"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="71dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:src="@drawable/nothing" />
+
+    <TextView
+        android:id="@+id/tv_incode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/qr_code"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="75dp"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dimen_22"
+        android:paddingLeft="@dimen/dimen_30"
+        android:text="GSFD15"
+        android:textColor="@color/base_red"
+        android:textSize="@dimen/size_12"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_click"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dimen_8">
+
+    <CheckBox
+        android:id="@+id/check_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:button="@drawable/selector_edit_song_check"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:padding="@dimen/dimen_6"
+        android:text="类型"
+        android:textColor="@color/color_14_text"
+        android:textSize="@dimen/size_13" />
+
+
+</FrameLayout>

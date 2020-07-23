@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_similar"
+    android:layout_width="225dp"
+    android:layout_height="100dp"
+    android:clickable="true"
+    app:cardCornerRadius="@dimen/dimen_5"
+    app:cardElevation="0dp"
+
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bckdynamic_music_item" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_head"
+            android:layout_width="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:src="@drawable/default_head_img" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+                android:textColor="@color/text_color"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_fans_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:text="粉丝"
+                android:textColor="#9da2a6"
+
+                />
+
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/ck_follow"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_25"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/select_home_follow"
+            android:button="@null"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="+关注"
+            android:textColor="@drawable/home_follow_tv_color"
+            android:textSize="@dimen/size_12" />
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

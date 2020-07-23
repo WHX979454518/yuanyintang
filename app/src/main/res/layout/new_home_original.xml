@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_10"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_15">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_type"
+            android:layout_width="29dp"
+            android:layout_height="28dp"
+            android:visibility="gone" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/dimen_45"
+                android:layout_height="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_25"
+                android:layout_marginLeft="@dimen/dimen_65"
+                android:src="@drawable/shape_txt_underline" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_marginRight="@dimen/dimen_5"
+                android:drawableLeft="@drawable/icon_index_yuanchuang"
+                android:drawablePadding="@dimen/dimen_10"
+                android:gravity="bottom"
+                android:text="原创音乐"
+                android:textColor="@color/color_17_text"
+                android:textSize="@dimen/size_17" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen_5"
+
+            android:id="@+id/moreMusic"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_22"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_bg_cg"
+            android:drawableRight="@drawable/icon_index_more_face"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimen_6"
+            android:paddingRight="@dimen/dimen_6"
+            android:text="更多"
+            android:textColor="#ff6699"
+            android:textSize="@dimen/dimen_12" />
+
+    </RelativeLayout>
+
+    <com.mxkj.yuanyintang.utils.photopicker.widget.NoScrollRecyclerView
+        android:id="@+id/original_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+
+    <include layout="@layout/home_change_bt" />
+
+</LinearLayout>

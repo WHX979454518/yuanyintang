@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_56"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10">
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_people_who"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:sb_border_width="@dimen/dimen_1"
+                app:sb_checked="false"
+                app:sb_checked_color="@color/base_red"
+                app:sb_shadow_effect="true"
+                app:sb_shadow_offset="@dimen/dimen_2"
+                app:sb_show_indicator="false"
+                app:sb_uncheck_color="@color/dividing_line_color" />
+
+            <TextView
+                style="@style/color_17_size_14"
+                android:layout_centerVertical="true"
+                android:text="未关注人消息收入消息盒子" />
+
+
+        </RelativeLayout>
+
+        <View
+            style="@style/view_line_h"
+            android:layout_marginLeft="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_56"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10">
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/not_disturb_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:sb_border_width="@dimen/dimen_1"
+                app:sb_checked="false"
+                app:sb_checked_color="@color/base_red"
+                app:sb_shadow_effect="true"
+                app:sb_shadow_offset="@dimen/dimen_2"
+                app:sb_show_indicator="false"
+                app:sb_uncheck_color="@color/dividing_line_color" />
+
+            <TextView
+                style="@style/color_17_size_14"
+                android:layout_centerVertical="true"
+                android:text="夜间免打扰" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/color_a6_size_14"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="开启免打扰模式后，23:00-7:00将不会收到消息通知" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_56"
+
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10">
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_button_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:sb_border_width="@dimen/dimen_1"
+                app:sb_checked="false"
+                app:sb_checked_color="@color/base_red"
+                app:sb_shadow_effect="true"
+                app:sb_shadow_offset="@dimen/dimen_2"
+                app:sb_show_indicator="false"
+                app:sb_uncheck_color="@color/dividing_line_color" />
+
+            <TextView
+                style="@style/color_17_size_14"
+                android:layout_centerVertical="true"
+                android:text="声音" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/view_line_h"
+            android:layout_marginLeft="@dimen/dimen_10" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_56"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10">
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_button_shock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:sb_border_width="@dimen/dimen_1"
+                app:sb_checked="false"
+                app:sb_checked_color="@color/base_red"
+                app:sb_shadow_effect="true"
+                app:sb_shadow_offset="@dimen/dimen_2"
+                app:sb_show_indicator="false"
+                app:sb_uncheck_color="@color/dividing_line_color" />
+
+            <TextView
+                style="@style/color_17_size_14"
+                android:layout_centerVertical="true"
+                android:text="振动" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_56"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10">
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switch_button_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_border_width="@dimen/dimen_1"
+            app:sb_checked="false"
+            app:sb_checked_color="@color/base_red"
+            app:sb_shadow_effect="true"
+            app:sb_shadow_offset="@dimen/dimen_2"
+            app:sb_show_indicator="false"
+            app:sb_uncheck_color="@color/dividing_line_color" />
+
+        <TextView
+            style="@style/color_17_size_14"
+            android:layout_centerVertical="true"
+            android:text="打招呼" />
+
+    </RelativeLayout>
+
+    <TextView
+        style="@style/color_a6_size_14"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="您关注用户后会自动发送一条打招呼消息以下是您打招呼的内容" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:background="@drawable/oval_5dp_eb_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_10">
+
+        <EditText
+            android:id="@+id/et_greet_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:hint="请输入打招呼的内容"
+            android:maxLength="40"
+            android:text="你好~我是喵喵酱！交个朋友好么？"
+            android:textColor="@color/color_66_text"
+            android:textCursorDrawable="@drawable/text_cursor"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tv_change_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_18"
+            android:paddingLeft="@dimen/dimen_15"
+            android:paddingRight="@dimen/dimen_15"
+            android:paddingTop="@dimen/dimen_18"
+            android:text="修改"
+            android:textColor="@color/base_red" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/login_close"
+        android:padding="@dimen/dimen_10"
+        android:text="小鱼干是什么？"
+        android:textColor="#1a1717"
+        android:textSize="@dimen/size_16" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/dimen_10"
+        android:padding="@dimen/dimen_10"
+        android:text="1、用户对您打赏或者下载您的作品的收益，将会扣除支付手续费和源音塘运营费用（当前为50%），自动转换为小鱼干放入您的账户
+2、10小鱼干以上可以提现，比例1小鱼干=1人民币"
+        android:textColor="#616665"
+        android:textSize="@dimen/size_14" />
+
+    <TextView
+        android:id="@+id/tv_go_help_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_10"
+        android:text="查看小鱼干使用攻略>"
+        android:textColor="#4ca6ff"
+        android:textSize="@dimen/size_14" />
+
+
+</LinearLayout>
+</RelativeLayout>

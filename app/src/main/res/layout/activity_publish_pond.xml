@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="@dimen/dimen_10">
+
+        <TextView
+            android:id="@+id/finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_10"
+            android:text="取消" />
+
+        <TextView
+            android:id="@+id/view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发池塘"
+            android:textColor="#1a1717"
+            android:textSize="@dimen/size_15"
+
+            />
+
+        <TextView
+            android:id="@+id/publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_10"
+            android:text="发布"
+            android:textColor="#1a1717"
+            android:textSize="@dimen/size_15"
+
+
+            />
+    </RelativeLayout>
+
+    <com.mxkj.yuanyintang.mainui.pond.widget.VerticalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/toolbar_botom_devicer" />
+
+                <EditText
+                    android:id="@+id/et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:hint="写点什么嘛~ο(=•ω＜=)ρ⌒☆"
+                    android:maxHeight="150dp"
+                    android:maxLength="2000"
+                    android:minHeight="107dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/login_gray"
+                    android:textSize="@dimen/size_13" />
+                <!--选择的图片-->
+
+                <com.mxkj.yuanyintang.utils.photopicker.widget.BGASortableNinePhotoLayout
+                    android:id="@+id/nineimg_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:bga_snpl_deleteDrawable="@drawable/icon_clear"
+                    app:bga_snpl_deleteDrawableOverlapQuarter="false"
+                    app:bga_snpl_editable="true"
+                    app:bga_snpl_itemCornerRadius="0dp"
+                    app:bga_snpl_itemSpanCount="4"
+                    app:bga_snpl_itemWhiteSpacing="4dp"
+                    app:bga_snpl_itemWidth="0dp"
+                    app:bga_snpl_maxItemCount="9"
+                    app:bga_snpl_placeholderDrawable="@mipmap/bga_pp_ic_holder_dark"
+                    app:bga_snpl_plusDrawable="@mipmap/bga_pp_ic_plus"
+                    app:bga_snpl_plusEnable="true"
+                    app:bga_snpl_sortable="true" />
+                <!--选择的位置-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_choose_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/shape_location"
+                        android:drawableLeft="@drawable/icon_chitang_locatio"
+                        android:drawablePadding="@dimen/dimen_10"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_10"
+                        android:text="你在哪里？"
+                        android:textColor="#9da2a6"
+                        android:textSize="@dimen/size_13"
+
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_location_red"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_10">
+
+                        <TextView
+                            android:id="@+id/tv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableLeft="@drawable/location_red"
+                            android:drawablePadding="@dimen/dimen_10"
+                            android:gravity="center_vertical"
+                            android:paddingRight="@dimen/dimen_10"
+                            android:singleLine="true"
+                            android:text="你在哪里？"
+                            android:textColor="@color/base_red"
+                            android:textSize="@dimen/size_13"
+                            android:visibility="gone"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/img_del_loc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/tv_location"
+                            android:padding="@dimen/dimen_5"
+                            android:src="@drawable/dele_red"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--添加的音乐-->
+                <LinearLayout
+                    android:id="@+id/ll_selectmusic"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:background="@color/bckdynamic_music_item"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen_55"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_selected"
+                            android:layout_width="55dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/nothing" />
+                        <TextView
+                            android:visibility="invisible"
+                            android:id="@+id/tv_type"
+                            android:layout_width="27dp"
+                            android:layout_height="17dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/home_musi_type_txt"
+                            android:gravity="center"
+                            android:text="原创"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/size_10"
+
+
+                            />
+
+                    </RelativeLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        tools:ignore="RtlHardcoded">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_item_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_dynamic_music_type"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/dimen_2"
+                                android:paddingLeft="@dimen/dimen_5"
+                                android:paddingRight="@dimen/dimen_5"
+                                android:paddingTop="@dimen/dimen_2"
+                                android:text="单曲"
+                                android:textColor="@color/pink_99_text"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/tv_selectmusic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_5"
+                                android:ellipsize="end"
+                                android:maxEms="10"
+                                android:singleLine="true"
+                                android:text="音乐"
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/tv_selectsinger"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxEms="10"
+                            android:singleLine="true"
+                            android:text="音乐人"
+                            android:textColor="#666666"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/delet_seletmusic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"
+                        android:padding="@dimen/dimen_14"
+                        android:src="@drawable/dele_text" />
+
+                </LinearLayout>
+
+                <!--投票布局-->
+                <LinearLayout
+                    android:id="@+id/rl_cote"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_45"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:layout_marginBottom="@dimen/dimen_20"
+                    android:background="@color/bckdynamic_music_item"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/pond_cote" />
+
+                    <TextView
+                        android:id="@+id/tv_cote_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="上档次拿到手承诺的时刻创建的涉及到的的集成点击的城东街道吃的简称的集成" />
+
+                    <ImageView
+                        android:id="@+id/img_dele_cote"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:src="@drawable/dele_text" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="#f5f7fa" />
+                <!--标签-->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:scrollbars="none"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_28"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+
+                        <TextView
+                            android:id="@+id/to_choose_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_15"
+                            android:background="@drawable/shape_choose_tag_red"
+                            android:paddingBottom="@dimen/dimen_5"
+                            android:paddingLeft="@dimen/dimen_10"
+                            android:paddingRight="@dimen/dimen_10"
+                            android:paddingTop="@dimen/dimen_5"
+                            android:text="添加标签"
+                            android:textColor="@color/base_red" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <include layout="@layout/view_devider" />
+
+
+            <FrameLayout
+                android:id="@+id/fl_emotionview_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+
+        </LinearLayout>
+    </com.mxkj.yuanyintang.mainui.pond.widget.VerticalScrollView>
+    <!--底部菜单-->
+    <LinearLayout
+        android:id="@+id/ll_botom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bckdynamic_music_item"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:padding="@dimen/dimen_10"
+            android:src="@drawable/icon_chitang_face" />
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:padding="@dimen/dimen_10"
+
+            android:src="@drawable/icon_chitang_picture"
+
+            />
+
+        <ImageView
+            android:id="@+id/music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:padding="@dimen/dimen_10"
+            android:src="@drawable/icon_chitang_music"
+
+            />
+
+        <ImageView
+            android:id="@+id/vote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:padding="@dimen/dimen_10"
+            android:src="@drawable/icon_chitang_tp"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_hideSoft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_total_textnum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:maxLength="500"
+                android:text="2000"
+                android:textColor="#9da6a4"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/img_softKeytag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:src="@drawable/icon_soft_up" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

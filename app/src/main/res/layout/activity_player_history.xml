@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_42"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/tv_all_playing"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_15">
+            <ImageView
+                android:id="@+id/play"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_index_songlist_play"/>
+            <TextView
+                android:id="@+id/tv_all_playing_tv"
+                android:layout_toRightOf="@+id/play"
+                style="@style/color_17_size_12"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_8"
+                android:text="全部播放" />
+
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/check_song"
+            style="@style/color_17_size_12"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:button="@drawable/selector_edit_song_check"
+            android:checked="false"
+            android:paddingBottom="@dimen/dimen_4"
+            android:paddingLeft="@dimen/dimen_15"
+            android:paddingTop="@dimen/dimen_4"
+            android:text="全选"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_batch_operation"
+            style="@style/color_17_size_12"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/icon_batch_operation"
+            android:drawablePadding="@dimen/dimen_6"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_10"
+            android:text="批量编辑" />
+
+
+        <TextView
+            android:id="@+id/tv_select_song_num"
+            style="@style/color_a6_size_12"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_10"
+            android:text="已选0/0首歌曲"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View style="@style/view_line_h" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_not_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            style="@style/color_66_size_12"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="@dimen/dimen_15"
+            android:drawableTop="@mipmap/img_help_nothing"
+            android:gravity="center_horizontal"
+            android:text="这里还什么都没有呢" />
+
+        <TextView
+            android:id="@+id/tv_to_click"
+            style="@style/color_white_size_13"
+            android:layout_marginTop="@dimen/dimen_22"
+            android:background="@drawable/oval_25dp_red_66_bg"
+            android:paddingBottom="@dimen/dimen_8"
+            android:paddingLeft="@dimen/dimen_15"
+            android:paddingRight="@dimen/dimen_15"
+            android:paddingTop="@dimen/dimen_8"
+            android:text="去__互动"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.SuperSwipeRefreshLayout
+        android:id="@+id/superSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+    </com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.SuperSwipeRefreshLayout>
+
+
+    <View style="@style/view_line_h" />
+
+    <LinearLayout
+        android:id="@+id/layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_clear_history"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="清除历史"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_13" />
+
+        <View
+            style="@style/view_line_v"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16" />
+
+        <TextView
+            android:id="@+id/tv_add_song"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="加到歌单"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_13" />
+
+        <View
+            style="@style/view_line_v"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16" />
+
+        <TextView
+            android:id="@+id/tv_add_musicList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="加到播放列表"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_13" />
+
+        <View
+            style="@style/view_line_v"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16" />
+
+        <TextView
+            android:id="@+id/tv_download_music"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="下载"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_13" />
+
+    </LinearLayout>
+</LinearLayout>

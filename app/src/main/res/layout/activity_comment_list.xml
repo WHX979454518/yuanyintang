@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/uc_navigationbar" />
+
+    <View style="@style/view_line_h" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_not_data_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_icon"
+                style="@style/color_66_size_12"
+                android:layout_centerHorizontal="true"
+                android:drawableTop="@drawable/nothing"
+                android:text="会有人评论你的，别放在心上~" />
+
+            <TextView
+                android:id="@+id/tv_add_song"
+                style="@style/color_white_size_14"
+                android:layout_below="@id/tv_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:background="@drawable/login_button_red"
+                android:paddingBottom="@dimen/dimen_8"
+                android:paddingLeft="@dimen/dimen_28"
+                android:paddingRight="@dimen/dimen_28"
+                android:paddingTop="@dimen/dimen_8"
+                android:text="逛逛池塘" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

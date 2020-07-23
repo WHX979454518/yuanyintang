@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/layout_updata_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/dimen_70"
+        android:background="@drawable/oval_5dp_white_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_22"
+            android:text="截图成功"
+            android:textColor="@color/color_17_text"
+            android:textSize="@dimen/size_15" />
+
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10"
+            android:gravity="center"
+            android:text="若有问题可以直接在线反馈哟"
+            android:textColor="@color/fullplayer_time"
+            android:textSize="13sp" />
+
+
+        <include layout="@layout/view_devider" />
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:text="反馈问题"
+            android:textColor="#0080ff"
+            android:textSize="@dimen/size_15" />
+
+        <include layout="@layout/view_devider" />
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:text="分享图片"
+            android:textColor="#0080ff"
+            android:textSize="@dimen/size_15" />
+
+        <include layout="@layout/view_devider" />
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#0080ff"
+            android:textSize="@dimen/size_15" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

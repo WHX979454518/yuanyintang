@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:layout_marginTop="20dp"
+            android:drawableRight="@drawable/login_close"
+            android:text="收不到验证码"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:background="#ebebeb" />
+
+        <TextView
+            android:id="@+id/tv_fail_getcode_tips"
+            style="@style/fail_get_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1、请查看验证码是否被广告过滤软件过滤
+2、请将手机开关一次飞行模式再试
+3、一部手机每天只能请求6次验证码
+4、若手机号有误，请联系客服处理" />
+
+        <TextView
+            android:id="@+id/tv_see_more"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_20"
+            android:paddingLeft="@dimen/dimen_20"
+            android:text="查看更多帮助信息>"
+            android:textColor="#4ca6ff"
+            android:textSize="@dimen/size_14" />
+
+
+    </LinearLayout>
+</RelativeLayout>

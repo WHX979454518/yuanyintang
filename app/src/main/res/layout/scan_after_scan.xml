@@ -1,0 +1,109 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fram_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_32"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@drawable/help_search_bck"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="搜索本地音乐"
+                android:paddingLeft="@dimen/dimen_10"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="@dimen/size_12" />
+
+            <RelativeLayout
+                android:id="@+id/rl_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/help_search_icon_bck">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="@dimen/dimen_15"
+                    android:paddingRight="@dimen/dimen_15"
+                    android:src="@drawable/icon_saomiao_search" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:divider="@null" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bckdynamic_music_item">
+
+            <TextView
+                android:id="@+id/tv_total_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_10"
+                android:text="共扫描出0首歌曲"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/size_13" />
+
+            <TextView
+                android:id="@+id/re_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:drawablePadding="@dimen/dimen_10"
+                android:drawableRight="@drawable/to_next_red"
+                android:padding="@dimen/dimen_10"
+                android:text="重新扫描"
+                android:textColor="@color/base_red"
+                android:textSize="@dimen/size_13" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/dialog_text"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="60sp" />
+
+    <com.mxkj.yuanyintang.mainui.myself.my_release.up_load_music.scan_sd.SideBar
+        android:id="@+id/sidebar"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginBottom="56dp"
+        android:visibility="gone" />
+
+
+</FrameLayout>

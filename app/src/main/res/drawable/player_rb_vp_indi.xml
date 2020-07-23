@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/player_vp_indi_true" android:state_checked="true" />
+    <item android:drawable="@drawable/player_vp_indi_false" android:state_checked="false" />
+    <item android:drawable="@drawable/player_vp_indi_true" android:state_selected="true" />
+    <item android:drawable="@drawable/player_vp_indi_false" android:state_selected="false" />
+    <item android:drawable="@drawable/player_vp_indi_false" />
+
+</selector>

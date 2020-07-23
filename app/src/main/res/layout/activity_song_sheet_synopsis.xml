@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/NavigationBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_48">
+
+            <Button
+                android:id="@+id/leftBT"
+                style="@style/BarButton"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_weight="0"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/close_back_white"
+                android:drawablePadding="@dimen/dimen_2"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_14"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_bg_img"
+            android:layout_width="@dimen/dimen_180"
+            android:layout_height="@dimen/dimen_180"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/color_white_size_15"
+            android:layout_marginLeft="@dimen/dimen_36"
+            android:layout_marginRight="@dimen/dimen_36"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:gravity="center"
+            android:text="标题" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginBottom="@dimen/dimen_24"
+            android:layout_marginLeft="@dimen/dimen_36"
+            android:layout_marginRight="@dimen/dimen_36"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:background="#99f5f7fa" />
+
+
+        <com.mxkj.yuanyintang.widget.MultiLineRadioGroup
+            android:id="@+id/mulrg_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_36"
+            android:layout_marginRight="@dimen/dimen_36"
+            android:layout_marginTop="@dimen/dimen_15"
+            app:child_layout="@layout/songtag_item"
+            app:child_margin_horizontal="@dimen/dimen_10"
+            app:child_margin_vertical="@dimen/dimen_10"
+            app:single_choice="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_36"
+            android:layout_marginRight="@dimen/dimen_36"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:text="歌单简介："
+            android:textColor="@color/white_text"
+            android:textSize="@dimen/size_13" />
+
+        <TextView
+            android:id="@+id/tv_synopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:layout_marginLeft="@dimen/dimen_36"
+            android:layout_marginRight="@dimen/dimen_36"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:hint="暂无简介"
+            android:text=""
+            android:textColor="@color/white_text"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/size_12" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

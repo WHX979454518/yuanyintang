@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_data_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentInsetLeft="0dp"
+        android:paddingTop="@dimen/dimen_24"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:padding="@dimen/dimen_15"
+            android:src="@drawable/icon_back_black" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="@dimen/dimen_220"
+            android:text="申请提现"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_16" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+       <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <!--提现主界面-->
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:background="@color/bck_vote_progress"
+               android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+                   android:background="@color/bck_vote_progress"
+                   android:orientation="vertical"
+                   android:weightSum="1">
+
+                   <!--未添加银行卡-->
+                   <LinearLayout
+                       android:id="@+id/ll_no_card"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/dimen_100"
+                       android:layout_marginTop="@dimen/dimen_10"
+                       android:background="@color/white"
+                       android:gravity="center_vertical"
+                       android:orientation="horizontal">
+
+                       <de.hdodenhof.circleimageview.CircleImageView
+                           android:layout_width="@dimen/dimen_45"
+                           android:layout_height="@dimen/dimen_45"
+                           android:layout_marginLeft="@dimen/dimen_25"
+                           android:src="@drawable/icon_card_bank"
+
+                           />
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="@dimen/dimen_20"
+                           android:layout_marginRight="@dimen/dimen_15"
+                           android:drawableRight="@drawable/to_next_layout"
+                           android:text="添加银行卡"
+                           android:textColor="#248bf2"
+
+                           />
+
+                   </LinearLayout>
+
+                   <!--已添加银行卡-->
+
+                   <LinearLayout
+                       android:id="@+id/ll_card_view"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/dimen_100"
+                       android:layout_marginTop="@dimen/dimen_10"
+                       android:background="@color/white"
+                       android:gravity="center_vertical"
+                       android:orientation="horizontal"
+                       android:visibility="gone"
+                       >
+
+                       <de.hdodenhof.circleimageview.CircleImageView
+                           android:id="@+id/img_card"
+                           android:layout_width="@dimen/dimen_45"
+                           android:layout_height="@dimen/dimen_45"
+                           android:layout_marginLeft="@dimen/dimen_25"
+                           android:src="@drawable/nothing"
+
+                           />
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="@dimen/dimen_20"
+                           android:layout_weight="1"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:id="@+id/bank_name"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="建设银行"
+                               android:textColor="@color/text_color"
+                               android:textSize="@dimen/size_16" />
+
+                           <TextView
+                               android:id="@+id/card_number"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="@dimen/dimen_5"
+                               android:text="0"
+                               android:textColor="#9da6a4"
+                               android:textSize="@dimen/size_16"
+
+                               />
+                       </LinearLayout>
+
+                       <ImageView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginRight="@dimen/dimen_15"
+                           android:src="@drawable/to_next_layout" />
+                   </LinearLayout>
+
+
+                   <!--账户小鱼干余额-->
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@color/bck_vote_progress"
+                       android:gravity="center_vertical"
+                       android:orientation="horizontal">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="@dimen/dimen_20"
+                           android:text="可提现"
+                           android:textColor="@color/text_color"
+                           android:textSize="@dimen/size_13" />
+
+                       <TextView
+                           android:id="@+id/tv_fish_num"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="0"
+                           android:textColor="@color/base_red"
+                           android:textSize="@dimen/size_13" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="个小鱼干"
+
+                           android:textColor="@color/text_color"
+                           android:textSize="@dimen/size_13" />
+
+                       <TextView
+                           android:id="@+id/tv_cash_all"
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="right"
+                           android:layout_weight="1"
+                           android:gravity="right"
+                           android:padding="@dimen/dimen_10"
+                           android:text="全部提现"
+                           android:textColor="@color/base_red"
+                           android:textSize="@dimen/size_13" />
+
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/dimen_50"
+                       android:background="@color/white"
+                       android:gravity="center_vertical"
+                       android:orientation="horizontal">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="@dimen/dimen_20"
+                           android:text="提现小鱼干"
+                           android:textColor="@color/dynamic_nick_nosex"
+                           android:textSize="@dimen/size_15" />
+
+                       <EditText
+                           android:textCursorDrawable="@drawable/text_cursor"
+                           android:id="@+id/et_fish_num"
+                           android:layout_width="0dp"
+                           android:inputType="numberDecimal"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:background="@color/white"
+                           android:hint="输入提现数量"
+                           android:padding="@dimen/dimen_15"
+                           android:textColorHint="@color/login_gray"
+                           android:textColor="@color/text_color"
+                           android:textSize="@dimen/size_15" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginRight="@dimen/dimen_20"
+                           android:text="个"
+                           android:textColor="@color/login_gray"
+                           android:textSize="@dimen/size_15" />
+                   </LinearLayout>
+
+                   <TextView
+                       android:id="@+id/cash_tips"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/dimen_14"
+                       android:layout_marginLeft="@dimen/dimen_20"
+                       android:text="可到账0元"
+                       android:textColor="@color/base_red"
+                       android:textSize="@dimen/size_13"
+
+                       />
+
+                   <TextView
+                       android:id="@+id/tv_ensure_cash"
+                       android:layout_width="335dp"
+                       android:layout_height="@dimen/dimen_40"
+                       android:layout_marginLeft="@dimen/dimen_20"
+                       android:layout_marginRight="@dimen/dimen_20"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_marginTop="@dimen/dimen_35"
+                       android:background="@drawable/shape_un_add_card"
+                       android:gravity="center"
+                       android:text="申请提现"
+                       android:textColor="@color/white"
+                       android:textSize="@dimen/size_15" />
+
+                   <LinearLayout
+                       android:id="@+id/ll_notice"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentBottom="true"
+                       android:layout_marginBottom="@dimen/dimen_10"
+                       android:layout_marginTop="@dimen/dimen_15"
+                       android:gravity="center"
+                       android:orientation="horizontal"
+                       android:padding="@dimen/dimen_10">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="我已阅读并同意"
+                           android:textColor="#616665"
+                           android:textSize="@dimen/size_13" />
+
+                       <TextView
+                           android:id="@+id/user_notice"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="《源音塘小鱼干虚拟货币协议》"
+                           android:textColor="@color/base_red"
+                           android:textSize="@dimen/size_13" />
+
+                   </LinearLayout>
+               </LinearLayout>
+
+               <TextView
+                   android:id="@+id/tv_desc"
+                   android:layout_marginBottom="@dimen/dimen_30"
+                   android:layout_marginLeft="@dimen/dimen_20"
+                   android:layout_marginRight="@dimen/dimen_20"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="bottom"
+                   android:text="每月10日前申请，11日进入提现流程，2工作日内到账
+每月10日后申请，次月11日进入提现流程，2工作日内到账
+进入提现流程前可取消提现" />
+           </LinearLayout>
+           <!--提现成功界面-->
+           <include layout="@layout/cash_success"/>
+       </FrameLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.mxkj.yuanyintang.musicplayer.activity.ShareLyricActivity">
+
+    <LinearLayout
+        android:background="@color/dividing_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_30">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_share_view"
+        android:layout_weight="9"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_song"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/nothing" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_choosepic"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_marginRight="@dimen/dimen_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/dimen_34"
+                    android:layout_height="@dimen/dimen_34">
+
+                    <ImageView
+                        android:id="@+id/show"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/icon_picture1" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:alpha="0.6"
+                    android:background="#616366"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/dimen_20"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:padding="@dimen/dimen_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="1234"
+                        android:id="@+id/lv_lyric"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size_14" />
+                </LinearLayout>
+                <!--android:lineSpacingExtra="@dimen/dimen_5"-->
+                <!--android:maxLines="4"-->
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_105">
+
+            <TextView
+                android:layout_marginTop="@dimen/dimen_28"
+                android:text="歌曲名字"
+                android:id="@+id/tv_songname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textColor="#2b2b2b"
+                android:textSize="@dimen/size_15" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/ll"
+                android:layout_alignBottom="@+id/tv_songname"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_toRightOf="@+id/tv_songname"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:background="#2b2b2b"
+                android:layout_width="@dimen/dimen_10"
+                android:layout_height="@dimen/dimen_2"></LinearLayout>
+
+            <TextView
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_28"
+                android:layout_toRightOf="@+id/ll"
+                android:text="作者"
+                android:id="@+id/tv_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2b2b2b"
+                android:textSize="@dimen/size_15" />
+
+            <RelativeLayout
+                android:layout_alignBottom="@+id/qrcode_img"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/img"
+                    android:src="@mipmap/logo3"
+                    android:layout_width="@dimen/dimen_49"
+                    android:layout_height="@dimen/dimen_25" />
+                <TextView
+                    android:text="來自源音塘音乐·歌词分享"
+                    android:textColor="#9da3a6"
+                    android:layout_marginLeft="@dimen/dimen_13"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_13"/>
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/qrcode_img"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen_21"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/dimen_70"
+                android:layout_height="@dimen/dimen_70" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/dividing_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_35">
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/view_line_h" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_share_lyric"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_play_sharesong3"
+                android:drawablePadding="@dimen/dimen_10"
+                android:gravity="center"
+                android:text="分享"
+                android:textColor="#1a1717"
+                android:textSize="@dimen/size_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@color/dividing_line_color"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/save_img_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/save_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_play_keep"
+                android:drawablePadding="@dimen/dimen_10"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="#1a1717"
+                android:textSize="@dimen/size_14" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

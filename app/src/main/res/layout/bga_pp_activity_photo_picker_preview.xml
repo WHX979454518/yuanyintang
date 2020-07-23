@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mxkj.yuanyintang.utils.photopicker.widget.BGAHackyViewPager
+        android:id="@+id/hvp_photo_picker_preview_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+
+    <RelativeLayout
+        android:id="@+id/rl_photo_picker_preview_choose"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/blackbck_sheet"
+
+        >
+
+        <ImageView
+            android:id="@+id/finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="1/0"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/tv_photo_picker_preview_choose"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/bga_pp_size_level2"
+            android:clickable="true"
+            android:drawableLeft="@drawable/icon_xuantupian_false"
+            android:drawablePadding="@dimen/bga_pp_textSize_level1"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/bga_pp_size_level2"
+            android:paddingRight="@dimen/bga_pp_size_level2"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/blackbck_sheet">
+
+        <TextView
+            android:id="@+id/bt_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_marginRight="@dimen/size_10"
+            android:background="@drawable/shape_button_red"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/dimen_15"
+            android:paddingRight="@dimen/dimen_15"
+            android:paddingTop="@dimen/dimen_5"
+            android:text="完成"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nothing" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/help_center_nodata_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂时没有找到" />
+
+        <TextView
+            android:id="@+id/tv_search_word"
+            style="@style/help_center_nodata_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="“视频剪辑”" />
+
+        <TextView
+            style="@style/help_center_nodata_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="相关的结果" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        style="@style/help_center_nodata_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:text="去问问源小伊吧" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_call_robot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:background="@drawable/oval_25dp_red_66_bg"
+        android:clickable="true"
+        android:paddingBottom="@dimen/dimen_10"
+        android:paddingLeft="@dimen/dimen_20"
+        android:paddingRight="@dimen/dimen_20"
+        android:paddingTop="@dimen/dimen_10"
+        android:text="联系源小伊机器人"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

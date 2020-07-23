@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_click"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/dimen_6"
+        android:layout_marginTop="@dimen/dimen_10">
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_60">
+
+            <ImageView
+                android:id="@+id/civ_headimg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/img_defaut_head"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/iv_is_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_headimg_vip_small"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-3dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/song_sheet_right" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:maxLines="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_11"
+                android:id="@+id/tv_name"
+                android:textSize="@dimen/size_15"
+                android:textColor="@color/color_17_text"
+                android:layout_toRightOf="@id/civ_headimg"
+                android:ellipsize="end"
+                android:text="源音塘"
+                android:singleLine="true" />
+
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_song_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_12"
+                    android:textColor="@color/musicplayerColor"
+                    android:text="0首,"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_play_num"
+                    style="@style/color_a6_size_12"
+                    android:layout_below="@+id/viewStub"
+                    android:layout_marginRight="@dimen/dimen_15"
+                    android:layout_toEndOf="@+id/civ_headimg"
+                    android:layout_toRightOf="@+id/civ_headimg"
+                    android:drawablePadding="@dimen/dimen_6"
+                    android:gravity="center_vertical"
+                    android:text="0" />
+                <!--android:drawableLeft="@drawable/icon_player_grey"-->
+
+                <TextView
+                    android:id="@+id/tv_music_num"
+                    style="@style/color_a6_size_12"
+                    android:layout_below="@+id/viewStub"
+                    android:layout_toEndOf="@+id/civ_headimg"
+                    android:layout_toRightOf="@+id/civ_headimg"
+                    android:drawablePadding="@dimen/dimen_6"
+                    android:gravity="center_vertical"
+                    android:text="0" />
+                <!--android:drawableLeft="@drawable/icon_player_count"-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/check_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:button="@drawable/selector_collection_music_checked"
+            android:checked="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:padding="@dimen/dimen_5" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="@dimen/dimen_96"
+        style="@style/view_line_h"/>
+
+</LinearLayout>

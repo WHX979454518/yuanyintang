@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_updata_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dimen_42"
+        android:layout_marginRight="@dimen/dimen_42">
+
+        <LinearLayout
+            android:id="@+id/layout_updata_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_85"
+            android:background="@drawable/oval_5dp_white_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_32"
+                android:text="升级到最新版本"
+                android:textColor="@color/color_17_text"
+                android:textSize="@dimen/size_15" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_140"
+                android:layout_marginTop="@dimen/dimen_20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_updata_content"
+                        style="@style/color_66_size_13"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:lineSpacingMultiplier="1.2" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/tv_updata_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_20"
+                android:layout_marginLeft="@dimen/dimen_16"
+                android:layout_marginRight="@dimen/dimen_16"
+                android:background="@drawable/oval_5dp_red_bg"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_10"
+                android:text="立即升级"
+                android:textColor="@color/white_text"
+                android:textSize="@dimen/size_14" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/dimen_105"
+            android:layout_height="@dimen/dimen_105"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_dialog_updata" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dimen_18"
+            android:src="@drawable/icon_update_app_close" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_updata_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dimen_42"
+        android:layout_marginRight="@dimen/dimen_42"
+        android:background="@drawable/oval_5dp_white_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_32"
+            android:text="新版本下载中！"
+            android:textColor="@color/color_17_text"
+            android:textSize="@dimen/size_15" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            style="@style/color_17_size_12"
+            android:layout_marginTop="@dimen/dimen_18"
+            android:text="0%" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/schedule_progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_10"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:layout_marginRight="@dimen/dimen_30"
+                android:max="100"
+                android:progressDrawable="@drawable/schedule_progress" />
+
+            <ImageView
+                android:id="@+id/iv_cancle_updata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="-26dp"
+                android:layout_toRightOf="@id/schedule_progressbar"
+                android:padding="@dimen/dimen_6"
+                android:src="@drawable/icon_cancle_updata" />
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/color_a6_size_12"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:text="新版本正在努力更新中，请稍等" />
+
+        <TextView
+            android:id="@+id/tv_service_updata"
+            style="@style/color_4c_size_13"
+            android:layout_marginBottom="@dimen/dimen_6"
+            android:padding="@dimen/dimen_14"
+            android:text="后台更新" />
+
+    </LinearLayout>
+
+</RelativeLayout>

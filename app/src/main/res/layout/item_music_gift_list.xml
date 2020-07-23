@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><!--2-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dimen_160"
+    android:layout_height="@dimen/dimen_75"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:orientation="horizontal"
+    android:layout_marginLeft="@dimen/dimen_10"
+    android:background="@drawable/music_detail_shape_gift_list"
+    >
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/dimen_10"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#6d2d00"
+            android:padding="@dimen/dimen_5"
+            android:textSize="@dimen/size_14"
+            android:text="源音塘"
+            />
+
+        <TextView
+            android:id="@+id/gift_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="甜甜圈"
+            android:padding="@dimen/dimen_5"
+            android:textColor="#ff9100"
+            android:textSize="@dimen/size_14" />
+
+
+    </LinearLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_gift"
+        android:layout_width="@dimen/dimen_38"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        />
+    
+    
+</LinearLayout>

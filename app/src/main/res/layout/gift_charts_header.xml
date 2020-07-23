@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_top_gift_charts" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+
+        <RadioGroup
+            android:id="@+id/radiogrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_week"
+                android:layout_width="@dimen/dimen_70"
+                android:layout_height="@dimen/dimen_30"
+                android:layout_margin="@dimen/dimen_10"
+                android:background="@drawable/selector_gift_charts"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="周榜"
+                android:textColor="@drawable/gift_charts_selector_text_color"
+
+                />
+
+            <RadioButton
+                android:id="@+id/rb_all"
+                android:layout_width="@dimen/dimen_70"
+                android:layout_height="@dimen/dimen_30"
+                android:layout_margin="@dimen/dimen_10"
+                android:background="@drawable/selector_gift_charts"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="总榜"
+                android:textColor="@drawable/gift_charts_selector_text_color"
+
+                />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_40"
+                android:background="@drawable/shape_gift_chart1"
+                android:orientation="horizontal">
+
+                <!--第二名-->
+                <LinearLayout
+                    android:id="@+id/ll_charts_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_15"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_gift_chart2"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_to_user2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_90">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/gift_hat_2" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_head2"
+                            android:layout_width="@dimen/dimen_60"
+                            android:layout_height="@dimen/dimen_60"
+                            android:layout_centerInParent="true"
+                            android:padding="@dimen/dimen_1"
+                            android:src="@drawable/nothing"
+                            app:civ_border_color="#73b9ff"
+                            app:civ_border_width="@dimen/dimen_1" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_v2"
+                            android:layout_width="@dimen/dimen_80"
+                            android:layout_height="@dimen/dimen_25"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/dimen_5">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/img_charts_tip_second" />
+
+                            <ImageView
+                                android:id="@+id/img_v_rz_2"
+                                android:layout_width="@dimen/dimen_10"
+                                android:layout_height="@dimen/dimen_10"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:src="@drawable/icon_headimg_vip"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+
+
+                        <ImageView
+                            android:id="@+id/iv_order_statu2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_toRightOf="@+id/rl_v2"
+                            android:src="@drawable/charts_order_normal" />
+
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/nick_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text=""
+                        android:maxLength="4"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:id="@+id/score_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#4ca6ff"
+                        android:textSize="@dimen/size_15" />
+
+                    <TextView
+                        android:id="@+id/tv_type2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="收益值"
+                        android:textColor="#9da6a4"
+                        android:textSize="@dimen/size_12" />
+
+
+                </LinearLayout>
+                <!--第三名-->
+                <LinearLayout
+                    android:id="@+id/ll_charts_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dimen_15"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_gift_chart3"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_to_user3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_90">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/gift_hat_3" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_head3"
+                            android:layout_width="@dimen/dimen_60"
+                            android:layout_height="@dimen/dimen_60"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:padding="@dimen/dimen_1"
+                            android:src="@drawable/nothing"
+                            app:civ_border_color="#ff9966"
+                            app:civ_border_width="@dimen/dimen_1" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_v3"
+                            android:layout_width="@dimen/dimen_80"
+                            android:layout_height="@dimen/dimen_25"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/dimen_5">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/gift_chart_tips3" />
+
+                            <ImageView
+                                android:id="@+id/img_v_rz_3"
+                                android:layout_width="@dimen/dimen_10"
+                                android:layout_height="@dimen/dimen_10"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:src="@drawable/icon_headimg_vip"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_order_statu3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_toRightOf="@+id/rl_v3"
+                            android:src="@drawable/charts_order_normal" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/nick_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text=""
+                        android:maxLength="4"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:id="@+id/score_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#ff884c"
+                        android:textSize="@dimen/size_15" />
+
+                    <TextView
+                        android:id="@+id/tv_type3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="收益值"
+                        android:textColor="#9da6a4"
+                        android:textSize="@dimen/size_12" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <!--第一名-->
+            <LinearLayout
+                android:id="@+id/ll_charts_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_top_income"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_to_user1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_90"
+                    android:layout_marginTop="@dimen/dimen_50">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/gift_hat_1" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_head1"
+                        android:layout_width="@dimen/dimen_60"
+                        android:layout_height="@dimen/dimen_60"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/dimen_1"
+                        android:src="@drawable/nothing"
+                        app:civ_border_color="#ffc80a"
+                        app:civ_border_width="@dimen/dimen_1" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_v1"
+                        android:layout_width="@dimen/dimen_80"
+                        android:layout_height="@dimen/dimen_25"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/dimen_5">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/img_charts_tipfirst" />
+
+                        <ImageView
+                            android:id="@+id/img_v_rz_1"
+
+                            android:layout_width="@dimen/dimen_10"
+                            android:layout_height="@dimen/dimen_10"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:src="@drawable/icon_headimg_vip"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_order_statu1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:layout_toRightOf="@+id/rl_v1"
+                        android:src="@drawable/charts_order_normal" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/nick_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text=""
+                    android:maxLength="4"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/score_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#4ca6ff"
+                    android:textSize="@dimen/size_15" />
+
+                <TextView
+                    android:id="@+id/tv_type1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="收益值"
+                    android:textColor="#9da6a4"
+                    android:textSize="@dimen/size_12" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

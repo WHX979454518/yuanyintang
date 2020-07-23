@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/dynamic_common_top" />
+
+        <com.mxkj.yuanyintang.widget.StretchyTextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            tools:ignore="RtlHardcoded" />
+
+        <com.mxkj.yuanyintang.widget.NoScrollGridview
+            android:id="@+id/dynamic_img_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@color/white"
+            android:horizontalSpacing="@dimen/dimen_5"
+            android:listSelector="#00000000"
+            android:verticalSpacing="@dimen/dimen_5"
+            tools:ignore="RtlHardcoded">
+
+        </com.mxkj.yuanyintang.widget.NoScrollGridview>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_item_music"
+        android:layout_marginLeft="@dimen/dimen_10">
+
+        <include layout="@layout/dynamic_item_agree" />
+    </RelativeLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/img_ani"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="@dimen/dimen_40"
+        android:src="@drawable/ani_comment_agree"
+
+        />
+
+
+</RelativeLayout>

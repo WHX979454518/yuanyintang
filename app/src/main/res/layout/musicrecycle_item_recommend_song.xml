@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="@dimen/dimen_5"
+android:background="@color/white"
+android:orientation="vertical"
+android:paddingLeft="@dimen/dimen_5"
+android:paddingRight="@dimen/dimen_5"
+android:paddingTop="@dimen/dimen_15">
+
+<TextView
+    style="@style/color_17_size_14"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/color_17_text"
+    android:textSize="@dimen/size_16"
+    android:layout_marginLeft="@dimen/dimen_5"
+    android:layout_marginRight="@dimen/dimen_5"
+    android:drawableLeft="@drawable/icon_music_recommend"
+    android:drawablePadding="@dimen/dimen_10"
+    android:text="猜你喜欢" />
+
+<com.mxkj.yuanyintang.utils.photopicker.widget.NoScrollRecyclerView
+    android:id="@+id/song_recyclerview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_10"
+    android:overScrollMode="never"
+    android:scrollbars="none" />
+
+
+</LinearLayout>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:panel="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/moremore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/dimen_15"
+        android:src="@drawable/more_charts_member" />
+
+    <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:orientation="vertical">
+
+            <com.xiao.nicevideoplayer.NiceVideoPlayer
+                android:id="@+id/nice_video_player"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"/>
+
+            <ScrollView
+                android:layout_marginTop="@dimen/dimen_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_marginLeft="@dimen/dimen_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/mv_music_name"
+                            android:text="歌曲名称"
+                            android:textColor="@color/delectColor"
+                            android:layout_centerVertical="true"
+                            android:layout_width="688px"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_music"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15px"
+                        android:layout_gravity="right"
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlHardcoded">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:textColor="@color/musicplayerColor"
+                                android:text="发布:"
+                                android:textSize="10sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textColor="@color/musicplayerColor"
+                                android:id="@+id/mv_update"
+                                android:layout_weight="3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:textColor="@color/musicplayerColor"
+                                android:text="播放:"
+                                android:textSize="10sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textColor="@color/musicplayerColor"
+                                android:id="@+id/mv_playnumber"
+                                android:layout_weight="3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/dimen_2"
+                                android:text=""
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:textColor="@color/musicplayerColor"
+                                android:layout_weight="3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img_toDetial"
+                            android:layout_width="@dimen/dimen_5"
+                            android:layout_height="@dimen/dimen_10"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:src="@drawable/to_next_layout" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_title"
+                        android:layout_marginTop="15px"
+                        android:layout_marginBottom="15px"
+                        android:layout_marginLeft="@dimen/dimen_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/mv_user_photo"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/nothing"
+                            android:text="mobile" />
+
+
+                        <TextView
+                            android:id="@+id/mv_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_toEndOf="@+id/mv_user_photo"
+                            android:layout_toRightOf="@+id/mv_user_photo"
+                            android:padding="@dimen/dimen_5"
+                            android:text="用户昵称"
+                            android:textColor="@color/musicplayerColor"
+                            android:textSize="@dimen/size_10" />
+
+                        <ImageView
+                            android:layout_toRightOf="@+id/mv_user_name"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10px"
+                            android:src="@drawable/icon_arrow_right_grey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <RelativeLayout
+                            android:id="@+id/mv_gift_rl"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dimen_30"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/shape_button_red_incode"
+                            android:layout_width="@dimen/dimen_90"
+                            android:layout_height="@dimen/dimen_30">
+                            <ImageView
+                                android:id="@+id/mv_gift"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:src="@drawable/music_detail_gift_list"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="33px"
+                                android:layout_height="32px" />
+                            <TextView
+                                android:layout_toRightOf="@+id/mv_gift"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dimen_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_button_red_incode"
+                                android:text="送礼物"
+                                android:textColor="@color/white" />
+                        </RelativeLayout>
+
+
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:background="@color/grey_cc_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                    <View style="@style/view_line_h" />
+
+
+                    <com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.SuperSwipeRefreshLayout
+                            android:id="@+id/swipe_refresh"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_300"
+                            android:background="@color/bckdynamic_music_item">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_comment"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/dimen_10">
+
+                            </android.support.v7.widget.RecyclerView>
+                        </com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.SuperSwipeRefreshLayout>
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/bck"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5000"
+        android:clickable="true"
+        android:visibility="gone" />
+    <com.mxkj.yuanyintang.widget.Panel
+        android:visibility="gone"
+        android:layout_below="@+id/moremore"
+        android:id="@+id/rightPanel2"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="@dimen/dimen_40"
+        panel:animationDuration="100"
+        panel:content="@+id/panelContent"
+        panel:handle="@+id/panelHandle"
+        panel:linearFlying="true"
+        panel:position="right">
+
+        <FrameLayout
+            android:id="@+id/panelHandle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="@dimen/dimen_20">
+
+            <ImageView
+                android:id="@+id/img_gift"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:src="@drawable/musicdetail_animation" />
+
+            <TextView
+                android:layout_width="@dimen/dimen_32"
+                android:layout_height="@dimen/dimen_90"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/switcher_bt_bck"
+                android:gravity="center"
+                android:text="打\n赏\n榜"
+                android:textColor="#ff8400"
+                android:textSize="@dimen/size_13" />
+        </FrameLayout>
+
+        <include
+            layout="@layout/right_switcher_list" />
+    </com.mxkj.yuanyintang.widget.Panel>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_marginTop="@dimen/dimen_9"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_24"
+        android:src="@drawable/ic_player_back"
+        android:visibility="visible"/>
+
+
+    <ImageView
+        android:id="@+id/share"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:layout_alignBottom="@+id/report"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:layout_toLeftOf="@+id/report"
+        android:src="@drawable/icon_mv_share" />
+    <ImageView
+        android:id="@+id/report"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:src="@drawable/icon_mv_jubao"
+        android:layout_width="40px"
+        android:layout_height="40px" />
+
+    <FrameLayout
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/dimen_1"
+        android:paddingTop="1dp"
+        android:id="@+id/fl_emotionview_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
+    <LinearLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1dp"
+        android:background="@color/white_text"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_comment_et"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/et_pinglun"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="#333333"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="12sp"
+                tools:ignore="RtlHardcoded" />
+
+
+            <ImageView
+                android:id="@+id/img_show_emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:padding="@dimen/dimen_10"
+                android:src="@drawable/emoji_icon" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_send_mvcomment"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/white"
+            android:text="发送"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+</RelativeLayout>

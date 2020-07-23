@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/dimen_150"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/search_nothing" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dimen_10"
+        android:text="木有找到相关内容唉( ..• ̀ω•́ ฅ)"
+        android:textColor="#9da6a4"
+        android:textSize="14sp" />
+    <!--android:detailsactivity_item=" 换个关键词试试 ฅ( • ̀ω•́ ฅ)"-->
+
+
+</LinearLayout>

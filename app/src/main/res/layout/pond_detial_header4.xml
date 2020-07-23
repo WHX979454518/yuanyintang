@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--投票-->
+    <LinearLayout
+        android:id="@+id/ll_voteView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:background="@color/bckdynamic_music_item" />
+
+        <RelativeLayout
+            android:id="@+id/rl_recommdPond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_below="@+id/text"
+                android:layout_width="@dimen/dimen_20"
+                android:layout_height="@dimen/dimen_5"
+                android:layout_marginTop="-5dp"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:src="@drawable/shape_txt_underline" />
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dimen_10"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_12"
+                android:text="投票"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14" />
+            <!--android:background="@color/bg_color"-->
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_vote_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10"
+            android:text="title"
+            android:textColor="#1a1717"
+            android:textSize="13sp" />
+
+        <com.mxkj.yuanyintang.mainui.dynamic.widget.NoScrollListview
+            android:id="@+id/lv_vote"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#00000000"/>
+
+        <EditText
+            android:id="@+id/et_vote"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:background="@drawable/oval_5dp_f5_bg"
+            android:hint="说说你的看法吧~"
+            android:paddingLeft="@dimen/dimen_10"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/login_gray"
+            android:textSize="@dimen/size_12" />
+
+        <TextView
+            android:id="@+id/tv_send_vote"
+            android:layout_width="70dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:background="@drawable/shape_button_red"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="投票"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:background="@color/bckdynamic_music_item" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

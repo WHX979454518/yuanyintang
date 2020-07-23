@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mxkj.yuanyintang.mainui.myself.settings.activity.CleanCache">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_cleanPic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="清理图片文字缓存"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tv_picDataSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="@dimen/dimen_10"
+            android:drawableRight="@drawable/to_next_layout"
+            android:text="0M"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_devider" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_cleanMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="清理歌曲缓存"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tv_musicSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="@dimen/dimen_10"
+            android:drawableRight="@drawable/to_next_layout"
+            android:text="0M"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_devider" />
+
+</LinearLayout>

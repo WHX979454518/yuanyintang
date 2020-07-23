@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dimen_10"
+    android:paddingRight="@dimen/dimen_10">
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/color_a6_size_11"
+        android:layout_marginTop="@dimen/dimen_18"
+        android:text="time" />
+
+    <LinearLayout
+        android:id="@+id/layout_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_12"
+        android:background="@drawable/oval_5dp_white_bg"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dimen_12"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_12">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/color_17_size_14"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="您发布的池塘被评论啦" />
+
+        <TextView
+            android:id="@+id/tv_contents"
+            style="@style/color_a6_size_12"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.1"
+            android:maxLines="2"
+            android:text="您发布的动态[动态前10个字动态...]，被评论了（点击查看）快过来观望一下，说不定是你心动得那位哦，说不定是你心..." />
+
+    </LinearLayout>
+
+</LinearLayout>

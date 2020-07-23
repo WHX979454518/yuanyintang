@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_system_msg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fdf8e8"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dimen_10"
+    android:paddingRight="@dimen/dimen_10">
+
+    <ImageView
+        android:id="@+id/iv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_8"
+        android:src="@drawable/icon_system_msg" />
+
+    <com.mxkj.yuanyintang.widget.MarqueTextView
+        android:id="@+id/tv_system_msg"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_32"
+        android:layout_weight="1"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="消息"
+        android:textColor="#fe8535"
+        android:textSize="11sp" />
+
+    <ImageView
+        android:padding="@dimen/dimen_10"
+        android:id="@+id/hide_sys_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/hide_sys_msg"
+
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mxkj.yuanyintang.mainui.newapp.message.GiftListActivity">
+
+
+    <com.mxkj.yuanyintang.mainui.newapp.weidget.BigTxtTabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_58"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dimen_10" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/view_line_h" />
+
+    <FrameLayout
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dimen_90"
+        android:id="@+id/rl_nothing"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/noting_date"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/not_playlist_img"
+                android:src="@mipmap/img_search_nothing3"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/gift_show"
+                android:textSize="@dimen/size_13"
+                android:layout_marginTop="@dimen/dimen_35"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/not_playlist_img"
+                android:text="你还没有收到礼物呢~"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </FrameLayout>
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</LinearLayout>

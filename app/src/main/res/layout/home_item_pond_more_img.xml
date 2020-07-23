@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mxkj.yuanyintang.widget.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#cccccc"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_more_img_num"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44333333"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:text="查看更多\n3张"
+        android:textColor="@color/white_text"
+        android:textSize="@dimen/size_12"
+        android:visibility="gone"
+        />
+
+</com.mxkj.yuanyintang.widget.SquareRelativeLayout>

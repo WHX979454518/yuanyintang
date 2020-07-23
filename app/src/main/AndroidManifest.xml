@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mxkj.yuanyintang"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!--<uses-sdk android:targetSdkVersion="26" />-->
+
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission
+        android:name="android.permission.WRITE_APN_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" />
+    <meta-data
+        android:name="android.max_aspect"
+        android:value="2.1" />
+
+    <application
+        android:name=".base.SophixStubApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.Light.NoActionBar"
+        tools:replace="label,icon,theme">
+
+        <!-- ali hotFix -->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="24781656-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="cd8ae5c2a3464242ce4727db6a6b1900" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCKFjJDFQGheAM82ad5SBdK/o9nUrgjgsa5bMwMkFbKidXgPAIqSz3wZVh7mjNNe5etnaelrmkS63A9JnoGBlQqIyBtU0YxsgSl8qSr6L2wUhJ03rGh4bPCJygWPBDztAWVYdyxAT+Shq7vSz6aRRCprfY5EjcD66m1byS6j3+Sz96Cmz9ibJf2sxgEeLKd8251BvZv55UsmNgCk1gi7WRNgcdfSFFQFSakoWKOqg0ZuTo4fCj2MobFN69w18EnF4Q1zmn/orJ9UrryQsvTCKw1mB8eTqEfmFN+CfZg8auq61zQyrIZZA94v0ESBBitaiAdBdGc0mpSlsn5fCxqE9w7AgMBAAECggEAEM/RAL/O+gStiDwLmsV/KH9DoFW+23vxi+PGGAV+u5v6cRl9Pf75JIqCMlI8ysMwXU/jeFV6r3YArUFA+/jLSHIMYaMQ2b4NuNKI3/EvHwdu/dGbGNVs2EeCJurbOYCCaYSHpPk87y78n1+u2INuGup2Hs6r6gtIFzHX6+rKomoEQJKMGxgftCVsOi6VWWzec2Oz2xnqQB1ePt7BsC7JAzwFkztRlYukY1l7Ykr81TS/u4SHUldesm6yuCiwrtvjIFJkt92l+1jgMrUlyOj8OFwGB5W8hcu/rsPoPG0PITOXy8S6XgiyFC91KLszolL3PL90uYPZ690etR+3M+Wj0QKBgQDW+07VGtdkrxqqEMoFV6z5o15QtrBhE8jEMho+ncY8gwMQ5pk/L+sDwiFlGOkUv5DWP4NeXwJXrR3J9waEdFZv2ETuro7or8mliGz9USM3rjs4x5puW11AdLnJtQOxEvZI++p8Ob0IZOC65+XlE7sEE/SqMRXrZeXenDDc+0qY+QKBgQCkbvwuzpX6EJlZE+alkvMSyxvSZBqCSQP6ZWA3bLCIpxKow2lTW3Lv/9x3IWyuS6tLzfh5xkw5bn3FCxTgLoyGrLx+jISBSuzZG8Nf4RDDxAa9u41XQuP7gI0ibREwhM/cHyqDXVs9uIpS87lAvOzivf/xEjPubSetRg03gqa/0wKBgQC6rrRAHfTY+6197OJhTUdp6FGoaVw0kIeQx6k+oqdYOLRa4sREuImuU8/ICJ+uYsOVKMYdFwfjtvLdROOl9Zhxuy3wzihPKwdB9XwfZWvdmDDZF4ulNTV/GV2UKNox1DOGISv3//OE7ISyCVn7WOzXl7SobcOJDI1Wh+9uldCrkQKBgB8NNmJAcOIAMHU55Nxvm6d445Afh0IDN9UZP8o3pD6qDkQAYuty4Ymg76kvjq57a6WtB7c3Uz2lN+r15MNRBwiHpjDfqEYiOAfnzkVU4y2U3xEFUfOglhzwcbaGkjBvZDFVUVntT0Wgi76Od/VZuAI5jxOfNF9aDZwTFnvdGFAxAoGAPuQaCBBOw6FAdVM9fZ5ItcSt0ZKYuw4MC8G7BMyB0U6gsNiWOBbU/zwlMeFAO5MKK+yqb0CDEDlguFDDfKKxLNtt5VPg0oUbqd2x4NcOx17UFUMT3ByEGVbcp20tbHzciFEsgStlOQ8d6O2qiE526SHz9kmXeolJyaIr8/sxsQ4=" />
+        <!-- android:theme="@style/BGAPPTheme" -->
+
+
+        <!-- umeng share\Statistics -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58743b0df5ade44882001702" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="5374abde979407c1823534f796e4e5d9" />
+
+        <!-- aMap -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="e09ef392f2d57f0eb9a58821b2aae66a" />
+        <!--
+       em AppKey
+       debug:1125171011115552#yytdeme
+       release: 1125171011115552#yyt
+        -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1125171011115552#yyt" />
+
+
+        <!--<activity-->
+        <!--android:name=".musicplayer.activity.PlayerActivity"-->
+        <!--android:launchMode="singleTask"-->
+        <!--android:theme="@style/ThemeSwipeBack" />-->
+        <activity
+
+            android:name=".base.activity.WelComeActivity"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".base.activity.HomeActivity" />
+        <activity android:name=".base.activity.StartActivity" />
+
+        <provider
+            android:name=".utils.file.UpdateFileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/new_app_file_paths" />
+        </provider>
+
+        <!-- Home -->
+        <activity android:name=".mainui.home.activity.MusicListActivity" />
+
+        <!-- window.location = "yyt://host/pathPrefix"; -->
+        <activity
+            android:name=".mainui.home.activity.HtmlAgencyActivity"
+            android:theme="@style/TranslucentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="host"
+                    android:pathPrefix="/pathPrefix"
+                    android:scheme="yyt" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mainui.home.activity.MusicDetailsActivity" />
+        <activity android:name=".mainui.pond.widget.ChoosePondTagNew" />
+        <activity android:name=".mainui.home.activity.SongSheetDetailsActivity" />
+        <activity android:name=".mainui.home.activity.MusicIanDetailsActivity" />
+        <activity
+            android:name=".mainui.home.activity.LikesMusicActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".mainui.home.activity.ContainSongListActivity" />
+        <activity
+            android:name=".mainui.home.activity.MyCollectionSongActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".mainui.home.activity.LyricsDetailsActivity" />
+        <activity android:name=".mainui.home.activity.SongSheetSynopsisActivity" />
+        <!-- myself -->
+        <activity
+            android:name=".mainui.myself.activity.EditPersonalProfileActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.activity.SelectSexDialog"
+            android:launchMode="singleTask"
+            android:theme="@style/Dialog" />
+        <activity
+            android:name=".mainui.myself.activity.MyFollowAndFansActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.activity.MyCollectionActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.activity.MySongListActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.activity.PlayerHistoryActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.activity.MyPondActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.activity.DownLoadFileListActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.activity.DownLoadFileManagerActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.activity.EditSongActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.activity.NearbyPeopleActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.my_release.MyReleaseActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.activity.FeedBackActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.activity.SuggestActivity"
+            android:launchMode="singleTask" />
+
+        <!-- common -->
+        <activity
+            android:name=".extraui.activity.ReportActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".extraui.activity.PicturePagerDetailsActivity" />
+        <activity android:name=".extraui.activity.PictureDetailsActivity" />
+        <activity
+            android:name=".extraui.activity.CommentPictureDetailsActivity"
+            android:launchMode="singleTask" />
+
+        <!-- messageCenter -->
+        <activity android:name=".mainui.message.activity.MessageCenterActivity" />
+        <activity android:name=".mainui.message.activity.SystemMessageListActivity" />
+        <activity
+            android:name=".mainui.message.ChatActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.message.activity.MyCollectionSongListActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.message.activity.MessageChatSettingActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".mainui.message.activity.TrendsMessageListActivity" />
+        <activity android:name=".mainui.message.activity.SystemMessageListDetailsActivity" />
+        <activity android:name=".mainui.message.activity.MessageSettingActivity" />
+
+        <!-- music play service -->
+        <service android:name=".musicplayer.service.MediaService">
+            <intent-filter>
+                <action android:name="finish" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".mainui.login_regist.RegistStep2" />
+        <activity android:name=".mainui.login_regist.AddSelfInfo" />
+        <activity android:name=".utils.image.CropImgActivity" />
+
+        <!-- picture preview -->
+        <activity
+            android:name=".utils.photopicker.activity.BGAPhotoPreviewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".utils.photopicker.activity.BGAPhotoPickerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".utils.photopicker.activity.BGAPhotoPickerPreviewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".apshare.ShareEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="1106114082" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".mainui.login_regist.BindThird" />
+        <activity android:name=".mainui.pond.activity.PondTagListActivity" />
+        <activity
+            android:name=".mainui.pond.activity.PublishPond"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".mainui.pond.TagDetialPondList" />
+        <activity
+            android:name=".mainui.dynamic.activity.DynamicDetial"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".mainui.pond.widget.ChoosePondTag" />
+        <activity android:name=".mainui.pond.activity.AddMusicNew">
+            <intent-filter>
+                <action android:name="com.mxkj.yuanyintang.ui.pond.AddMusicNew" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--
+        <activity android:name=".ui.pond.AddMusic">
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".ui.login_regist.BindThird"></activity>
+        <activity android:name=".ui.pond.PondTagListActivity"></activity>
+        <activity android:name=".ui.pond.TagDetialPond"></activity>
+        <!-em
+        -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <!-- em regist -->
+        <activity
+            android:name=".im.ui.EaseShowBigImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" />
+        <activity
+            android:name=".mainui.message.activity.SelectorMyCollectionSongListActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.mxkj.yuanyintang.ui.message.activity.SelectMyCollectionSongListActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mainui.pond.VoteActivity" />
+        <!-- <activity android:name=".ui.comment.CommenDetialActivity"></activity> -->
+        <activity
+            android:name=".mainui.search.SearchResultActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mainui.search.SearchActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name=".mainui.comment.CommenDetialActivity" />
+        <activity android:name=".mainui.pond.activity.PondReplyDetialActivity" />
+        <activity
+            android:name=".mainui.comment.CommentActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".mainui.myself.celebrity.RealInfoAuthStep1"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name=".mainui.myself.celebrity.RealInfoAuthStep2" />
+        <activity android:name=".mainui.myself.celebrity.RealInfoAuthStep3" />
+        <activity
+            android:name=".mainui.dynamic.activity.PublishDynamic"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".mainui.myself.settings.SettingActivity" />
+        <activity android:name=".mainui.myself.settings.activity.ChangetActivity" />
+        <activity android:name=".mainui.myself.settings.activity.ChangePhoneActivity" />
+        <activity android:name=".mainui.myself.settings.activity.ChangePhoneStep2" />
+        <activity android:name=".mainui.myself.settings.activity.ChangePwdActivity" />
+        <activity android:name=".mainui.myself.settings.activity.PlaySettingActivity" />
+        <activity android:name=".mainui.myself.activity.OnlinePlaySetActivity" />
+        <activity android:name=".mainui.myself.activity.DownloadSetActivity" />
+        <activity
+            android:name=".mainui.myself.my_release.up_load_music.UploadMusicActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".mainui.myself.my_release.MusicTypeActivity" />
+        <activity android:name=".mainui.myself.activity.ChooseMusicTag" />
+        <activity android:name=".mainui.pond.activity.ReplyPond" />
+        <activity android:name=".musicplayer.activity.ChooseLyricActivity" />
+        <activity android:name=".musicplayer.activity.ShareLyricActivity" />
+        <activity android:name=".mainui.login_regist.HotUserRecommend" />
+        <activity android:name=".mainui.myself.settings.activity.CleanCache" />
+        <activity android:name=".mainui.myself.settings.activity.About" />
+        <activity android:name=".mainui.web.CommonWebview" />
+        <activity android:name=".mainui.login_regist.UserNoticeActivity" />
+        <activity
+            android:name=".musicplayer.activity.LockScreenActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.package.name.lockscreen"
+            android:theme="@style/LockScreenTheme" />
+        <activity android:name=".base.share.ShareToYYT" />
+        <!-- service -->
+        <service
+            android:name=".base.service.BackgroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":white" />
+
+        <activity
+            android:name=".mainui.pond.activity.PondDetialActivityNew"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".mainui.login_regist.LoginRegMainPage"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".mainui.login_regist.QuickLoginActivityNew"
+            android:configChanges="keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".mainui.login_regist.QuickCodeActivityNew"
+            android:configChanges="keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".mainui.login_regist.ForgetStepNew1" />
+        <activity android:name=".mainui.login_regist.ForgetStepNew2" />
+        <activity android:name=".mainui.login_regist.RegistActivityNew" />
+        <activity android:name=".mainui.myself.settings.activity.InviteOthersActivity" />
+        <activity
+            android:name=".upush.SystemPush"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <!-- 魅族push应用定义消息receiver声明 -->
+        <receiver android:name=".upush.MeizuReceiver">
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
+                <!-- 接收register消息 -->
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />
+                <!-- 接收unregister消息 -->
+                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" />
+                <!-- 兼容低版本Flyme3推送服务配置 -->
+                <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
+                <action android:name="com.meizu.c2dm.intent.RECEIVE" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".upush.UpushService$NotificationReceiver">
+            <intent-filter>
+                <action android:name="uPushClick" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".upush.UpushService" />
+
+        <activity android:name=".mainui.message.activity.BroadcastMsgListActivity" />
+        <activity android:name=".mainui.message.activity.CommentsListActivity" />
+        <activity
+            android:name=".mainui.myself.helpcenter.HelpCenterActivity"
+            android:label="@string/title_activity_help_center" />
+        <activity android:name=".mainui.myself.helpcenter.HotQuestionsActivity" />
+        <activity android:name=".mainui.dynamic.circle_msg.CircleMsgListActivity" />
+        <activity android:name=".mainui.login_regist.NewMobileAuthActivity" />
+        <activity android:name=".mainui.home.music_charts.activity.ChartsHomeActivity" />
+        <activity android:name=".mainui.home.music_charts.activity.ChartsListsActivity" />
+        <activity
+            android:name=".mainui.myself.my_release.up_load_music.BeforeScanActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".mainui.myself.my_release.up_load_music.ScaningActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".mainui.myself.my_release.up_load_music.LocalMusicListActivity" />
+
+        <!-- <provider -->
+        <!-- android:name="android.support.v4.content.FileProvider" -->
+        <!-- android:authorities="com.mxkj.yuanyintang.fileProvider" -->
+        <!-- android:exported="false" -->
+        <!-- android:grantUriPermissions="true"> -->
+
+
+        <!-- <meta-data -->
+        <!-- android:name="android.support.FILE_PROVIDER_PATHS" -->
+        <!-- android:resource="@xml/file_provider"/> -->
+        <!-- </provider> -->
+        <activity android:name=".mainui.login_regist.NewDeviceAuthActivity" />
+        <activity android:name=".mainui.pond.activity.PondReplyDetialActivityNew" />
+        <activity android:name=".mainui.myself.helpcenter.ChatRobotActivity" />
+        <activity android:name=".mainui.myself.settings.activity.NoMobile_goBind_Activity" />
+
+        <!-- ali_pay -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/myTransparent" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".extraui.gift.SvgaAnimActivity"
+            android:theme="@style/myTransparent" />
+        <activity
+            android:name=".pay.qq_pay.QQPayCallbackActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/myTransparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="qwallet1106114082" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mainui.myself.doughnut.ChargeDoughnutActivity" />
+        <activity
+            android:name=".pay.ali_pay.AliPayCallbackActivity"
+            android:theme="@style/myTransparent" />
+        <activity android:name=".mainui.home.gift_charts.GiftChartsActivity" />
+        <activity android:name=".mainui.myself.my_income.activity.MyIncomeActivity" />
+        <activity android:name=".mainui.myself.my_income.activity.IncomeHistoryActivity" />
+        <activity
+            android:name=".mainui.myself.my_income.activity.ApplyCashActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".mainui.myself.my_income.activity.AddCreditCardActivity" />
+        <activity android:name=".mainui.myself.my_income.activity.AddCard_ListActivity" />
+        <activity android:name=".mainui.myself.my_income.activity.CashHistoryActivity" />
+        <activity
+            android:name=".mainui.myself.my_release.BindPartnerActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".mainui.myself.my_release.PartnerListActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".mainui.myself.doughnut.MyDoughnutActivityNew" />
+        <activity
+            android:name=".base.activity.GiiGiftSuccessActivity"
+            android:theme="@style/myTransparent" />
+        <activity android:name=".mainui.login_regist.RegSuccessRecommend" />
+        <activity android:name=".mainui.login_regist.RegSuccessRecommend2" />
+        <activity android:name=".mainui.newapp.home.TodayHotSongActivity" />
+        <activity android:name=".mainui.newapp.home.MusicTypeActivity" />
+        <activity android:name=".mainui.newapp.home.AllSongSheetActivity" />
+        <activity android:name=".mainui.newapp.home.AllMusicianActivity" />
+        <activity android:name=".mainui.myself.my_release.up_load_music.AddLyricActivity" />
+        <activity android:name=".mainui.newapp.myself.AddMusicianTagActivity" />
+        <activity android:name=".mainui.newapp.myself.LocalMusicActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".mainui.pond.activity.LocationListActivity" />
+        <activity android:name=".mainui.newapp.message.GiftListActivity" />
+        <activity android:name=".mainui.myself.activity.EditIntroActivity" />
+        <activity android:name=".mainui.myself.my_release.up_load_music.ChooseMusicTagNew" />
+        <activity android:name=".mainui.myself.activity.MusicLikeTagActivity"></activity>
+        <activity android:name=".video.MvVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".musicplayer.activity.PlayerActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppAnimationTheme"
+            />
+        <activity android:name=".video.MvVideoActivitykt"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".mainui.myself.helpcenter.AboutYuanActivity"></activity>
+        <activity android:name=".mainui.myself.helpcenter.DetailsActivity"></activity>
+        <activity android:name=".mainui.myself.helpcenter.text.TextActivity"></activity>
+    </application>
+
+</manifest>

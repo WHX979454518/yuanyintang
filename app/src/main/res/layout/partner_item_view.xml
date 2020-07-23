@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dimen_35"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/dimen_5"
+    android:paddingTop="@dimen/dimen_5">
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="作曲"
+        android:textColor="#616665"
+        android:textSize="@dimen/size_14"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_icon"
+        android:layout_width="@dimen/dimen_25"
+        android:layout_height="@dimen/dimen_25"
+        android:layout_centerVertical="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_icon"
+            android:layout_width="@dimen/dimen_35"
+            android:layout_height="@dimen/dimen_35"
+            android:clickable="true"
+            android:src="@drawable/default_head_img" />
+
+        <ImageView
+            android:id="@+id/v_rz"
+            android:layout_width="@dimen/dimen_10"
+            android:layout_height="@dimen/dimen_10"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_headimg_vip_small" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:singleLine="true"
+        android:text="源音塘"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/size_13" />
+
+    <TextView
+        android:id="@+id/tv_devider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:text="|"
+        android:textColor="#e6e6e6"
+        android:textSize="@dimen/size_13" />
+
+</LinearLayout>
+

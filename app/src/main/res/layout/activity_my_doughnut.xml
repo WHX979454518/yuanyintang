@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_150"
+        android:background="@drawable/doughnut_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/color_66_size_12"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:text="可用甜甜圈（个）" />
+
+        <TextView
+            android:id="@+id/tv_doughnut_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:text="0"
+            android:textColor="@color/base_red"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_doughnut_num"
+            android:layout_marginBottom="14dp"
+            android:layout_toEndOf="@+id/tv_doughnut_num"
+            android:layout_toRightOf="@+id/tv_doughnut_num"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:src="@drawable/doughnut_more" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_48"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimen_15"
+        android:paddingRight="@dimen/dimen_15">
+
+        <TextView
+            style="@style/color_17_size_14"
+            android:layout_centerVertical="true"
+            android:text="甜甜圈明细" />
+
+        <TextView
+            android:id="@+id/tv_detail_prompt"
+            style="@style/color_a6_size_12"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="@dimen/dimen_6"
+            android:drawableRight="@drawable/home_index_more"
+            android:text="仅显示最近七天甜甜圈变化"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <View style="@style/view_line_h" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:id="@+id/layout_not_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_not_data_view" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

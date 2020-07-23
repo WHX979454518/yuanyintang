@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.mxkj.yuanyintang.mainui.pond.activity.PondTagListActivity">
+
+    <include layout="@layout/base_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#f2f2f2"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_search_tag"
+            android:drawableLeft="@drawable/pond_search"
+            android:drawablePadding="@dimen/dimen_10"
+            android:hint="搜索全站"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/tag_gray"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/clear_text"
+            android:clickable="true"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:src="@drawable/dele_text" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.mxkj.yuanyintang.mainui.pond.activity.PondTagListActivity">
+
+
+            <LinearLayout
+                android:id="@+id/ll_hotTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.mxkj.yuanyintang.mainui.pond.widget.FlowLayout
+                    android:id="@+id/pond_tag_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    app:child_layout="@layout/tag_list_child"
+                    app:child_margin_horizontal="@dimen/dimen_10"
+                    app:child_margin_vertical="@dimen/dimen_10" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:gravity="center"
+                    android:text="以上为热门标签"
+                    android:textColor="@color/login_gray"
+                    android:textSize="11sp"
+
+                    />
+
+            </LinearLayout>
+
+
+            <com.mxkj.yuanyintang.mainui.pond.widget.FlowLayout
+                android:id="@+id/pond_tag_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15"
+                app:child_layout="@layout/tag_list_child"
+                app:child_margin_horizontal="@dimen/dimen_10"
+                app:child_margin_vertical="@dimen/dimen_10" />
+
+            <TextView
+                android:id="@+id/load_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="@dimen/dimen_20"
+                android:text="点我加载更多"
+                android:textColor="@color/login_gray"
+                android:textSize="11sp"
+
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

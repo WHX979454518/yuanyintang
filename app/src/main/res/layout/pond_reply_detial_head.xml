@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_item_music"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:id="@+id/ll_to_pond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="horizontal"
+        tools:ignore="RtlHardcoded">
+
+        <ImageView
+            android:id="@+id/img_pond"
+            android:layout_width="@dimen/dimen_55"
+            android:layout_height="@dimen/dimen_55"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nothing"
+            tools:ignore="RtlHardcoded" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="RtlHardcoded">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_dynamic_music_type"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dimen_2"
+                    android:paddingLeft="@dimen/dimen_5"
+                    android:paddingRight="@dimen/dimen_5"
+                    android:paddingTop="@dimen/dimen_2"
+                    android:text="池塘"
+                    android:textColor="@color/pink_99_text"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_pondname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_6"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="-"
+                    android:textColor="@color/dynamic_music_name"
+                    android:textSize="@dimen/size_12" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_pond_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_6"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="-"
+                android:textColor="@color/grey_a6_text"
+                android:textSize="@dimen/size_11" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/bckdynamic_music_item" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_20">
+
+        <RelativeLayout
+            android:id="@+id/rl_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/img_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/default_head_img"
+                android:clickable="true" />
+
+            <ImageView
+                android:id="@+id/v_rz"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_headimg_vip"
+                android:visibility="gone"
+                tools:ignore="RtlHardcoded" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_toRightOf="@+id/rl_icon"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxEms="8"
+                android:singleLine="true"
+                android:text="源音塘"
+                android:textColor="@color/dynamic_nick_nosex"
+                android:textSize="@dimen/size_12" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="00-00"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/grey_a6_text"
+                android:textColorHint="@color/grey_a6_text"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_5"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_5"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/tv_agree_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/grey_a6_text"
+                android:textSize="@dimen/size_11" />
+
+            <ImageView
+                android:id="@+id/img_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_6"
+                android:gravity="center"
+                android:src="@mipmap/icon_chitang_zan_gray" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/music_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_57">
+
+        <LinearLayout
+            android:id="@+id/ll_music"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_55"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@color/bckdynamic_music_item"
+            android:clickable="true"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/img_song"
+                android:layout_width="@dimen/dimen_55"
+                android:layout_height="@dimen/dimen_55"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nothing"
+                tools:ignore="RtlHardcoded" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_dynamic_music_type"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/dimen_5"
+                        android:paddingRight="@dimen/dimen_5"
+                        android:paddingTop="@dimen/dimen_2"
+                        android:paddingBottom="@dimen/dimen_2"
+                        android:text="单曲"
+                        android:textColor="@color/pink_99_text"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tv_songName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_6"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textColor="@color/color_17_text"
+                        android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/singer_song"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/grey_a6_text"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_playmusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:padding="@dimen/dimen_10"
+                android:src="@drawable/dynamic_unplaying" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.mxkj.yuanyintang.widget.StretchyTextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_57"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/dimen_10"
+        tools:ignore="RtlHardcoded"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <com.mxkj.yuanyintang.mainui.dynamic.widget.NoScrollListview
+            android:id="@+id/list_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:divider="@null"
+            android:orientation="vertical" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mxkj.yuanyintang.widget.NoScrollGridview
+            android:id="@+id/dynamic_img_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_57"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:horizontalSpacing="7dp"
+            android:listSelector="#00000000"
+            android:verticalSpacing="7dp"
+            tools:ignore="RtlHardcoded">
+
+        </com.mxkj.yuanyintang.widget.NoScrollGridview>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bckdynamic_music_item"
+        android:drawableLeft="@drawable/icon_all_comments"
+        android:drawablePadding="@dimen/dimen_5"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/dimen_12"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_12"
+        android:text="全部评论"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/size_14" />
+
+    <include layout="@layout/view_devider"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/tv_load_more"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/no_more_data_text"
+    android:background="@color/white"
+    android:padding="@dimen/dimen_10"
+    android:text="没有更多啦 (o´・ω・`)σ) "
+    >
+
+</TextView>

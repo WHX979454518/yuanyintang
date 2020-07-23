@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dimen_115"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_115">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_defaulft" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/selector_music_button" />
+
+        <TextView
+            style="@style/color_white_size_10"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dimen_5"
+            android:drawableLeft="@drawable/home_icon_headphon"
+            android:drawablePadding="@dimen/dimen_6"
+            android:text="11" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/dimen_6"
+            android:src="@drawable/icon_music_player_white_normal_false" />
+
+    </RelativeLayout>
+
+    <TextView
+        style="@style/color_17_size_14"
+        android:layout_marginLeft="@dimen/dimen_6"
+        android:layout_marginRight="@dimen/dimen_6"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxHeight="@dimen/dimen_56"
+        android:maxLines="2"
+        android:layout_marginTop="@dimen/dimen_2"
+        android:minHeight="@dimen/dimen_42"
+        android:text="工作室工作室工作室工作室" />
+
+    <TextView
+        style="@style/color_a6_size_12"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="111" />
+
+</LinearLayout>

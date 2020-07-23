@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/ll_uploadFail"
+    android:layout_marginTop="@dimen/dimen_10"
+    android:visibility="gone"
+
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="啊哦~上传失败"
+        android:textColor="@color/base_red"
+        android:textSize="@dimen/size_11"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxEms="20"
+        android:text="支持mp3,wma,m4a,ape,flac主流音频文件，最大不超过50M,最低码率128kbps"
+        android:textColor="@color/color_66_text"
+        android:textSize="@dimen/size_11"
+        />
+
+    <ImageView
+        android:id="@+id/img_reUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/click_reupload"
+        android:padding="@dimen/dimen_10"
+        />
+</LinearLayout>

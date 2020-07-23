@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/new_song_rl"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_height="@dimen/dimen_65">
+        <ImageView
+            android:id="@+id/newsong_icn"
+            android:src="@drawable/icon_xinjiangedan"
+            android:layout_width="@dimen/dimen_65"
+            android:layout_height="@dimen/dimen_65" />
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/newsong_icn"
+            style="@style/color_17_size_14"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:text="新建歌单" />
+        <View
+            android:layout_alignBottom="@+id/newsong_icn"
+            style="@style/view_line_h"
+            android:layout_marginLeft="@dimen/dimen_80" />
+
+    </RelativeLayout>
+
+    <com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.SuperSwipeRefreshLayout
+        android:id="@+id/superSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_15">
+
+        <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+    </com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.SuperSwipeRefreshLayout>
+
+
+</LinearLayout>

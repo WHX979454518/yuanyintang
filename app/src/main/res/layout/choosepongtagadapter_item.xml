@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dimen_5"
+        android:layout_marginBottom="@dimen/dimen_5"
+        android:id="@+id/title_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_45">
+
+        <TextView
+            android:id="@+id/title"
+            android:gravity="center_vertical"
+            android:text=""
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45" />
+    </RelativeLayout>
+    <com.mxkj.yuanyintang.mainui.pond.widget.FlowLayout
+        android:layout_below="@+id/title_rl"
+        android:id="@+id/playlist_tag_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_5"
+        android:layout_marginBottom="@dimen/dimen_15"
+        app:child_layout="@layout/child_pond_tag" />
+</RelativeLayout>

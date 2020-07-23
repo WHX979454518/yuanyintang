@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="#fafafa"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="@dimen/dimen_5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <com.mxkj.yuanyintang.widget.MarqueTextView
+        android:id="@+id/sysMsg"
+        android:background="#fafafa"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_45"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/home_msg"
+        android:drawablePadding="@dimen/dimen_10"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="#ff7aa4"
+        android:textSize="@dimen/size_13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=">>"
+        android:textColor="#ff7aa4"
+        android:textSize="@dimen/size_13" />
+</LinearLayout>
+</android.support.v7.widget.CardView>

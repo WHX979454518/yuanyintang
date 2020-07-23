@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="obj"
+            type="com.mxkj.yuanyintang.mainui.myself.helpcenter.data.HelperListBean.DataBean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.mxkj.yuanyintang.widget.SearTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_15"
+            android:text="@{obj.title}"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_14" />
+        <include layout="@layout/view_devider"/>
+
+        <com.mxkj.yuanyintang.widget.SearTextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_15"
+            android:text="@{obj.description}"
+            android:textColor="#616665"
+            android:textSize="@dimen/size_14" />
+
+    </LinearLayout>
+
+
+</layout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_msg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/message_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_12">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dimen_45"
+            android:layout_height="@dimen/dimen_45">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_headimg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/default_head_img"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/iv_is_vip"
+                android:layout_toEndOf="@+id/iv_is_vip" />
+
+            <ImageView
+                android:id="@+id/iv_is_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_headimg_vip"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_12">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/color_17_size_14"
+                android:layout_marginTop="@dimen/dimen_2"
+                android:ellipsize="end"
+                android:maxEms="8"
+                android:maxLines="1"
+                android:text="源音塘" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/color_a6_size_12"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dimen_2"
+                android:ellipsize="end"
+                android:hint="点击查看详情"
+                android:maxEms="18"
+                android:maxLines="1"
+                android:textColorHint="@color/color_99_text" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/color_a6_size_10"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dimen_2"
+                android:text="time" />
+
+            <TextView
+                android:id="@+id/tv_msg_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dimen_2"
+                android:background="@drawable/oval_25dp_red_66_bg"
+                android:paddingBottom="@dimen/dimen_2"
+                android:paddingLeft="@dimen/dimen_6"
+                android:paddingRight="@dimen/dimen_6"
+                android:paddingTop="@dimen/dimen_2"
+                android:text="99+"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_11"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/message_line"
+        android:layout_below="@+id/message_ll"
+        style="@style/view_line_h"
+        android:layout_marginLeft="@dimen/dimen_67"
+        android:layout_marginTop="@dimen/dimen_12" />
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@color/bg_color"
+        android:layout_centerInParent="true"
+        android:id="@+id/message_noting_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_not_data_view" />
+
+    </LinearLayout>
+</RelativeLayout>

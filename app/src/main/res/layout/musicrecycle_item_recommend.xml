@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_recommend"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_5"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_15"
+    android:paddingLeft="@dimen/dimen_5"
+    android:paddingRight="@dimen/dimen_5"
+    android:paddingTop="@dimen/dimen_15">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dimen_100"
+        android:layout_height="@dimen/dimen_20"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/dimen_45"
+            android:layout_height="@dimen/dimen_5"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:src="@drawable/shape_txt_underline" />
+
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_reco_song"
+            style="@style/color_17_size_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_5"
+            android:drawablePadding="@dimen/dimen_10"
+            android:gravity="center_horizontal"
+            android:text="猜你喜欢"
+            android:textColor="@color/color_17_text"
+            android:textSize="@dimen/size_16" />
+    </RelativeLayout>
+
+
+    <com.mxkj.yuanyintang.utils.photopicker.widget.NoScrollRecyclerView
+        android:id="@+id/song_sheet_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+
+        android:layout_marginTop="@dimen/dimen_10"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_10">
+
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_10"
+        android:background="@color/bg_pond_divcolor" />
+
+    <RelativeLayout
+        android:id="@+id/rl_recommdPond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_below="@+id/text"
+            android:layout_width="@dimen/dimen_45"
+            android:layout_height="@dimen/dimen_5"
+            android:layout_marginTop="-5dp"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:src="@drawable/shape_txt_underline" />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_12"
+            android:text="相关池塘"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_14" />
+        <!--android:background="@color/bg_color"-->
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_similerPond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10" />
+
+</LinearLayout>

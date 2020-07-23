@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/dimen_10"
+    android:paddingTop="@dimen/dimen_15">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/color_17_size_14"
+        android:text="name" />
+
+    <TextView
+        android:id="@+id/tv_describe"
+        style="@style/color_a6_size_12"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="@dimen/dimen_12"
+        android:text="等待中..." />
+
+
+    <View
+        style="@style/view_line_h"
+        android:layout_below="@id/tv_describe"
+        android:layout_marginTop="@dimen/dimen_15" />
+
+    <FrameLayout
+        android:id="@+id/layout_action"
+        android:layout_width="@dimen/dimen_22"
+        android:layout_height="@dimen/dimen_22"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/iv_wait"
+            android:layout_width="@dimen/dimen_22"
+            android:layout_height="@dimen/dimen_22"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_wait"
+            android:visibility="gone" />
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/donut_progress"
+            android:layout_width="@dimen/dimen_22"
+            android:layout_height="@dimen/dimen_22"
+            android:backgroundTint="@color/base_red"
+            android:backgroundTintMode="add"
+            custom:donut_finished_color="@color/base_red"
+            custom:donut_finished_stroke_width="@dimen/dimen_4"
+            custom:donut_show_text="false"
+            custom:donut_unfinished_color="@color/white"
+            custom:donut_unfinished_stroke_width="@dimen/dimen_4" />
+
+        <ImageView
+            android:id="@+id/iv_start_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/fullplay_pause_small"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_delete_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/delet"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</RelativeLayout>

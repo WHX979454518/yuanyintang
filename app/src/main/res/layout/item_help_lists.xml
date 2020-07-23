@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="obj"
+            type="com.mxkj.yuanyintang.mainui.myself.helpcenter.data.HelperListBean.DataBean" />
+
+    </data>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_15"
+        android:drawableRight="@drawable/to_next_layout"
+        android:drawablePadding="@dimen/dimen_11"
+        android:gravity="center_vertical"
+        android:text="@{obj.title}"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/size_14"
+        />
+
+
+</layout>

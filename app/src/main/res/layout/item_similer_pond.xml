@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_similar"
+    android:layout_width="225dp"
+    android:layout_height="100dp"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <com.mxkj.yuanyintang.mainui.newapp.weidget.RoundCornorImageView
+        android:id="@+id/img_pond"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/similar_pond_default_pic" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/oval_5dp_4000_bg" />
+
+    <TextView
+        android:id="@+id/tv_pond_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_10"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

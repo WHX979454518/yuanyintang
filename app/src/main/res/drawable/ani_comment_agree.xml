@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item
+        android:drawable="@drawable/comment_agree_0"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_1"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_2"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_3"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_4"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_5"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_6"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_7"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_8"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_9"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_10"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_11"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_12"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_13"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_14"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_15"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_16"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_17"
+        android:duration="40"></item><item
+        android:drawable="@drawable/comment_agree_18"
+        android:duration="40"></item>
+    <item
+        android:drawable="@drawable/comment_agree_19"
+        android:duration="40"></item>
+
+</animation-list>

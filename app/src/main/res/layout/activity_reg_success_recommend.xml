@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimen_25"
+    tools:context="com.mxkj.yuanyintang.mainui.login_regist.RegSuccessRecommend">
+
+    <TextView
+        android:id="@+id/tvSkip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:drawablePadding="@dimen/dimen_10"
+        android:drawableRight="@drawable/to_next_layout"
+        android:gravity="right"
+        android:padding="@dimen/dimen_20"
+        android:text="跳过"
+        android:textColor="#9da3a6"
+        android:textSize="@dimen/size_14" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        tools:context="com.mxkj.yuanyintang.mainui.login_regist.RegSuccessRecommend">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.mxkj.yuanyintang.mainui.login_regist.RegSuccessRecommend">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_100"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_10">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_headimg"
+                    android:layout_width="@dimen/dimen_60"
+                    android:layout_height="@dimen/dimen_60"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/default_head_img" />
+
+                <TextView
+                    android:id="@+id/tvNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="210dp"
+                    android:background="@drawable/login_tips_gray"
+                    android:paddingBottom="@dimen/dimen_10"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:paddingTop="@dimen/dimen_5"
+                    android:text="hi~小可爱"
+                    android:textColor="#9da3a6"
+                    android:textSize="12sp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="你的身份？"
+                android:textColor="#2b2b2b"
+                android:textSize="@dimen/size_18" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="源小伊将为你寻找爱好相同小伙伴哟~"
+                android:textColor="#616466"
+                android:textSize="@dimen/size_13" />
+
+            <com.mxkj.yuanyintang.widget.MultiLineRadioGroup
+                android:id="@+id/mrb_recommendTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15"
+                app:child_layout="@layout/regtagitem"
+                app:child_margin_horizontal="@dimen/dimen_10"
+                app:child_margin_vertical="@dimen/dimen_10"
+                app:single_choice="false" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_55"
+        android:layout_marginBottom="@dimen/dimen_20"
+        android:background="#f7f9fa"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvFinish"
+            android:layout_width="@dimen/dimen_120"
+            android:layout_height="@dimen/dimen_37"
+            android:background="@drawable/shape_btn_20"
+            android:gravity="center"
+            android:text="上一步"
+            android:textColor="#9da3a6"
+            android:textSize="@dimen/dimen_15"
+
+            />
+
+        <TextView
+            android:id="@+id/tvSure"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_37"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:background="@drawable/shape_btn_20_red"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_15"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+

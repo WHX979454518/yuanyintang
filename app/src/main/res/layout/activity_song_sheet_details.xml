@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:contentScrim="#00000000"
+                app:expandedTitleMarginEnd="0dp"
+                app:expandedTitleMarginStart="0dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+
+                <ImageView
+                    android:id="@+id/imageview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_254"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_254"
+                    android:background="@drawable/gradient_music_detial" />
+
+                <LinearLayout
+                    android:id="@+id/layout_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dimen_34">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dimen_10"
+
+                        >
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_150"
+                            app:cardCornerRadius="@dimen/dimen_5">
+
+                            <RelativeLayout
+                                android:id="@+id/layout_music_cover"
+                                android:layout_width="@dimen/dimen_150"
+                                android:layout_height="@dimen/dimen_150">
+
+                                <ImageView
+                                    android:id="@+id/iv_music_cover"
+                                    android:layout_width="@dimen/dimen_150"
+                                    android:layout_height="@dimen/dimen_150"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/img_moren_gedan3" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#3000" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="@dimen/dimen_4"
+                                    android:src="@drawable/icon_prompt_01" />
+
+                                <TextView
+                                    android:id="@+id/listen_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:drawableLeft="@drawable/home_icon_headphon"
+                                    android:drawablePadding="@dimen/dimen_5"
+                                    android:padding="@dimen/dimen_5"
+                                    android:text="0"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/size_12" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_150"
+                            android:layout_marginLeft="@dimen/dimen_20">
+
+                            <TextView
+                                android:id="@+id/tv_music_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:lineSpacingMultiplier="1.2"
+                                android:text="源音塘"
+                                android:textColor="#1a1717"
+                                android:textSize="@dimen/size_17" />
+
+                            <LinearLayout
+                                android:id="@+id/layout_musician"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/dimen_30"
+                                    android:layout_height="@dimen/dimen_30">
+
+                                    <ImageView
+                                        android:id="@+id/riv_head_img"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/default_head_img"
+                                        android:scaleType="centerCrop" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_is_vip"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_alignParentRight="true"
+                                        android:src="@drawable/icon_headimg_vip_small"
+                                        android:visibility="gone" />
+
+                                </RelativeLayout>
+
+
+                                <TextView
+                                    android:id="@+id/tv_music_nickname"
+                                    style="@style/color_white_size_12"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/dimen_5"
+                                    android:drawablePadding="@dimen/dimen_20"
+                                    android:drawableRight="@drawable/to_next_layout"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:text=""
+                                    android:textColor="#616665" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_other_user"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/dtv_collection_num"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawablePadding="@dimen/dimen_5"
+                                    android:drawableTop="@drawable/music_detail_collection_false"
+                                    android:gravity="center"
+                                    android:lineSpacingMultiplier="1.2"
+                                    android:text="收藏"
+                                    android:textColor="#616665"
+                                    android:textSize="@dimen/size_12" />
+
+                                <TextView
+                                    android:id="@+id/dtv_comment_num"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawablePadding="@dimen/dimen_5"
+                                    android:drawableTop="@drawable/icon_music_pinlun"
+                                    android:gravity="center"
+                                    android:lineSpacingMultiplier="1.2"
+                                    android:text="评论"
+                                    android:textColor="#616665"
+                                    android:textSize="@dimen/size_12" />
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginRight="@dimen/dimen_10">
+
+                                    <ImageView
+                                        android:id="@+id/img_ani"
+                                        android:layout_width="@dimen/dimen_50"
+                                        android:layout_height="@dimen/dimen_50"
+                                        android:layout_centerHorizontal="true"
+                                        android:paddingBottom="@dimen/dimen_15"
+                                        android:src="@drawable/ani_song_sheet_agree"
+                                        android:visibility="invisible" />
+
+                                    <TextView
+                                        android:id="@+id/dtv_doughnut_num"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:drawablePadding="@dimen/dimen_5"
+                                        android:drawableTop="@drawable/fullplay_share_normal"
+                                        android:gravity="center"
+                                        android:lineSpacingMultiplier="1.2"
+                                        android:text="分享"
+                                        android:textColor="#616665"
+                                        android:textSize="@dimen/size_12" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <include layout="@layout/musicrecycle_item_label" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentInsetLeft="0dp"
+                    android:paddingTop="@dimen/dimen_24"
+                    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:title="">
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:padding="@dimen/dimen_15"
+                        android:src="@drawable/icon_back_black" />
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:maxWidth="@dimen/dimen_220"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/size_15" />
+
+                    <ImageView
+                        android:id="@+id/iv_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:padding="@dimen/dimen_15"
+                        android:src="@drawable/icon_more_black" />
+
+                    <TextView
+                        android:id="@+id/tv_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:padding="@dimen/dimen_15"
+                        android:text="关闭"
+                        android:textColor="#616665"
+                        android:visibility="gone"
+
+                        />
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_play_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_all_playing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_15"
+                        android:background="#fafafa"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/song_detail_play_false" />
+
+                    <TextView
+                        android:id="@+id/tv_song_list_label"
+                        style="@style/color_17_size_14"
+                        android:textColor="@color/color_17_text"
+                        android:textSize="@dimen/size_16"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:drawablePadding="@dimen/dimen_6"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dimen_10"
+                        android:text="全部播放" />
+
+                </LinearLayout>
+
+
+                    <CheckBox
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_15"
+                        android:id="@+id/check_song"
+                        style="@style/color_17_size_12"
+                        android:button="@drawable/selector_edit_song_check"
+                        android:clickable="false"
+                        android:paddingBottom="@dimen/dimen_4"
+                        android:paddingLeft="@dimen/dimen_15"
+                        android:paddingTop="@dimen/dimen_4"
+                        android:text="全选"
+
+                        />
+
+
+                <TextView
+                    android:id="@+id/tv_edit_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/dimen_10"
+                    android:text="批量编辑"
+                    android:textColor="#616665"
+                    android:textSize="@dimen/size_12" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/notplaylist"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/show"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="你可以收藏喜欢的音乐到歌单哟~" />
+                <TextView
+                    android:id="@+id/go_homoelook"
+                    android:background="@drawable/shape_button_red_incode"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_below="@+id/show"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:layout_width="240px"
+                    android:layout_height="70px"
+                    android:text="去首页看看"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_below="@+id/go_homoelook"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_20" />
+            </RelativeLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_anchor="@id/app_bar"
+            app:layout_anchorGravity="bottom"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.mxkj.yuanyintang.utils.photopicker.widget.NoScrollRecyclerView
+                    android:id="@+id/song_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:scrollbars="none" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <!--猜你喜欢-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_recommend"
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/dimen_15"
+                        android:paddingRight="@dimen/dimen_5"
+                        android:paddingTop="@dimen/dimen_15">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_gravity="center_horizontal"
+                            >
+
+                            <ImageView
+                                android:id="@+id/recommended_playlist"
+                                android:layout_marginLeft="@dimen/dimen_15"
+                                android:layout_width="@dimen/dimen_21"
+                                android:layout_height="@dimen/dimen_21"
+                                android:layout_alignParentBottom="true"
+                                android:src="@mipmap/icon_baohangedan3x" />
+
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_8"
+                                android:layout_toRightOf="@+id/recommended_playlist"
+                                android:id="@+id/tv_reco_song"
+                                style="@style/color_17_size_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dimen_5"
+                                android:drawablePadding="@dimen/dimen_10"
+                                android:gravity="center_horizontal"
+                                android:text="推荐的歌单"
+                                android:textColor="@color/color_17_text"
+                                android:textSize="@dimen/size_16" />
+                        </RelativeLayout>
+
+
+                        <com.mxkj.yuanyintang.utils.photopicker.widget.NoScrollRecyclerView
+                            android:id="@+id/song_sheet_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:overScrollMode="never"
+                            android:scrollbars="none" />
+
+
+                    </LinearLayout>
+
+                    <!--相关池塘-->
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/layout_pond"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/dimen_15"
+                        android:paddingTop="@dimen/dimen_15">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                            <ImageView
+                                android:id="@+id/related_pond"
+                                android:layout_width="@dimen/dimen_21"
+                                android:layout_gravity="center"
+                                android:layout_height="@dimen/dimen_21"
+                                android:layout_marginLeft="@dimen/dimen_15"
+                                android:src="@drawable/icon_music_pond" />
+
+                            <TextView
+                                android:layout_toRightOf="@+id/related_pond"
+                                style="@style/color_17_size_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/color_17_text"
+                                android:textSize="@dimen/size_16"
+                                android:layout_marginLeft="@dimen/dimen_10"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:drawableBottom="@drawable/text_underline"
+                                android:gravity="center_vertical"
+                                android:text="相关池塘" />
+
+
+
+                        </RelativeLayout>
+
+                        <com.mxkj.yuanyintang.utils.photopicker.widget.NoScrollRecyclerView
+                            android:id="@+id/pond_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:background="@color/white"
+                            android:overScrollMode="never"
+                            android:scrollbars="none" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <LinearLayout
+        android:id="@+id/main_content_show"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        >
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:contentScrim="#00000000"
+                app:expandedTitleMarginEnd="0dp"
+                app:expandedTitleMarginStart="0dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_254"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_254"
+                    android:background="@drawable/gradient_music_detial" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dimen_34">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dimen_10"
+
+                        >
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_150"
+                            app:cardCornerRadius="@dimen/dimen_5">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/dimen_150"
+                                android:layout_height="@dimen/dimen_150">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dimen_150"
+                                    android:layout_height="@dimen/dimen_150"
+                                    android:scaleType="centerCrop"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/grey_e8_text" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="@dimen/dimen_4" />
+
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_150"
+                            android:layout_marginLeft="@dimen/dimen_20">
+
+                            <TextView
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:id="@+id/te"
+                                android:background="@color/grey_e8_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_30"
+                                android:layout_alignParentTop="true"
+                                android:lineSpacingMultiplier="1.2"
+                                android:text=""
+                                android:textColor="#1a1717"
+                                android:textSize="@dimen/size_17" />
+
+                            <LinearLayout
+                                android:id="@+id/ll"
+                                android:layout_marginRight="@dimen/dimen_10"
+                                android:layout_below="@+id/te"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_30"
+                                android:background="@color/grey_e8_text"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:orientation="horizontal">
+
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/dimen_15"
+                                android:layout_below="@+id/ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:background="@color/grey_e8_text"
+                                    android:layout_width="@dimen/dimen_55"
+                                    android:layout_height="@dimen/dimen_55"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_marginLeft="@dimen/dimen_10"
+                                    android:background="@color/grey_e8_text"
+                                    android:layout_width="@dimen/dimen_55"
+                                    android:layout_height="@dimen/dimen_55"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_marginLeft="@dimen/dimen_10"
+                                    android:background="@color/grey_e8_text"
+                                    android:layout_width="@dimen/dimen_55"
+                                    android:layout_height="@dimen/dimen_55"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <include layout="@layout/musicrecycle_item_label" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentInsetLeft="0dp"
+                    android:paddingTop="@dimen/dimen_24"
+                    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:title="">
+
+                    <ImageView
+                        android:id="@+id/back_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:padding="@dimen/dimen_15"
+                        android:src="@drawable/icon_back_black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:maxWidth="@dimen/dimen_220"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/size_15" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:padding="@dimen/dimen_15"
+                        android:text="关闭"
+                        android:textColor="#616665"
+                        android:visibility="gone"
+
+                        />
+
+                </android.support.v7.widget.Toolbar>
+
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:background="@color/grey_e8_text"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45">
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_anchor="@id/app_bar"
+            app:layout_anchorGravity="bottom"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_150"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:layout_marginBottom="@dimen/dimen_8"
+                        android:background="@color/grey_e8_text"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:padding="@dimen/dimen_20"
+                        android:layout_width="@dimen/dimen_50"
+                        android:layout_height="@dimen/dimen_50" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_60"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:background="@color/grey_e8_text"
+                            style="@style/color_33_size_14"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="" />
+
+                        <LinearLayout
+                            android:background="@color/grey_e8_text"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="@dimen/dimen_220"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:layout_marginBottom="@dimen/dimen_8"
+                        android:background="@color/grey_e8_text"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:padding="@dimen/dimen_20"
+                        android:layout_width="@dimen/dimen_50"
+                        android:layout_height="@dimen/dimen_50" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_60"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:background="@color/grey_e8_text"
+                            style="@style/color_33_size_14"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="" />
+
+                        <LinearLayout
+                            android:background="@color/grey_e8_text"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="@dimen/dimen_220"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:layout_marginBottom="@dimen/dimen_8"
+                        android:background="@color/grey_e8_text"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:padding="@dimen/dimen_20"
+                        android:layout_width="@dimen/dimen_50"
+                        android:layout_height="@dimen/dimen_50" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_60"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:background="@color/grey_e8_text"
+                            style="@style/color_33_size_14"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="" />
+
+                        <LinearLayout
+                            android:background="@color/grey_e8_text"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="@dimen/dimen_220"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:layout_marginBottom="@dimen/dimen_8"
+                        android:background="@color/grey_e8_text"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:padding="@dimen/dimen_20"
+                        android:layout_width="@dimen/dimen_50"
+                        android:layout_height="@dimen/dimen_50" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_60"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:background="@color/grey_e8_text"
+                            style="@style/color_33_size_14"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="" />
+
+                        <LinearLayout
+                            android:background="@color/grey_e8_text"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="@dimen/dimen_220"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:layout_marginBottom="@dimen/dimen_8"
+                        android:background="@color/grey_e8_text"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:padding="@dimen/dimen_20"
+                        android:layout_width="@dimen/dimen_50"
+                        android:layout_height="@dimen/dimen_50" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_60"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:background="@color/grey_e8_text"
+                            style="@style/color_33_size_14"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="" />
+
+                        <LinearLayout
+                            android:background="@color/grey_e8_text"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="@dimen/dimen_220"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/tv_add_song"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="加到歌单"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_13" />
+
+        <View
+            style="@style/view_line_v"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_add_musicList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="加到播放列表"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_13" />
+
+        <View
+            style="@style/view_line_v"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16" />
+
+        <TextView
+            android:id="@+id/tv_cancle_collection"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="从歌单中删除"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_13" />
+
+        <View
+            style="@style/view_line_v"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16" />
+
+        <TextView
+            android:id="@+id/tv_download_music"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="下载"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_13" />
+
+    </LinearLayout>
+
+</LinearLayout>

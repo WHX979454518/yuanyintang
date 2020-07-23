@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ckTag"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dimen_32"
+    android:layout_marginLeft="@dimen/dimen_10"
+    android:background="@drawable/selector_pond_tag_type"
+    android:button="@null"
+    android:clickable="true"
+    android:gravity="center"
+    android:text="池塘标签类别"
+    android:singleLine="true"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:paddingBottom="@dimen/dimen_5"
+    android:paddingLeft="@dimen/dimen_10"
+    android:paddingRight="@dimen/dimen_10"
+    android:paddingTop="@dimen/dimen_5"
+    android:textColor="@drawable/text_color_red_black"
+    android:textSize="@dimen/size_11">
+
+</CheckBox>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@mipmap/img_chart_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80">
+
+        <RelativeLayout
+            android:id="@+id/leftback"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_50">
+            <ImageView
+                android:layout_marginTop="@dimen/dimen_14"
+                android:layout_width="@dimen/dimen_10"
+                android:layout_height="@dimen/dimen_18"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:src="@mipmap/icon_chart_back"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:text="源音塘排行榜"
+            android:textColor="@color/white"
+            android:id="@+id/navTitleTextView"
+            style="@style/BarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxEms="9"
+            android:layout_centerInParent="true"
+            android:singleLine="true"  />
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_marginTop="@dimen/dimen_10"
+        android:divider="@null"
+        android:id="@+id/lv_charts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></ListView>
+</LinearLayout>

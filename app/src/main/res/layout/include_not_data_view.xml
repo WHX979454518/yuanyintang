@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        style="@style/color_66_size_12"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="@dimen/dimen_15"
+        android:drawableTop="@drawable/img_message_nothing"
+        android:gravity="center_horizontal"
+        android:text="这里还什么都没有呢" />
+
+    <TextView
+        android:id="@+id/tv_to_click"
+        style="@style/color_white_size_13"
+        android:layout_marginTop="@dimen/dimen_22"
+        android:background="@drawable/oval_25dp_red_66_bg"
+        android:paddingBottom="@dimen/dimen_8"
+        android:paddingLeft="@dimen/dimen_15"
+        android:paddingRight="@dimen/dimen_15"
+        android:paddingTop="@dimen/dimen_8"
+        android:text="去__互动"
+        android:visibility="invisible" />
+
+</merge>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_5"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_15"
+    android:paddingTop="@dimen/dimen_15">
+
+    <TextView
+        style="@style/color_17_size_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/color_17_text"
+        android:textSize="@dimen/size_16"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:drawableBottom="@drawable/text_underline"
+        android:gravity="center_vertical"
+        android:text="相关池塘" />
+    <ImageView
+        android:layout_width="@dimen/dimen_45"
+        android:layout_gravity="center"
+        android:layout_height="@dimen/dimen_5"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:src="@drawable/shape_txt_underline" />
+    <!--<TextView-->
+        <!--style="@style/color_17_size_14"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/color_17_text"-->
+        <!--android:textSize="@dimen/size_16"-->
+        <!--android:layout_marginLeft="@dimen/dimen_10"-->
+        <!--android:layout_marginRight="@dimen/dimen_10"-->
+        <!--android:drawableLeft="@drawable/icon_music_pond"-->
+        <!--android:drawablePadding="@dimen/dimen_10"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:detailsactivity_item="相关池塘" />-->
+
+    <com.mxkj.yuanyintang.utils.photopicker.widget.NoScrollRecyclerView
+        android:id="@+id/pond_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+
+        android:layout_marginTop="@dimen/dimen_10"
+        android:background="@color/white"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+
+</LinearLayout>

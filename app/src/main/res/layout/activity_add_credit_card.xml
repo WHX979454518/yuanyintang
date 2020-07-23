@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_data_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentInsetLeft="0dp"
+        android:paddingTop="@dimen/dimen_24"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:padding="@dimen/dimen_15"
+            android:src="@drawable/icon_back_black" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="@dimen/dimen_220"
+            android:text="添加银行卡"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_16" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bck_vote_progress"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/bck_vote_progress"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="持卡人姓名"
+                        android:layout_width="@dimen/dimen_80"
+                        android:layout_height="@dimen/dimen_50"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:textColor="@color/delectColor"
+                        android:gravity="center_vertical" />
+
+                    <EditText
+                        android:id="@+id/et_user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_50"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:hint="持卡人姓名"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:textColor="@color/delectColor"
+                        android:textSize="@dimen/size_15" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:background="@color/white"
+                      android:layout_marginTop="@dimen/dimen_10"
+                      android:paddingRight="@dimen/dimen_20">
+                    <ImageView
+                      android:visibility="gone"
+                      android:id="@+id/img_bank"
+                      android:layout_gravity="center_vertical"
+                      android:layout_width="@dimen/dimen_25"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                      android:layout_marginRight="@dimen/dimen_10"
+                      android:layout_height="@dimen/dimen_25" />
+
+                    <TextView
+                        android:id="@+id/bankname"
+                        android:text="开户银行"
+                        android:layout_width="@dimen/dimen_80"
+                        android:layout_height="@dimen/dimen_50"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:textColor="@color/delectColor"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                      android:id="@+id/tv_choose_bank"
+                      android:layout_width="match_parent"
+                      android:layout_height="@dimen/dimen_50"
+                      android:background="@color/white"
+                      android:drawableRight="@drawable/to_next_layout"
+                      android:gravity="center_vertical"
+                      android:layout_marginLeft="@dimen/dimen_10"
+                      android:hint="选择银行"
+                      android:textColor="@color/delectColor"
+                      android:textSize="@dimen/size_15" />
+              </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:background="@color/bck_vote_progress" />
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="银行卡号"
+                        android:layout_width="@dimen/dimen_80"
+                        android:layout_height="@dimen/dimen_50"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:textColor="@color/delectColor"
+                        android:gravity="center_vertical" />
+
+                    <EditText
+                        android:id="@+id/et_card_number"
+                        android:textCursorDrawable="@drawable/text_cursor"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_50"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:hint="银行卡号"
+                        android:inputType="number"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:textColor="@color/delectColor"
+                        android:textSize="@dimen/size_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="开户城市"
+                        android:layout_width="@dimen/dimen_80"
+                        android:layout_height="@dimen/dimen_50"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:textColor="@color/delectColor"
+                        android:gravity="center_vertical" />
+
+                    <EditText
+                        android:id="@+id/et_card_city"
+                        android:textCursorDrawable="@drawable/text_cursor"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_50"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:hint="开户城市(提现小于100小鱼干选填)"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:textColor="@color/delectColor"
+                        android:textSize="@dimen/size_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="所属支行"
+                        android:layout_width="@dimen/dimen_80"
+                        android:layout_height="@dimen/dimen_50"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:textColor="@color/delectColor"
+                        android:gravity="center_vertical" />
+
+                    <EditText
+                        android:id="@+id/et_card_bank"
+                        android:textCursorDrawable="@drawable/text_cursor"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_50"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:hint="所属支行(提现小于100小鱼干选填)"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:textColor="@color/delectColor"
+                        android:textSize="@dimen/size_15" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_ensure_cash"
+                    android:layout_width="335dp"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dimen_40"
+                    android:background="@drawable/shape_button_red_incode"
+                    android:gravity="center"
+                    android:text="添加"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_15" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/dimen_10"
+                android:text="当前暂支持：中国银行、建设银行、交通银行、农业银行、工商银行的储蓄卡
+请仔细填写您的提现账号，若信息错误将导致提现失败或提现资金丢失" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

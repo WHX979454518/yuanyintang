@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:clickable="true"
+            android:id="@+id/rl_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/img_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/default_head_img"
+                android:clickable="true" />
+
+            <ImageView
+                android:id="@+id/v_rz"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_headimg_vip"
+                tools:ignore="RtlHardcoded"
+
+                />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_6"
+            android:layout_toRightOf="@+id/rl_icon"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxEms="8"
+            android:singleLine="true"
+            android:text="-"
+            android:textColor="@color/dynamic_nick_nosex"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_from_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_5"
+            android:layout_toRightOf="@+id/username"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxEms="8"
+            android:singleLine="true"
+            android:text="分享了"
+            android:textColor="@color/dynamic_nick_nosex"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:orientation="vertical"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/tv_follow"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:background="@drawable/shape_disfollowed"
+                android:gravity="center"
+                android:text="+关注"
+                android:textColor="@color/base_red"
+                android:textSize="@dimen/size_11" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

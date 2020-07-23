@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/transparent"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/gift_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_254"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_bck_first_charge"
+        android:paddingTop="@dimen/dimen_20"
+        android:paddingBottom="@dimen/dimen_20"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:src="@drawable/first_charge_gift" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:clickable="true"
+            android:src="@drawable/first_charge_head" />
+
+        <TextView
+            android:id="@+id/tv_get_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bck_first_chargeget_gift"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/first_charge_head"
+            android:text="领取礼包"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/disMiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:padding="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:src="@drawable/dismiss_dialog_newyear" />
+
+</LinearLayout>

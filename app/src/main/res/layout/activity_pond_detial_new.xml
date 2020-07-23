@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.VpSuperSwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_pond_allcomment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.VpSuperSwipeRefreshLayout>
+
+    </RelativeLayout>
+
+    <View style="@style/view_line_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/back_botom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10"
+            android:src="@drawable/back"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_replyPond"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_comment_et"
+            android:drawableRight="@drawable/icon_chitang_face"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/dimen_9"
+            android:paddingLeft="@dimen/dimen_16"
+            android:paddingRight="@dimen/dimen_16"
+            android:paddingTop="@dimen/dimen_9"
+            android:text="说点什么吧..."
+            android:textColor="#9da6a4"
+            android:textSize="@dimen/dimen_12" />
+
+        <RelativeLayout
+            android:id="@+id/comments_pond_rl"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/comments_pond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_chitang_comment"
+                android:padding="@dimen/dimen_10"
+                android:text=""
+                android:textColor="#616366"
+                android:textSize="@dimen/size_13"
+                />
+            <TextView
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:id="@+id/pond_comments_num"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginLeft="-20dp"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/comments_pond"
+                android:background="@drawable/comments_pond_bg"
+                android:layout_width="@dimen/dimen_15"
+                android:layout_height="@dimen/dimen_8"
+                android:textSize="@dimen/dimen_7"
+                android:text="" />
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/share_pond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_chitang_item_share"
+            android:padding="@dimen/dimen_10"
+            android:text=""
+            android:textColor="#616366"
+            android:textSize="@dimen/size_13"
+
+            />
+
+
+        <LinearLayout
+            android:id="@+id/ll_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:clickable="true"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_agree"
+                    android:layout_width="@dimen/dimen_15"
+                    android:layout_height="@dimen/dimen_15"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_disagree" />
+
+                <ImageView
+                    android:id="@+id/ani_img_agree"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_50"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ani_comment_agree"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_agree_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

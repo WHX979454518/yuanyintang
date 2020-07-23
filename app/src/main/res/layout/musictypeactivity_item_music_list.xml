@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llItem"
+    android:paddingTop="@dimen/dimen_10"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_gravity="center_vertical"
+            android:id="@+id/check_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:button="@drawable/selector_edit_song_check"
+            android:checked="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:padding="@dimen/dimen_2"
+            android:visibility="gone"
+            />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            app:cardCornerRadius="@dimen/dimen_5">
+
+            <ImageView
+                android:id="@+id/iv_music"
+                android:layout_width="@dimen/dimen_60"
+                android:layout_height="@dimen/dimen_60"
+                android:src="@drawable/nothing_no_txt" />
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_60"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv_music_name"
+                style="@style/color_33_size_14"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/delectColor"
+                android:text="源音塘" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_music_name_gray"
+                style="@style/color_33_size_14"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/musicplayerColor"
+                android:text="源音塘" />
+
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivIsdown"
+                    android:layout_width="@dimen/dimen_12"
+                    android:layout_height="@dimen/dimen_12"
+                    android:src="@drawable/iocn_song_sheet_down"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="@dimen/dimen_25"
+                    android:layout_height="@dimen/dimen_15"
+                    android:background="@drawable/shape_diy_tag"
+                    android:gravity="center"
+                    android:text="原创"
+                    android:textColor="@color/base_red"
+                    android:textSize="@dimen/size_8" />
+
+                <TextView
+                    android:id="@+id/tv_music_nickname"
+                    android:layout_marginTop="@dimen/dimen_1"
+                    style="@style/color_99_size_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/musicplayerColor"
+                    android:text="秦墨弦音_陈九行" />
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_music_nickname_gray"
+                    android:layout_marginTop="@dimen/dimen_1"
+                    style="@style/color_99_size_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/musicplayerColor"
+                    android:text="秦墨弦音_陈九行" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/jinrituijian_img"
+            android:layout_width="@dimen/dimen_20"
+            android:layout_height="@dimen/dimen_20"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ivMore"
+            android:src="@mipmap/icon_index_list_mv" />
+
+
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_15"
+            android:src="@drawable/icon_index_list_more" />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_more1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_15"
+            android:src="@mipmap/icon_index_list_more" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/dimen_80"
+        android:background="@color/bckdynamic_music_item"
+        />
+
+</LinearLayout>

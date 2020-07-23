@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_icon"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/nothing" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_below="@+id/img_icon"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text=""
+        android:textColor="#616665"
+        android:textSize="11sp" />
+
+    <CheckBox
+        android:id="@+id/box"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/select_follow_recommend_bck"
+        android:button="@null"
+        android:drawableLeft="@drawable/select_follow_recommend"
+        android:drawablePadding="@dimen/dimen_6"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dimen_16"
+        android:paddingRight="@dimen/dimen_16"
+        android:text="关注"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_11" />
+
+</RelativeLayout>

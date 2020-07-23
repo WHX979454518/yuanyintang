@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/dimen_15">
+
+    <LinearLayout
+        android:id="@+id/layout_pond_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_7"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_hot_pond"
+            android:layout_width="@dimen/dimen_20"
+            android:layout_height="@dimen/dimen_20"
+            android:src="@drawable/hot_pond" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_5"
+            android:gravity="center_vertical"
+            android:text="热门池塘"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_icon"
+                android:layout_width="@dimen/dimen_44"
+                android:layout_height="@dimen/dimen_44">
+
+                <ImageView
+                    android:id="@+id/img_icon"
+                    android:layout_width="@dimen/dimen_44"
+                    android:layout_height="@dimen/dimen_44"
+                    android:src="@drawable/tab_music_player" />
+
+                <ImageView
+                    android:id="@+id/img_vip"
+                    android:layout_width="@dimen/dimen_15"
+                    android:layout_height="@dimen/dimen_15"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/icon_headimg_vip" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_toRightOf="@+id/rl_icon"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_44">
+
+                <TextView
+                    android:id="@+id/nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:layout_toRightOf="@+id/rl_head"
+                    android:text="源音塘昵称"
+                    android:textColor="#1a1a1a"
+                    android:textSize="@dimen/size_14"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_time"
+                    android:layout_width="@dimen/dimen_12"
+                    android:layout_height="@dimen/dimen_12"
+                    android:layout_marginBottom="@dimen/dimen_2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_9"
+                    android:layout_toRightOf="@+id/rl_head"
+                    android:src="@drawable/icon_chitang_time" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:layout_marginTop="@dimen/dimen_9"
+                    android:layout_toRightOf="@+id/iv_time"
+                    android:gravity="bottom"
+                    android:text="1分钟前"
+                    android:textColor="#9da2a6"
+                    android:textSize="@dimen/size_12"
+
+                    />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_comment_num"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_read"
+                    android:drawablePadding="@dimen/dimen_5"
+                    android:text="0"
+                    android:textColor="@color/login_gray"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <com.mxkj.yuanyintang.widget.SearTextView
+            android:id="@+id/pond_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_18"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:text="池塘标题"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_14"
+            />
+
+        <com.mxkj.yuanyintang.mainui.pond.widget.FlowLayout
+            android:id="@+id/pond_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginTop="@dimen/dimen_15"
+            app:child_layout="@layout/child_pond_tag"
+            app:child_margin_horizontal="@dimen/dimen_10"
+            app:child_margin_vertical="@dimen/dimen_10" />
+
+        <com.mxkj.yuanyintang.widget.NoScrollGridview
+            android:id="@+id/pond_img_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="@dimen/dimen_10"
+            android:numColumns="3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llShare"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10">
+
+                <TextView
+                    android:id="@+id/tvShareNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_chitang_item_share"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center"
+                    android:text="分享"
+                    android:textColor="#616366"
+                    android:textSize="@dimen/size_13"
+
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10">
+
+                <TextView
+                    android:id="@+id/tvCommentNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_chitang_comment"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center"
+                    android:text="评论"
+                    android:textColor="#616366"
+                    android:textSize="@dimen/size_13"
+
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAgree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_agree"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        android:src="@drawable/icon_disagree" />
+
+                    <ImageView
+                        android:id="@+id/ani_agree"
+                        android:layout_width="@dimen/dimen_40"
+                        android:layout_height="@dimen/dimen_40"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        android:src="@drawable/ani_comment_agree"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tvAgreeNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="赞"
+                    android:textColor="#616366"
+                    android:textSize="@dimen/size_13"
+
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/grey_e9_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_6"></LinearLayout>
+
+</LinearLayout>

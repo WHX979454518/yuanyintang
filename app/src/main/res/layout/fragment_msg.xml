@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimen_25">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_58"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/dimen_45"
+                android:layout_height="@dimen/dimen_5"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:src="@drawable/shape_txt_underline" />
+
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:drawableBottom="@drawable/text_underline"
+                android:text="消息"
+                android:textColor="#1a1a1a"
+                android:textSize="@dimen/sizepx_50"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_10"
+
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_toolbar"
+        android:background="@color/bg_color">
+
+
+        <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_not_data_view_bg"
+            android:background="@color/bg_color"
+            android:layout_marginTop="@dimen/dimen_70"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_not_data_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_not_data_view" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_msg_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/dimen_20"
+        android:src="@drawable/more_charts_member" />
+
+</RelativeLayout>
+
+

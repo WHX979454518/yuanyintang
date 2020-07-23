@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_toMusicDetial"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/bckdynamic_music_item"
+        >
+
+        <TextView
+            android:id="@+id/tv_songName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_14"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:src="@drawable/to_next_layout"
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/about_sheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/fullplay_include_sheet"
+                android:drawablePadding="@dimen/dimen_10"
+                android:padding="@dimen/dimen_15"
+                android:text="包含这首歌的歌单"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14"
+                />
+
+            <TextView
+                android:id="@+id/next_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/fullplay_next_play"
+                android:drawablePadding="@dimen/dimen_10"
+                android:padding="@dimen/dimen_15"
+                android:text="下一曲播放"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14"
+                />
+
+            <TextView
+                android:id="@+id/add_to_sheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/fullplay_add_sheet"
+                android:drawablePadding="@dimen/dimen_10"
+                android:padding="@dimen/dimen_15"
+                android:text="添加到歌单"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14"
+                />
+
+            <TextView
+                android:id="@+id/musician"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/fullplay_musician"
+                android:drawablePadding="@dimen/dimen_10"
+                android:padding="@dimen/dimen_15"
+                android:text="音乐人"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14"
+                />
+
+
+            <TextView
+                android:id="@+id/collect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/full_play_collect"
+                android:drawablePadding="@dimen/dimen_10"
+                android:padding="@dimen/dimen_15"
+                android:text="收藏"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14"
+                />
+
+            <TextView
+                android:id="@+id/download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/fullplay_download"
+                android:drawablePadding="@dimen/dimen_10"
+                android:padding="@dimen/dimen_15"
+                android:text="下载"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14"
+                />
+
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/fullplay_comment"
+                android:drawablePadding="@dimen/dimen_10"
+                android:padding="@dimen/dimen_15"
+                android:text="评论"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14"
+                />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dimen_15"
+    android:paddingTop="@dimen/dimen_15"
+    android:id="@+id/layout_click"
+    android:background="?android:attr/selectableItemBackground"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_6"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_6"
+            android:background="@drawable/oval_3dp_blue_f9_bg_blue_c4_line"
+            android:gravity="center"
+            android:minWidth="@dimen/dimen_38"
+            android:paddingBottom="@dimen/dimen_3"
+            android:paddingTop="@dimen/dimen_3"
+            android:text="审核中"
+            android:textColor="@color/blue_c4"
+            android:textSize="@dimen/size_10" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/color_17_text"
+            android:textSize="@dimen/size_14" />
+
+    </LinearLayout>
+
+    <com.mxkj.yuanyintang.widget.MultiLineRadioGroup
+        android:id="@+id/pond_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_15"
+        app:child_layout="@layout/child_pond_tag"
+        app:child_margin_horizontal="@dimen/dimen_5" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/color_a6_size_11"
+        android:text="" />
+
+    <View
+        style="@style/view_line_h"
+        android:layout_marginTop="@dimen/dimen_10" />
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_recharge"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50">
+
+            <TextView
+                android:id="@+id/tv_dought_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="甜甜圈：0"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_centerVertical="true"
+                android:textColor="@color/base_red"
+                android:textSize="@dimen/size_14"
+                android:textStyle="bold"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dimen_10"
+                android:src="@drawable/icon_recharge"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_tips"
+                android:visibility="gone"
+                android:layout_toLeftOf="@+id/img_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dimen_10"
+                android:src="@drawable/botom_dialog_first_charge"
+
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="255dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ebebeb" />
+
+            <com.mxkj.yuanyintang.widget.DisPatchViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFFFF"
+                android:minHeight="255dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:background="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_dot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8" />
+
+    </LinearLayout>
+</RelativeLayout>

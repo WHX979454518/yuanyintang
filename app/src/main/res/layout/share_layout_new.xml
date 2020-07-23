@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_share_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="invisible"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_share_picture" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/share_incode_left" />
+
+    <LinearLayout
+        android:id="@+id/ll_head_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  "
+
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_head_share"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_60"
+            android:layout_marginLeft="@dimen/dimen_22"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:src="@drawable/nothing" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/nickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_head_share"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="@dimen/dimen_10"
+        android:paddingLeft="@dimen/dimen_24"
+        android:src="@drawable/nothing"
+        android:text="nickname"
+        android:textColor="@color/text_color"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_invite_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nickName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="@dimen/dimen_24"
+        android:src="@drawable/nothing"
+        android:text="邀请您加入源音塘"
+        android:textColor="@color/base_red"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_invite_red"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dimen_8"
+        android:paddingLeft="@dimen/dimen_24"
+        android:src="@drawable/nothing"
+        android:text="——\n
+下载注册源音塘音乐\n
+输入TA的邀请码\n
+可随机获取一份惊喜哦
+"
+        android:textColor="@color/text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dimen_30"
+        android:gravity="center"
+        android:text="扫描二维码注册，自动填写邀请码哦"
+        android:textColor="@color/text_color"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_qr"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dimen_30"
+        android:src="@drawable/his_code" />
+
+    <RelativeLayout
+        android:id="@+id/rl_qr"
+        android:layout_width="@dimen/dimen_100"
+        android:layout_height="@dimen/dimen_100"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="@dimen/dimen_60">
+
+        <ImageView
+            android:id="@+id/qr_code"
+            android:layout_width="@dimen/dimen_90"
+            android:layout_height="@dimen/dimen_90"
+            android:layout_centerInParent="true"
+            android:src="@drawable/nothing" />
+
+        <ImageView
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="@dimen/dimen_100"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bg_qr_code" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_his"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dimen_24"
+        android:paddingTop="@dimen/dimen_20"
+        android:text="TA的邀请码"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/size_15" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_below="@+id/tv_his"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dimen_22"
+        android:text="(APP注册时填写)"
+        android:textColor="@color/gray_pressed"
+        android:textSize="@dimen/size_11" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_3"
+        android:paddingLeft="@dimen/dimen_24">
+
+        <TextView
+            android:id="@+id/tv_incode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_my_invite_code"
+            android:paddingBottom="@dimen/dimen_3"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:text="ssssss"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:textSize="@dimen/size_15"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>

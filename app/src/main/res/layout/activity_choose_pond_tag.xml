@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/finish"
+                android:text="取消"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="10dp"
+                android:textColor="@color/base_red"
+                android:textSize="@dimen/size_15" />
+            <!--android:src="@drawable/login_close"-->
+
+            <TextView
+                android:id="@+id/view_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="@dimen/dimen_10"
+                android:text="歌单标签"
+                android:textColor="#1a1717"
+                android:textSize="@dimen/size_15" />
+            <TextView
+                android:layout_toRightOf="@+id/view_title"
+                android:layout_centerInParent="true"
+                android:paddingTop="@dimen/dimen_10"
+                android:id="@+id/tvSelectedNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:text="(0/0)"
+                android:textColor="@color/grey_a6_text"
+                android:textSize="@dimen/size_11" />
+
+            <TextView
+                android:id="@+id/publish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="10dp"
+                android:text="保存"
+                android:textColor="@color/base_red"
+                android:textSize="@dimen/size_15" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <include
+        android:visibility="gone"
+        layout="@layout/view_devider" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:text="热门标签"
+        android:textColor="#616666"
+        android:textSize="13sp" />
+
+
+    <com.mxkj.yuanyintang.mainui.pond.widget.FlowLayout
+        android:visibility="gone"
+        android:id="@+id/pond_tag_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_5"
+        android:layout_marginTop="@dimen/dimen_15"
+        app:child_layout="@layout/child_pond_tag" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:text="自定义标签"
+        android:textColor="#616666"
+        android:textSize="13sp" />
+
+    <com.mxkj.yuanyintang.mainui.pond.widget.FlowLayout
+        android:visibility="gone"
+        android:id="@+id/pond_tag_diy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_5"
+        android:layout_marginTop="@dimen/dimen_8"
+        app:child_layout="@layout/child_pond_tag" />
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_tag_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:background="@drawable/oval_5dp_f5_bg"
+            android:hint="输入新标签"
+            android:maxLength="8"
+            android:paddingBottom="@dimen/dimen_12"
+            android:paddingLeft="@dimen/dimen_14"
+            android:paddingRight="@dimen/dimen_14"
+            android:paddingTop="@dimen/dimen_12"
+            android:textColor="@color/color_17_text"
+            android:textColorHint="@color/grey_a6_text"
+            android:textSize="@dimen/size_12" />
+
+        <TextView
+            android:id="@+id/add_diyTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="@dimen/dimen_10"
+            android:text="添加"
+            android:textColor="@color/base_red" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dimen_9"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60">
+
+        <EditText
+            android:textColorHint="@color/musicplayerColor"
+            android:hint="  "
+            android:textSize="@dimen/size_14"
+            android:id="@+id/choosetag_ed_tv"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_60"
+            android:background="@null"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"/>
+        <GridView
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_toLeftOf="@+id/choosetag_ed_tv"
+            android:id="@+id/playlist_name_list"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/transparent"
+            android:listSelector="@color/transparent"
+            android:numColumns="6"
+            android:scrollbars="none"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:layout_below="@+id/playlist_name_list"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ebebeb">
+    </TextView>
+
+
+    <ListView
+        android:id="@+id/playlist_name"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

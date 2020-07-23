@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="121dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/musician_detial_in_all"
+        />
+
+    <TextView
+        android:id="@+id/tv_income_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_70"
+        android:background="#da136b"
+        android:padding="@dimen/dimen_4"
+        android:text="TOP12"
+        android:textColor="#321a3f"
+        android:textSize="20sp"
+        android:visibility="invisible"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tv_out_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_70"
+        android:padding="@dimen/dimen_4"
+        android:text="TOP12"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dimen_70"
+        android:textColor="#321a3f"
+        android:textSize="20sp"
+        android:visibility="invisible"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_out_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_70"
+        android:layout_marginTop="@dimen/dimen_70"
+        android:padding="@dimen/dimen_4"
+        android:text="TOP12"
+        android:layout_centerHorizontal="true"
+        android:textColor="#321a3f"
+        android:textSize="18sp"
+        android:visibility="invisible"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_income_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:padding="@dimen/dimen_4"
+        android:text="TOP12"
+        android:textColor="#f0bf29"
+        android:textSize="18sp"
+        android:visibility="invisible"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_home_banner_layer" />
+</RelativeLayout>

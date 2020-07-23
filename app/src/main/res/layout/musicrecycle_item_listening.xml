@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_46"
+    android:layout_marginBottom="@dimen/dimen_5"
+    android:paddingLeft="@dimen/dimen_10"
+    android:paddingRight="@dimen/dimen_10">
+
+    <com.mxkj.yuanyintang.utils.photopicker.widget.NoScrollRecyclerView
+        android:id="@+id/listening_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:overScrollMode="never"
+        android:nestedScrollingEnabled="false"
+
+        android:scrollbars="none" />
+
+    <TextView
+        style="@style/color_a6_size_12"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawablePadding="@dimen/dimen_10"
+        android:drawableRight="@drawable/home_index_more"
+        android:gravity="center_vertical"
+        android:text="正在收听的人数" />
+
+</RelativeLayout>

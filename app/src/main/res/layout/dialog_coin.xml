@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/gift_dialog"
+        android:layout_width="270dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_bck_white">
+
+        <ImageView
+            android:id="@+id/iv_yxy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:src="@drawable/coin_yxy" />
+
+        <ImageView
+            android:id="@+id/coin_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/coin_success" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="219dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/iv_yxy"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:background="@drawable/shape_button_red_incode"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/first_charge_head"
+            android:text="主人，今日您已成功签到~"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_index_coin"
+                android:drawablePadding="@dimen/dimen_10"
+                android:text="甜甜圈 "
+                android:textColor="#616466"
+                android:textSize="@dimen/size_14" />
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1"
+                android:textColor="@color/base_red" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll"
+            android:text="钱包又涨了，快去数一数~ "
+            android:textColor="#9da3a6"
+            android:textSize="@dimen/size_13" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/disMiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:clickable="true"
+        android:padding="@dimen/dimen_20"
+        android:src="@drawable/dismiss_dialog_newyear" />
+
+</LinearLayout>

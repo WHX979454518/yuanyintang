@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_10">
+
+    <LinearLayout
+        android:background="@color/showprompt"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_25">
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="参加活动的歌曲,请到源音塘网页网页端上传哟~"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <!--歌曲名-->
+
+            <EditText
+                android:id="@+id/et_musicName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:background="@color/white"
+                android:hint="来个音乐名吧~"
+                android:maxLength="20"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/login_gray"
+                android:textSize="@dimen/size_15" />
+
+
+            <include layout="@layout/view_devider" />
+
+            <EditText
+                android:id="@+id/et_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dimen_10"
+                android:gravity="top"
+                android:hint="简单描述一下你的音乐(*^・_・)"
+                android:maxHeight="@dimen/dimen_110"
+                android:minHeight="@dimen/dimen_50"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_10"
+                android:textColor="@color/dynamic_music_name"
+                android:textColorHint="@color/login_gray"
+                android:textSize="@dimen/size_15" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <!--添加封面-->
+                <RelativeLayout
+                    android:layout_width="90dp"
+                    android:layout_height="90dp">
+
+                    <RelativeLayout
+                        android:layout_width="77dp"
+                        android:layout_height="77dp"
+                        android:layout_centerInParent="true"
+                        android:background="#f4f5f9">
+
+
+                        <TextView
+                            android:id="@+id/tv_addPic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawablePadding="@dimen/dimen_10"
+                            android:drawableTop="@drawable/icon_add_picture"
+                            android:gravity="center"
+                            android:text="封面图"
+                            android:textColor="#9da3a6"
+                            android:textSize="@dimen/size_12" />
+
+                        <ImageView
+                            android:id="@+id/add_albumPic"
+                            android:layout_width="77dp"
+                            android:layout_height="77dp"
+                            android:src="@drawable/nothing_no_txt"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/deleImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:padding="@dimen/dimen_5"
+                        android:src="@drawable/dele_text"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+
+                <!--点击上传音乐   上传前-->
+                <RelativeLayout
+
+                    android:id="@+id/beforeUpload"
+                    android:layout_width="0dp"
+                    android:layout_height="77dp"
+                    android:layout_weight="1"
+                    android:background="#f4f5f9">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="@dimen/dimen_10"
+                        android:drawableTop="@drawable/icon_add_picture"
+                        android:gravity="center"
+                        android:text="点击上传音乐"
+                        android:textColor="#9da3a6"
+                        android:textSize="@dimen/size_12" />
+
+                </RelativeLayout>
+
+                <!--上传中-->
+                <LinearLayout
+                    android:id="@+id/llUploading"
+                    android:layout_width="0dp"
+                    android:layout_height="77dp"
+                    android:layout_weight="1"
+                    android:background="#f4f5f9"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_15"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_songName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="..."
+                            android:textColor="#2b2b2b"
+                            android:textSize="@dimen/size_13"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:text="0M  0%"
+                            android:textColor="@color/login_gray"
+                            android:textSize="@dimen/size_10" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/progress_uoload"
+                            style="@style/mProgress_uploading_music"
+                            android:layout_width="0dp"
+                            android:max="100"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:progressDrawable="@drawable/progressbar_uploading"
+                            />
+
+                        <ImageView
+                            android:id="@+id/iv_cancle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dimen_10"
+                            android:src="@drawable/icon_addmusic_delete" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:id="@+id/check_mv"
+                    style="@style/color_17_size_12"
+                    android:button="@drawable/selector_edit_song_check"
+                    android:clickable="false"
+                    android:paddingBottom="@dimen/dimen_7"
+                    android:paddingLeft="@dimen/dimen_15"
+                    android:paddingTop="@dimen/dimen_7"
+                    />
+                <TextView
+                    android:id="@+id/private_songlist"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="上传MV"
+                    android:textColor="#1a1919"
+                    android:textSize="@dimen/size_14" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/mvrl"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <!--点击上传视频   上传前-->
+                <RelativeLayout
+
+                    android:id="@+id/beforeUploadvideo"
+                    android:layout_width="0dp"
+                    android:layout_height="77dp"
+                    android:layout_weight="1"
+                    android:background="#f4f5f9">
+
+                    <TextView
+                        android:id="@+id/mv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="@dimen/dimen_10"
+                        android:drawableTop="@drawable/icon_add_picture"
+                        android:gravity="center"
+                        android:text="点击上传视频(不超过300M)"
+                        android:textColor="#9da3a6"
+                        android:textSize="@dimen/size_12" />
+
+                </RelativeLayout>
+                <!--上传中-->
+                <LinearLayout
+                    android:id="@+id/llUploadingvideo"
+                    android:layout_width="0dp"
+                    android:layout_height="77dp"
+                    android:layout_weight="1"
+                    android:background="#f4f5f9"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_15"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_videoName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="..."
+                            android:textColor="#2b2b2b"
+                            android:textSize="@dimen/size_13"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_videoprogress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:text="0M  0%"
+                            android:textColor="@color/login_gray"
+                            android:textSize="@dimen/size_10" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/progress_uoloadvideo"
+                            style="@style/mProgress_uploading_music"
+                            android:layout_width="0dp"
+                            android:max="100"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:progressDrawable="@drawable/progressbar_uploading"
+                            />
+
+                        <ImageView
+                            android:id="@+id/iv_canclevideo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dimen_10"
+                            android:src="@drawable/icon_addmusic_delete" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/view_devider_5" />
+            <!--作品类型-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_60"
+                android:paddingRight="@dimen/dimen_10">
+
+                <TextView
+                    android:id="@+id/tv_musicType_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/dimen_10"
+
+                    android:padding="@dimen/dimen_10"
+                    android:text="作品类型"
+                    android:textColor="@color/dynamic_music_name"
+                    android:textSize="@dimen/sp_14" />
+                <!--android:drawableRight="@drawable/tips_gray"-->
+
+                <RadioGroup
+                    android:id="@+id/rg_musicType"
+                    android:layout_width="135dp"
+                    android:layout_height="33dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_firstSing"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/select_upload_music_type_first"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="原创"
+                        android:textColor="@drawable/selector_tvcolor_uploadmusic_type" />
+
+                    <RadioButton
+                        android:id="@+id/rb_ReSing"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/select_upload_music_type_resing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="翻唱"
+                        android:textColor="@drawable/selector_tvcolor_uploadmusic_type" />
+
+                    <RadioButton
+                        android:id="@+id/rb_Accompaniment"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/select_upload_music_type_resing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="伴奏"
+                        android:textColor="@drawable/selector_tvcolor_uploadmusic_type" />
+
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_devider" />
+
+            <!--可否下载-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_60"
+                android:paddingLeft="@dimen/dimen_10"
+                android:paddingRight="@dimen/dimen_10">
+
+                <TextView
+                    android:id="@+id/tv_candown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:text="允许下载"
+                    android:textColor="@color/dynamic_music_name"
+                    android:textSize="@dimen/sp_14" />
+
+                <RadioGroup
+                    android:id="@+id/rg_can_down"
+                    android:layout_width="90dp"
+                    android:layout_height="33dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_can_down"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/select_upload_music_type_first"
+
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_5"
+                        android:text="是"
+                        android:textColor="@drawable/selector_tvcolor_uploadmusic_type" />
+
+                    <RadioButton
+                        android:id="@+id/rb_not_down"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/select_upload_music_type_resing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_5"
+                        android:text="否"
+                        android:textColor="@drawable/selector_tvcolor_uploadmusic_type" />
+
+
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_devider" />
+
+            <RelativeLayout
+                android:id="@+id/rl_musictype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/musicType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_60"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:text="作品分类"
+                    android:textColor="@color/dynamic_music_name"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_musicType"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_60"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:drawableRight="@drawable/to_next_layout"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:text="选择分类"
+                    android:textColor="@color/dynamic_music_name"
+                    android:textSize="@dimen/sp_14" />
+
+            </RelativeLayout>
+
+
+            <!--选择标签-->
+            <com.mxkj.yuanyintang.mainui.pond.widget.FlowLayout
+                android:id="@+id/selected_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <com.mxkj.yuanyintang.mainui.pond.widget.FlowLayout
+                android:id="@+id/pond_song"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_marginRight="@dimen/dimen_15"
+                app:child_layout="@layout/child_song_tag" />
+
+            <include layout="@layout/view_devider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_60"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:text="关联小伙伴"
+                    android:textColor="@color/dynamic_music_name"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_bind_status"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_60"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:drawableRight="@drawable/to_next_layout"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:text=""
+                    android:textColor="#9da3a6"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <include layout="@layout/view_devider" />
+
+            <LinearLayout
+                android:id="@+id/llLyric"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_60"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:text="歌词"
+                    android:textColor="@color/dynamic_music_name"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_lyric_status"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_60"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:drawableRight="@drawable/to_next_layout"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:textColor="#9da3a6"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/bt_sure"
+        android:layout_width="345dp"
+        android:layout_height="@dimen/dimen_38"
+        android:layout_below="@+id/ll_phone"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_button_red_incode"
+        android:gravity="center"
+        android:text="上传"
+        android:textColor="@color/white" />
+</LinearLayout>

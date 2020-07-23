@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/louyudialogbackground"
+    android:layout_height="@dimen/dimen_270">
+
+
+    <RelativeLayout
+        android:id="@+id/player_all_music"
+        android:background="@color/grey_e9_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_42">
+        <TextView
+            android:id="@+id/song_list"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_6"
+            android:text="歌单:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/song_name"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/song_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/player_all_music"
+        android:id="@+id/unitxinxibianji_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                    android:id="@+id/editor_song_list"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_45">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/dimen_6"
+                        android:textColor="@color/delectColor"
+                        android:text="编辑歌单"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            <LinearLayout
+                    android:id="@+id/l1"
+                    android:orientation="vertical"
+                    android:background="@color/dividerColor"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"></LinearLayout>
+
+            <RelativeLayout
+                    android:id="@+id/share_song_list"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_45">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/dimen_6"
+                        android:textColor="@color/delectColor"
+                        android:text="分享歌单"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            <LinearLayout
+                    android:id="@+id/l2"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:background="@color/dividerColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"></LinearLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                    android:id="@+id/public_song_list"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_45">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/dimen_6"
+                        android:textColor="@color/delectColor"
+                        android:text="公开歌单"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            <LinearLayout
+                    android:id="@+id/l3"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:background="@color/dividerColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"></LinearLayout>
+
+            <RelativeLayout
+                    android:id="@+id/delete_song_list"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_45">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/dimen_6"
+                        android:textColor="@color/delectColor"
+                        android:text="删除歌单"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/l4"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:background="@color/dividerColor"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/cancel"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_e9_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45">
+        <TextView
+            android:layout_centerInParent="true"
+            android:padding="@dimen/dimen_6"
+            android:text="取消"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

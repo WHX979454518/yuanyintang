@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bckdynamic_music_item"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_14"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/dimen_10"
+            android:drawableRight="@drawable/to_next_layout"
+            android:text="000"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/size_14"
+
+            />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_devider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_e_mail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邮箱"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_14"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/dimen_10"
+            android:drawableRight="@drawable/to_next_layout"
+            android:text="未绑定"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/size_14"
+
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_bind_tips"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:text="为了你的账号安全，请及时绑定手机号码"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:textSize="@dimen/size_11"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_10"
+        android:text="社交账号"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_wechat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/wechat"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/icon_click_wechat" />
+
+        <TextView
+            android:id="@+id/tv_wechat_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_toRightOf="@+id/wechat"
+            android:text="未绑定" />
+
+        <TextView
+            android:id="@+id/bind_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="绑定"
+            android:textColor="@color/base_red" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_sina"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/sina"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/icon_click_sina" />
+
+        <TextView
+            android:id="@+id/tv_sina_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_toRightOf="@+id/sina"
+            android:text="未绑定" />
+
+        <TextView
+            android:id="@+id/bind_sina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="绑定"
+            android:textColor="@color/base_red"
+
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_qq"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/qq"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/icon_click_qq" />
+
+        <TextView
+            android:id="@+id/tv_qq_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_toRightOf="@+id/qq"
+            android:text="未绑定" />
+
+        <TextView
+            android:id="@+id/bind_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="绑定"
+            android:textColor="@color/base_red"
+
+
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:paddingLeft="@dimen/dimen_15"
+        android:paddingRight="@dimen/dimen_15"
+        android:text="注：一个社交账号只能绑定一个源音塘账号，若已经绑定过，需将原账号先解绑"
+        android:textColor="#616665"
+        android:textSize="@dimen/sp_12"
+
+        />
+
+</LinearLayout>

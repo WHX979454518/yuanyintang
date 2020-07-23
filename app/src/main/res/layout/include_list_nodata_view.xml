@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--列表下拉没有数据的时候~-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textViewListNoData"
+        android:layout_width="@dimen/dimen_105"
+        android:layout_height="@dimen/dimen_15"
+        android:layout_weight="1"
+        android:textSize="@dimen/size_13"
+        android:gravity="center"
+        android:textColor="@color/login_gray"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:text="没啦(o´・ω・`)σ) " />
+</LinearLayout>

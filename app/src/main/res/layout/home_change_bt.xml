@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llCgData"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dimen_100"
+    android:layout_height="@dimen/dimen_30"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/dimen_15"
+    android:background="@drawable/shape_home_change_bcg"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="换一批"
+        android:textColor="#ff7aa4"
+        android:textSize="@dimen/size_13" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:src="@drawable/icon_index_change" />
+
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/notoing_img"
+        android:layout_centerInParent="true"
+        android:src="@drawable/nothing"
+        android:layout_width="@dimen/dimen_165"
+        android:layout_height="@dimen/dimen_81" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_play_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/img_all_playing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:src="@mipmap/icon_index_songlist_play"
+            android:text="播放全部" />
+
+        <TextView
+            android:id="@+id/tv_all_playing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:drawablePadding="@dimen/dimen_6"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_10"
+            android:text="播放全部" />
+    </LinearLayout>
+    <TextView
+        android:layout_below="@+id/ll_play_all"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_color"/>
+
+    <com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.SuperSwipeRefreshLayout
+        android:visibility="gone"
+        android:layout_below="@+id/ll_play_all"
+        android:id="@+id/superSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.SuperSwipeRefreshLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/size_10"
+        android:scrollbars="none" />
+
+    <TextView
+        android:layout_below="@+id/superSwipeRefreshLayout"
+        android:id="@+id/tv_no_data"
+        style="@style/color_66_size_12"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_100"
+        android:drawablePadding="@dimen/dimen_15"
+        android:drawableTop="@drawable/nothing"
+        android:gravity="center_horizontal"
+        android:text="这里什么都没有呢\n╮(๑•́ ₃•̀๑)╭"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

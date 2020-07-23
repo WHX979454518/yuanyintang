@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_45"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:gravity="center"
+            android:text="源音塘"
+            android:textColor="#1a1717"
+            android:textSize="@dimen/size_14" />
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:text="源音塘"
+            android:textColor="#616665"
+            android:textSize="@dimen/size_11" />
+
+        <RelativeLayout
+            android:id="@+id/rl_sina"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/dimen_70"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新浪微博"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_sina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="@dimen/dimen_10"
+                android:text=""
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/size_14"
+
+                />
+
+        </RelativeLayout>
+
+        <include layout="@layout/view_devider" />
+
+        <RelativeLayout
+            android:id="@+id/rl_e_mail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系邮箱"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="@dimen/dimen_10"
+                android:text=""
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/size_14"
+
+                />
+
+        </RelativeLayout>
+
+        <include layout="@layout/view_devider" />
+
+        <RelativeLayout
+            android:id="@+id/rl_qq"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ反馈群"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14"
+
+                />
+
+            <TextView
+                android:id="@+id/feedback_qq_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="@dimen/dimen_10"
+                android:text="543282962"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/size_14"
+
+                />
+
+        </RelativeLayout>
+
+        <include layout="@layout/view_devider" />
+
+        <RelativeLayout
+            android:id="@+id/rl_wechat"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信公众号"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14"
+
+                />
+
+            <TextView
+                android:id="@+id/wx_mp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="@dimen/dimen_10"
+                android:text="源音塘音乐"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/size_14"
+
+                />
+
+        </RelativeLayout>
+
+        <include layout="@layout/view_devider" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dimen_15"
+        android:paddingRight="@dimen/dimen_15"
+        android:text="Copyright  2016 - 2017 Cheng Du Ming Xin Technology Co,Ltd
+成都洺信科技有限责任公司 版权所有 "
+        android:textColor="#9da6a4"
+        android:textSize="@dimen/sp_12"
+
+        />
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_pond_divcolor"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        style="@style/color_66_size_12"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_100"
+        android:drawablePadding="@dimen/dimen_15"
+        android:drawableTop="@drawable/nothing"
+        android:gravity="center_horizontal"
+        android:text="TA还没有上传过池塘呢\n╮(๑•́ ₃•̀๑)╭"
+        android:visibility="gone" />
+
+</RelativeLayout>

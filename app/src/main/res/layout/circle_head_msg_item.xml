@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_to_circle_msg_center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dimen_20"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/shape_circle_msg"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/img_circle_icon"
+        android:layout_width="@dimen/dimen_28"
+        android:layout_height="@dimen/dimen_28"
+        android:src="@drawable/helper_yxy"
+        />
+
+    <TextView
+        android:id="@+id/tv_msg_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_5"
+        android:drawablePadding="@dimen/dimen_10"
+        android:drawableRight="@drawable/to_next_red"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/base_red"
+        android:textSize="@dimen/size_12"
+
+        />
+
+
+</LinearLayout>

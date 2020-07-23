@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.mxkj.yuanyintang.mainui.newapp.myself.AddMusicianTagActivity">
+
+    <com.mxkj.yuanyintang.mainui.newapp.weidget.TagEdittext
+        android:id="@+id/etTag"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:background="@color/white"
+        android:minHeight="@dimen/dimen_50" />
+
+    <include layout="@layout/view_devider" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_10"
+        android:text="身份标签"
+        android:textColor="#9da2a6"
+        android:textSize="@dimen/size_14" />
+
+    <com.mxkj.yuanyintang.widget.MultiLineRadioGroup
+        android:id="@+id/selfTag"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:child_layout="@layout/regtagitem"
+        app:child_margin_horizontal="@dimen/dimen_10"
+        app:child_margin_vertical="@dimen/dimen_10"
+        app:single_choice="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:padding="@dimen/dimen_10"
+        android:text="音乐人标签"
+        android:textColor="#9da2a6"
+        android:textSize="@dimen/size_14" />
+
+    <com.mxkj.yuanyintang.widget.MultiLineRadioGroup
+        android:id="@+id/musicianTag"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:child_layout="@layout/regtagitem"
+        app:child_margin_horizontal="@dimen/dimen_10"
+        app:child_margin_vertical="@dimen/dimen_10"
+        app:single_choice="false" />
+
+
+</LinearLayout>

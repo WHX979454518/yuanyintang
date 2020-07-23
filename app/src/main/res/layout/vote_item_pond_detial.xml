@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:paddingBottom="@dimen/dimen_5"
+        android:paddingTop="@dimen/dimen_5"
+        >
+
+        <TextView
+            android:id="@+id/tv_vote_optionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#616666"
+            android:textSize="@dimen/size_12"
+            android:maxEms="25"
+            />
+
+        <CheckBox
+            android:id="@+id/ck_vote"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/select_vote"
+            android:button="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dimen_5"
+        >
+
+        <ProgressBar
+            android:layout_weight="8"
+            android:id="@+id/progress"
+            style="@style/mProgress_vote"
+            android:progress="0"
+
+            />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_percent"
+            android:gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="0%"
+            android:textColor="#9da6a5"
+            android:textSize="11sp"
+            />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_totalVote"
+            android:gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0票"
+            android:textColor="#9da6a5"
+            android:textSize="11sp"
+            />
+
+    </LinearLayout>
+</LinearLayout>

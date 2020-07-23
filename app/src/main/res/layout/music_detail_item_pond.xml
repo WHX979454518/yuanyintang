@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_20"
+    android:paddingLeft="@dimen/dimen_10"
+    android:paddingRight="@dimen/dimen_10"
+    android:paddingTop="@dimen/dimen_20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/color_17_size_14"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="标标题标题标题标题标题标题标题标题标题标题标题标题标题标题题" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/color_a6_size_12"
+                    android:background="@drawable/oval_5dp_coloreb_bg"
+                    android:ellipsize="end"
+                    android:maxEms="8"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:paddingLeft="@dimen/dimen_9"
+                    android:paddingRight="@dimen/dimen_9"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:text="标签名字标签名字标签名字" />
+
+                <TextView
+                    style="@style/color_a6_size_12"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:background="@drawable/oval_5dp_coloreb_bg"
+                    android:ellipsize="end"
+                    android:maxEms="8"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:paddingLeft="@dimen/dimen_9"
+                    android:paddingRight="@dimen/dimen_9"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:text="标签名字标签名字标签名字" />
+
+                <TextView
+                    style="@style/color_a6_size_12"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:background="@drawable/oval_5dp_coloreb_bg"
+                    android:ellipsize="end"
+                    android:maxEms="8"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:paddingLeft="@dimen/dimen_9"
+                    android:paddingRight="@dimen/dimen_9"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:text="标签名字标签名字标签名字" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_img_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_15"
+                android:orientation="horizontal">
+
+                <com.mxkj.yuanyintang.widget.SquareRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_6"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_more_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        />
+
+                </com.mxkj.yuanyintang.widget.SquareRelativeLayout>
+
+                <com.mxkj.yuanyintang.widget.SquareRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_6"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_more_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        />
+                </com.mxkj.yuanyintang.widget.SquareRelativeLayout>
+
+                <com.mxkj.yuanyintang.widget.SquareRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_6"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_more_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_more_img_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#44333333"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="查看更多\n3张"
+                        android:textColor="@color/white_text"
+                        android:textSize="@dimen/size_12"
+                        android:visibility="gone"
+                        />
+
+                </com.mxkj.yuanyintang.widget.SquareRelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/cimg_head"
+                    android:layout_width="@dimen/dimen_25"
+                    android:layout_height="@dimen/dimen_25"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo_defaulft" />
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_6"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="名字"
+                    android:textColor="@color/grey_a6_text"
+                    android:textSize="@dimen/size_12" />
+
+                <TextView
+                    android:id="@+id/tv_comment_num"
+                    style="@style/color_a6_size_11"
+                    android:drawableLeft="@drawable/home_icon_comment_num"
+                    android:drawablePadding="@dimen/dimen_6"
+                    android:text="5789" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.mxkj.yuanyintang.widget.SquareRelativeLayout
+            android:id="@+id/layout_alone_img"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_color"
+                android:scaleType="centerCrop" />
+
+        </com.mxkj.yuanyintang.widget.SquareRelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

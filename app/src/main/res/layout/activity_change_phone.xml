@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/phonebgColor">
+
+    <RelativeLayout
+        android:id="@+id/back_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_15"
+            android:src="@drawable/icon_back_black" />
+
+        <TextView
+            style="@style/tv_msg_center_list_title"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/dimen_16"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/back_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dimen_10">
+
+        <TextView
+            android:id="@+id/show_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="修改手机号"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_18" />
+
+        <ImageView
+            android:id="@+id/show_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:src="@drawable/img_tel_update" />
+
+
+        <RelativeLayout
+            android:id="@+id/show_phone_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10">
+
+            <TextView
+                android:id="@+id/number_or_email_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:text="你当前手机号为"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_15" />
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_below="@+id/number_or_email_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:text="-"
+                    android:textColor="@color/base_red"
+                    android:textSize="@dimen/size_14"
+
+                    />
+
+                <TextView
+                    android:layout_toRightOf="@+id/tv_phone"
+                    android:id="@+id/tv_coutType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更换后可用作新手机号登录"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/size_14" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/show_email_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10">
+
+            <com.mxkj.yuanyintang.mainui.login_regist.EmailAutoCompleteTextView
+                android:hint="邮箱号"
+                android:id="@+id/et_email_code"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dimen_10"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/dimen_8"
+                android:paddingRight="@dimen/dimen_8"
+                android:textColor="@color/text_color"
+                android:textColorHint="#b6bcbf"
+                android:textSize="@dimen/size_15"
+                />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginLeft="@dimen/dimen_30"
+            android:layout_marginRight="@dimen/dimen_30"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/t"
+                android:layout_weight="1"
+                android:background="@color/phonebgColor"
+                android:drawablePadding="@dimen/dimen_10"
+                android:hint="验证码"
+                android:inputType="number"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/login_gray"
+                android:textSize="@dimen/size_14" />
+
+            <TextView
+                android:id="@+id/tv_reget"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="@color/base_red"
+                android:textSize="@dimen/size_14" />
+        </LinearLayout>
+
+        <include layout="@layout/view_devider"/>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen_30"
+            android:id="@+id/tvSure"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_37"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:background="@drawable/shape_btn_20_red"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_15"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_byEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机不在身边,"
+            android:textColor="#6a6661"
+            android:textSize="@dimen/sp_12"
+
+            />
+
+        <TextView
+            android:id="@+id/ByEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10"
+            android:text="邮箱验证"
+            android:textColor="@color/base_red"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+</RelativeLayout>

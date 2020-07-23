@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/oval_25dp_blue_2f_bg" android:state_checked="false"/>
+    <item android:drawable="@drawable/shape_un_follow_recommend" android:state_checked="true"/>
+</selector>

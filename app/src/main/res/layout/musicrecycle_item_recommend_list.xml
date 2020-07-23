@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_click"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimen_5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/circleimageview_line_color"
+            android:padding="@dimen/dimen_1"
+            app:cardCornerRadius="@dimen/dimen_10">
+
+            <com.mxkj.yuanyintang.widget.SquareRelativeLayout
+                android:id="@+id/layout_music_cover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_1">
+
+                <ImageView
+                    android:id="@+id/cimg_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/nothing" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#3000" />
+
+                <ImageView
+                    android:id="@+id/iv_player"
+                    android:layout_width="@dimen/dimen_24"
+                    android:layout_height="@dimen/dimen_24"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/icon_music_player_white_big_false"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_player_num"
+                    style="@style/color_white_size_10"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginRight="@dimen/dimen_5"
+                    android:drawableLeft="@drawable/icon_play_num"
+                    android:drawablePadding="@dimen/dimen_6"
+                    android:text="11" />
+
+            </com.mxkj.yuanyintang.widget.SquareRelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/song_sheet_right" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_music_name"
+        style="@style/color_17_size_14"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:ellipsize="end"
+        android:gravity="left|top"
+        android:maxHeight="@dimen/dimen_56"
+        android:maxLines="2"
+        android:minHeight="@dimen/dimen_42"
+        android:text="源音塘" />
+
+</LinearLayout>

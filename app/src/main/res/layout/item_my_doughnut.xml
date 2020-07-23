@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dimen_20"
+    android:paddingTop="@dimen/dimen_13">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:textSize="@dimen/size_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/pond_title"
+        android:text="" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_14"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/dimen_15">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:textSize="@dimen/size_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dynamic_nick_nosex"
+            android:layout_centerVertical="true"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:textSize="@dimen/size_18"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/pond_title"
+            android:layout_alignParentRight="true"
+            android:text="" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:textSize="@dimen/size_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/login_gray"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/dimen_14"
+        android:text="" />
+
+    <View
+        style="@style/view_line_h"
+        android:layout_marginTop="@dimen/dimen_13" />
+
+</LinearLayout>

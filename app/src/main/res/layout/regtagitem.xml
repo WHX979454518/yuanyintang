@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ckTag"
+    android:layout_width="wrap_content"
+    android:minWidth="@dimen/dimen_55"
+    android:layout_height="@dimen/dimen_25"
+    android:layout_marginLeft="@dimen/dimen_5"
+    android:layout_marginRight="@dimen/dimen_5"
+    android:background="@drawable/selector_reg_tag"
+    android:button="@null"
+    android:clickable="true"
+    android:gravity="center"
+    android:maxLines="1"
+    android:singleLine="true"
+    android:text="源音塘"
+    android:textColor="@drawable/tv_color_reg_tag"
+    android:textSize="@dimen/size_12">
+
+</CheckBox>

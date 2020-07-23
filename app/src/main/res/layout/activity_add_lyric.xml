@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mxkj.yuanyintang.mainui.myself.my_release.up_load_music.AddLyricActivity">
+
+    <EditText
+        android:id="@+id/etLyric"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="歌词呢？(*^・_・)~"
+        android:textSize="@dimen/size_14"
+        android:textColorHint="#9da2a6"
+        android:textColor="@color/text_color"
+        android:gravity="top"
+        android:padding="@dimen/dimen_10"
+        />
+
+</LinearLayout>

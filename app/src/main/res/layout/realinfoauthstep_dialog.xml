@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/louyudialogbackground"
+    android:layout_height="231dp">
+
+
+    <RelativeLayout
+        android:background="@color/grey_e9_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_35">
+        <TextView
+            android:id="@+id/real_info_ok"
+            android:layout_marginRight="@dimen/dimen_8"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="确定"
+            android:padding="@dimen/dimen_5"
+            android:textColor="@color/base_red"
+            android:textSize="@dimen/size_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="197dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dimen_81"
+                android:orientation="vertical"
+                android:background="@color/grey_e9_text"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/real_info_idcard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_35">
+                <TextView
+                    android:id="@+id/real_info_idcard_tv"
+                    android:layout_toRightOf="@+id/mt_works_img1"
+                    android:layout_centerInParent="true"
+                    android:text="身份证"
+                    android:textSize="@dimen/size_15"
+                    android:textColor="@color/diologColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/l1"
+                android:orientation="vertical"
+                android:background="@color/grey_e9_text"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/real_info_othercertificates"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_35">
+                <TextView
+                    android:id="@+id/real_info_othercertificates_tv"
+                    android:layout_centerInParent="true"
+                    android:text="其他证件"
+                    android:textSize="@dimen/size_15"
+                    android:textColor="@color/diologColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@color/grey_e9_text"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>

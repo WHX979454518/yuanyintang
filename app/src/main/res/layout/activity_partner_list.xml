@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentInsetLeft="0dp"
+        android:paddingTop="@dimen/dimen_24"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
+
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="">
+
+        <ImageView
+            android:id="@+id/finish"
+            android:src="@drawable/login_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:padding="@dimen/dimen_15"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="@dimen/dimen_220"
+            android:text="关联小伙伴"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_16" />
+
+        <TextView
+            android:id="@+id/tv_sure_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:padding="@dimen/dimen_10"
+            android:text="完成"
+            android:visibility="gone"
+            android:textColor="@color/base_red"
+            android:textSize="@dimen/size_15" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f3f3f3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dimen_8"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bck_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:cursorVisible="true"
+                android:drawableLeft="@drawable/home_icon_search"
+                android:drawablePadding="@dimen/dimen_11"
+                android:gravity="center_vertical"
+                android:hint="输入小伙伴昵称搜索"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/dimen_6"
+                android:paddingLeft="@dimen/dimen_11"
+                android:paddingRight="@dimen/dimen_11"
+                android:paddingTop="@dimen/dimen_6"
+                android:singleLine="true"
+                android:textColor="@color/color_17_text"
+                android:textColorHint="@color/grey_a6_text"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/clear_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_5"
+                android:padding="@dimen/dimen_5"
+                android:src="@drawable/dele_text" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10"
+            android:text="最近使用的小伙伴"
+            android:textColor="#616665"
+            android:textSize="@dimen/size_13"
+
+            />
+        <include layout="@layout/view_devider"/>
+
+        <LinearLayout
+            android:id="@+id/ll_dataView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <ListView
+                android:id="@+id/lv_partner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_nodataView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_no_data_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dimen_10"
+                android:drawableTop="@drawable/nothing_no_txt"
+                android:text="还没有关联过小伙伴哦"
+                android:textColor="#616665"
+                android:textSize="@dimen/size_13" />
+
+            <TextView
+                android:id="@+id/tv_invite"
+                android:layout_width="@dimen/dimen_110"
+                android:layout_height="@dimen/dimen_34"
+                android:background="@drawable/shape_button_red_incode"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:drawablePadding="@dimen/dimen_10"
+                android:gravity="center"
+                android:text="邀请注册"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_14" />
+
+            <TextView
+                android:id="@+id/tv_just_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dimen_10"
+                android:text="直接添加"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:padding="@dimen/dimen_10"
+                android:gravity="center"
+                android:textColor="#ff4c55"
+                android:textSize="@dimen/size_14" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

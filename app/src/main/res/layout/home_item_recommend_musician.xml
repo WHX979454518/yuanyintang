@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_click"
+    android:layout_width="115dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:background="@drawable/oval_5dp_transparent_bg_line"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cimg_cover"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/default_head_img"
+            app:civ_border_color="@color/bg_color"
+            app:civ_border_width="0.8dp" />
+
+        <ImageView
+            android:id="@+id/iv_is_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/cimg_cover"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_headimg_vip" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        style="@style/color_17_size_14"
+        android:layout_marginBottom="@dimen/dimen_20"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="" />
+
+    <LinearLayout
+        android:id="@+id/layout_click_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oval_bottom_5dp_coloreb_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="6dp">
+
+        <ImageView
+            android:id="@+id/iv_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_8"
+            android:paddingLeft="@dimen/dimen_6"
+            android:paddingRight="@dimen/dimen_6"
+            android:paddingTop="@dimen/dimen_8"
+            android:src="@drawable/home_icon_red_player_false" />
+
+        <TextView
+            android:id="@+id/tv_music_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="歌曲名字"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_12" />
+
+    </LinearLayout>
+
+</LinearLayout>

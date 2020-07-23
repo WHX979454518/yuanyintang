@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/textView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="40dp"
+    android:layout_height="18dp"
+    android:background="@drawable/shape_more_pic"
+    android:gravity="center"
+    android:padding="@dimen/dimen_2"
+    android:text="+1"
+    android:textColor="@color/white">
+
+</TextView>
+
+
+
+<!--    android:drawableLeft="@drawable/icon_picture_more"
+-->

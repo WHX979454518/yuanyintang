@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_click"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_20"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dimen_86"
+        android:layout_height="@dimen/dimen_86">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_headimg"
+            android:layout_width="@dimen/dimen_86"
+            android:layout_height="@dimen/dimen_86"
+            android:src="@drawable/default_head_img" />
+
+        <ImageView
+            android:id="@+id/iv_is_vip"
+            android:visibility="invisible"
+            android:layout_width="@dimen/dimen_20"
+            android:layout_height="@dimen/dimen_20"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_headimg_vip_small"
+
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:lines="1"
+        android:ellipsize="end"
+        android:maxEms="7"
+        android:text=" "
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/size_13"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_fans_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:ellipsize="end"
+        android:text=" "
+        android:textColor="#9da2a6"
+        android:textSize="@dimen/size_12"
+
+        />
+
+    <CheckBox
+        android:id="@+id/ck_follow"
+        android:layout_width="@dimen/dimen_60"
+        android:layout_height="@dimen/dimen_25"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:background="@drawable/select_home_follow"
+        android:button="@null"
+
+        android:checked="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:text="+关注"
+        android:textColor="@drawable/home_follow_tv_color"
+        android:textSize="@dimen/size_12"
+
+        />
+
+
+</LinearLayout>

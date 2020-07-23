@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/dimen_4"
+    android:paddingTop="@dimen/dimen_4"
+    tools:ignore="RtlHardcoded">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:text="01-01 00:00"
+        android:textColor="@color/disagreed"
+        android:textSize="@dimen/size_11" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_agree"
+                    android:layout_width="@dimen/dimen_15"
+                    android:layout_height="@dimen/dimen_15"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/disagree" />
+
+                <ImageView
+                    android:id="@+id/ani_img_agree"
+                    android:layout_width="@dimen/dimen_50"
+                    android:layout_height="@dimen/dimen_50"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ani_comment_agree"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_agree_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="0"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:textColor="@color/dynamic_agree_num"
+                android:textSize="11sp"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dimen_6"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/dimen_6">
+
+            <ImageView
+                android:id="@+id/img_comment"
+                android:layout_width="14dp"
+                android:layout_height="12dp"
+                android:clickable="false"
+                android:src="@drawable/comment" />
+
+            <TextView
+                android:id="@+id/tv_comment_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="false"
+                android:gravity="left"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:singleLine="true"
+                android:text="0"
+
+                android:textColor="@color/dynamic_agree_num"
+                android:textSize="11sp"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
+

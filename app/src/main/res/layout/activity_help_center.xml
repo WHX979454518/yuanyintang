@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    tools:context=".mainui.myself.helpcenter.HelpCenterActivity">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:paddingTop="@dimen/dimen_25"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_230"
+        android:background="@drawable/bg_help">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_call"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:layout_toLeftOf="@+id/iv_yxy"
+            android:background="@drawable/bg_help_talk_bck"
+            android:lineSpacingExtra="@dimen/dimen_5"
+            android:padding="@dimen/dimen_10"
+            android:text="您好，我是源小伊，请问您需要\n什么帮助吗？"
+            android:textColor="@color/white"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_call"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_50"
+            android:layout_toLeftOf="@+id/iv_yxy"
+            android:background="@drawable/help_center_call"
+            android:drawableLeft="@drawable/help_call"
+            android:drawablePadding="@dimen/dimen_10"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimen_20"
+            android:paddingRight="@dimen/dimen_20"
+            android:text="立即咨询"
+            android:textColor="#1a1717"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_yxy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/helper_yxy" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/back_title"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_15"
+            android:src="@drawable/icon_back_black" />
+
+        <TextView
+            style="@style/tv_msg_center_list_title"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/dimen_16"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:text="帮助中心" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:orientation="vertical"
+        android:layout_below="@+id/back_title"
+        android:background="#f3f3f3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"></LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.mxkj.yuanyintang.widget.MarqueTextView
+            android:id="@+id/tv_system_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text=" "
+            android:textColor="#fe8535"
+            android:drawableLeft="@drawable/icon_system_msg"
+            android:drawablePadding="@dimen/dimen_10"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <!--hot question-->
+    <RelativeLayout
+        android:id="@+id/ll2"
+        android:layout_below="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/search_more"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_32"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:background="@drawable/help_search_bck"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:hint="有问题，点我搜搜看"
+                android:paddingLeft="@dimen/dimen_10"
+                android:singleLine="true"
+
+                android:textSize="@dimen/size_12" />
+            <!--android:textCursorDrawable="@drawable/text_cursor"-->
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_hot_question"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40"
+            android:drawableLeft="@drawable/help_hot_question"
+            android:drawablePadding="@dimen/dimen_10"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_10"
+            android:text="热门问题"
+            android:textColor="@color/text_color"
+
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:drawablePadding="@dimen/dimen_10"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_10"
+            android:text="搜索更多"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/size_13"
+
+            />
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/ll3"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:layout_below="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+
+    <ScrollView
+        android:id="@+id/unitxinxibianji_scrollView"
+        android:layout_below="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--问题分类列表-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_45">
+                <TextView
+                    android:text="问题分类"
+                    android:layout_marginLeft="@dimen/dimen_15"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <GridView
+                android:id="@+id/problem_list"
+                android:background="@color/white"
+                android:columnWidth="@dimen/dimen_45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/transparent"
+                android:gravity="center"
+                android:listSelector="@color/transparent"
+                android:numColumns="2"
+                android:horizontalSpacing="5dip"
+                android:verticalSpacing="5dip"
+                android:scrollbars="none"/>
+
+            <!--热门问题和搜索结果-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_45">
+                <TextView
+                    android:text="常见问题"
+                    android:layout_marginLeft="@dimen/dimen_15"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <ListView
+                android:id="@+id/lv_help_list"
+                android:layout_below="@+id/unitxinxibianji_scrollView"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_to_advice"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/base_red"
+        android:textSize="@dimen/size_13"
+        android:text="吐槽、意见反馈请点击这里"
+        android:gravity="center"
+        android:padding="@dimen/dimen_15"
+
+        />
+
+</RelativeLayout>

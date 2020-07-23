@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dimen_55"
+        android:layout_marginRight="@dimen/dimen_55"
+        android:background="@drawable/shape_button"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_55"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:gravity="left|center"
+            android:text="切换储存位置"
+            android:textColor="@color/color_14_text"
+            android:textSize="@dimen/size_15" />
+
+        <RelativeLayout
+            android:id="@+id/rl_in_dir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:clickable="true"
+            android:padding="@dimen/dimen_10"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_private_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="内部存储"
+                    android:textColor="@color/dynamic_nick_nosex"
+                    android:textSize="@dimen/size_13"
+
+                    />
+
+                <TextView
+                    android:id="@+id/odd_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:text="-"
+                    android:textColor="@color/login_gray"
+                    android:textSize="@dimen/size_11"
+
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_in_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_private_space"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:singleLine="true"
+                android:text="/storage"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/size_11" />
+
+            <CheckBox
+                android:id="@+id/cb_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:button="@null"
+                android:clickable="false"
+                android:drawableLeft="@drawable/selector_edit_song_check"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </RelativeLayout>
+
+        <include layout="@layout/view_devider" />
+
+        <RelativeLayout
+            android:id="@+id/rl_ex_dir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="@dimen/dimen_10"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_external_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="外部存储"
+                    android:textColor="@color/dynamic_nick_nosex"
+                    android:textSize="@dimen/size_13"
+
+                    />
+
+                <TextView
+                    android:id="@+id/odd_ex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:text="-"
+                    android:textColor="@color/login_gray"
+                    android:textSize="@dimen/size_11"
+
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_ex_path"
+                android:layout_width="match_parent"
+                android:paddingRight="@dimen/dimen_20"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_external_space"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:text="/"
+                android:maxLines="2"
+                android:textColor="@color/login_gray"
+                android:textSize="@dimen/size_11" />
+
+            <CheckBox
+                android:id="@+id/cb_ex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:button="@null"
+                android:clickable="false"
+                android:drawableLeft="@drawable/selector_edit_song_check"
+                android:focusable="true"
+                android:focusableInTouchMode="false" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dimen_10"
+                android:text="确定"
+                android:textColor="@color/base_red"
+
+
+                />
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_sure"
+                android:padding="@dimen/dimen_10"
+                android:text="取消"
+                android:textColor="@color/base_red" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

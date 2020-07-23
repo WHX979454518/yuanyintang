@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="10dp"
+                android:src="@drawable/login_close" />
+
+            <TextView
+                android:id="@+id/view_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="选择标签"
+                android:textColor="#1a1717"
+                android:textSize="@dimen/size_15" />
+
+            <TextView
+                android:id="@+id/publish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="10dp"
+                android:text="确定"
+                android:textColor="@color/base_red"
+                android:textSize="@dimen/size_15" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvSelectedNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_title"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:text="(0/0)" />
+    </LinearLayout>
+
+    <include layout="@layout/view_devider" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:text="热门标签"
+        android:textColor="#616666"
+        android:textSize="13sp" />
+
+
+    <com.mxkj.yuanyintang.mainui.pond.widget.FlowLayout
+        android:id="@+id/pond_tag_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        app:child_layout="@layout/child_pond_tag"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:text="自定义标签"
+        android:textColor="#616666"
+        android:textSize="13sp" />
+
+    <com.mxkj.yuanyintang.mainui.pond.widget.FlowLayout
+        android:id="@+id/pond_tag_diy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_15"
+        app:child_layout="@layout/child_pond_tag" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_tag_name"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:textCursorDrawable="@drawable/text_cursor"
+            android:background="@drawable/oval_5dp_f5_bg" />
+
+        <TextView
+            android:id="@+id/add_diyTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:clickable="true"
+            android:text="添加"
+            android:textColor="@color/base_red" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_text"
+    android:orientation="vertical"
+    android:paddingBottom="15dp">
+
+    <LinearLayout
+        android:id="@+id/layout_click_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dimen_15"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_15">
+
+        <ImageView
+            android:id="@+id/iv_label_img"
+            android:layout_width="@dimen/dimen_20"
+            android:layout_height="@dimen/dimen_20"
+            android:src="@drawable/icon_index_recommend_music" />
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_8"
+            android:drawablePadding="@dimen/dimen_8"
+            android:drawableRight="@drawable/home_index_more"
+            android:gravity="center_vertical"
+            android:text="推荐歌单"
+            android:textColor="@color/color_17_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <com.mxkj.yuanyintang.mainui.home.utils.BetterRecyclerView
+        android:id="@+id/recommend_musician_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_6"
+        android:layout_marginRight="@dimen/dimen_6"
+
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+</LinearLayout>

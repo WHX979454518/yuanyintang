@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_108">
+
+    <LinearLayout
+        android:id="@+id/messagetitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_55"
+                android:layout_height="@dimen/dimen_55"
+                android:src="@drawable/icon_message_pinglun" />
+            <TextView
+                android:id="@+id/tv_msg_count_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dimen_10"
+                android:text="评论"
+                android:textColor="#1a1a1a"
+                android:textSize="@dimen/size_13" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_msg_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-15dp"
+            android:layout_marginBottom="@dimen/dimen_2"
+            android:background="@drawable/oval_25dp_red_66_bg"
+            android:paddingBottom="@dimen/dimen_2"
+            android:paddingLeft="@dimen/dimen_6"
+            android:paddingRight="@dimen/dimen_6"
+            android:paddingTop="@dimen/dimen_2"
+            android:text="99+"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_11"
+            android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:id="@+id/llGift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_30"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_55"
+                android:layout_height="@dimen/dimen_55"
+                android:src="@drawable/icon_message_gift" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dimen_10"
+                android:text="礼物"
+                android:textColor="#1a1a1a"
+                android:textSize="@dimen/size_13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSysMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_30"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_55"
+                android:layout_height="@dimen/dimen_55"
+                android:src="@drawable/icon_sysmsg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dimen_10"
+                android:text="系统消息"
+                android:textColor="#1a1a1a"
+                android:textSize="@dimen/size_13" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_msg_count_sysmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-15dp"
+            android:layout_marginBottom="@dimen/dimen_2"
+            android:background="@drawable/oval_25dp_red_66_bg"
+            android:paddingBottom="@dimen/dimen_2"
+            android:paddingLeft="@dimen/dimen_6"
+            android:paddingRight="@dimen/dimen_6"
+            android:paddingTop="@dimen/dimen_2"
+            android:text="99+"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_11"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/messagetitle"
+        style="@style/view_line" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:text="选择其他支付方式充值  ￥0元"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_close"
+            android:padding="@dimen/dimen_15"
+            />
+
+    </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:background="#ebebeb" />
+
+        <TextView
+            android:id="@+id/tv_alipay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_20"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_14"
+            android:drawableRight="@drawable/to_next_layout"
+            android:drawableLeft="@drawable/ali_pay"
+            android:drawablePadding="@dimen/dimen_10"
+            android:text="支付宝支付" />
+        <TextView
+            android:id="@+id/tv_wx_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_20"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_14"
+            android:drawableLeft="@drawable/wx_pay"
+            android:drawablePadding="@dimen/dimen_10"
+            android:drawableRight="@drawable/to_next_layout"
+            android:text="微信支付" />
+
+        <TextView
+            android:id="@+id/tv_qq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/to_next_layout"
+            android:padding="@dimen/dimen_20"
+            android:text="QQ支付"
+            android:drawableLeft="@drawable/qq_pay"
+            android:drawablePadding="@dimen/dimen_10"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_14" />
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

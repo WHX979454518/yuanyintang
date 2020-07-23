@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_6"
+    android:paddingLeft="@dimen/dimen_10"
+    android:paddingRight="@dimen/dimen_10"
+    android:paddingTop="@dimen/dimen_15">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_music_synopsis"
+        android:drawablePadding="@dimen/dimen_10"
+        android:text="音乐简介"
+        android:textColor="@color/color_17_text"
+        android:textSize="@dimen/size_16"
+        android:visibility="gone" />
+
+    <com.mxkj.yuanyintang.widget.ExpandableTextView
+        android:id="@+id/expand_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_12"
+        app:animDuration="200"
+        app:maxCollapsedLines="10">
+
+        <TextView
+            android:id="@id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TA还没有简介哦~"
+            android:lineSpacingMultiplier="1.4"
+            android:textColor="@color/color_66_text"
+            android:textSize="@dimen/size_14" />
+
+        <ImageButton
+            android:id="@id/expand_collapse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:paddingBottom="@dimen/dimen_6"
+            android:paddingTop="@dimen/dimen_14" />
+
+    </com.mxkj.yuanyintang.widget.ExpandableTextView>
+
+</LinearLayout>

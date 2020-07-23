@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_main_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bck_add_partner"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_30"
+        android:text="源音塘"
+        android:gravity="center_vertical"
+        android:textColor="#ff6699"
+        android:textSize="@dimen/size_13" />
+
+    <TextView
+        android:id="@+id/tv_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        />
+    <ImageView
+        android:id="@+id/iv_del_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/login_close"
+        android:padding="@dimen/dimen_10"
+        />
+
+
+</LinearLayout>

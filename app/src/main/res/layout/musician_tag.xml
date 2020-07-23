@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ckTag"
+    android:layout_width="wrap_content"
+    android:layout_height="26dp"
+    android:paddingLeft="@dimen/dimen_10"
+    android:paddingRight="@dimen/dimen_10"
+    android:layout_marginLeft="@dimen/dimen_5"
+    android:layout_marginRight="@dimen/dimen_5"
+    android:background="@drawable/shape_musician_tag"
+    android:button="@null"
+    android:clickable="false"
+    android:gravity="center"
+    android:maxLines="1"
+    android:singleLine="true"
+    android:text="源音塘"
+    android:textColor="@color/delectColor"
+    android:textSize="@dimen/size_13"/>

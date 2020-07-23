@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mySongList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:drawableLeft="@drawable/icon_mine_new"
+        android:drawablePadding="@dimen/dimen_10"
+        android:drawableRight="@drawable/to_next_layout"
+        android:gravity="center_vertical"
+        android:text="创建的歌单"
+        android:textColor="#1a1a1a"
+        android:textSize="@dimen/size_14"
+
+        />
+
+    <TextView
+        android:id="@+id/myLikeSongList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:drawableLeft="@drawable/icon_mine_colloct"
+        android:drawablePadding="@dimen/dimen_10"
+        android:drawableRight="@drawable/to_next_layout"
+        android:gravity="center_vertical"
+        android:text="收藏的歌单"
+        android:textColor="#1a1a1a"
+        android:textSize="@dimen/size_14"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:textColor="#9da2a6" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:background="#ebebeb" />
+
+    <RelativeLayout
+        android:id="@+id/layout_doughnut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tianquanquan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:drawableLeft="@drawable/icon_mine_tian"
+            android:drawablePadding="@dimen/dimen_10"
+            android:drawableRight="@drawable/to_next_layout"
+            android:gravity="center_vertical"
+            android:text="甜甜圈"
+            android:textColor="#1a1a1a"
+            android:textSize="@dimen/size_14"
+
+            />
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/ll_charge"
+            android:background="@drawable/img_limited_time"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_100"
+            android:layout_width="150px"
+            android:layout_height="60px">
+            <TextView
+                android:id="@+id/xianshi"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/dimen_11"
+                android:textColor="@color/white"
+                android:text="限时优惠"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.mxkj.yuanyintang.mainui.myself.doughnut.CountDownView
+                android:layout_below="@+id/xianshi"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:id="@+id/count_down"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_doughnut_num"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_45"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_marginRight="@dimen/dimen_45"
+            android:drawablePadding="@dimen/dimen_10"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="#9da2a6"
+            android:textSize="@dimen/size_14"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/myFish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:drawableLeft="@drawable/icon_mine_yugan"
+            android:drawablePadding="@dimen/dimen_10"
+            android:drawableRight="@drawable/to_next_layout"
+            android:gravity="center_vertical"
+            android:text="小鱼干"
+
+            android:textColor="#1a1a1a"
+            android:textSize="@dimen/size_14"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_fish_num"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_45"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_marginRight="@dimen/dimen_45"
+            android:drawablePadding="@dimen/dimen_10"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="#9da2a6"
+            android:textSize="@dimen/size_14"
+
+            />
+
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:background="#ebebeb" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:textColor="#9da2a6" />
+
+    <TextView
+        android:id="@+id/toAuth"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:drawableLeft="@drawable/icon_mine_shiming"
+        android:drawablePadding="@dimen/dimen_10"
+        android:drawableRight="@drawable/to_next_layout"
+        android:gravity="center_vertical"
+        android:text="实名认证"
+        android:textColor="#1a1a1a"
+        android:textSize="@dimen/size_14"
+
+        />
+
+    <TextView
+        android:id="@+id/toRelease"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:drawableLeft="@drawable/icon_mine_shangchuan"
+        android:drawablePadding="@dimen/dimen_10"
+        android:drawableRight="@drawable/to_next_layout"
+        android:gravity="center_vertical"
+        android:text="上传作品"
+        android:textColor="#1a1a1a"
+        android:textSize="@dimen/size_14"
+
+        />
+
+    <TextView
+        android:id="@+id/helpCenter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:drawableLeft="@drawable/icon_mine_help"
+        android:drawablePadding="@dimen/dimen_10"
+        android:drawableRight="@drawable/to_next_layout"
+        android:gravity="center_vertical"
+        android:text="帮助中心"
+        android:textColor="#1a1a1a"
+        android:textSize="@dimen/size_14"
+
+        />
+
+    <TextView
+        android:id="@+id/feedBack"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:drawableLeft="@drawable/icon_mine_yijian"
+        android:drawablePadding="@dimen/dimen_10"
+        android:drawableRight="@drawable/to_next_layout"
+        android:gravity="center_vertical"
+        android:text="意见反馈"
+        android:textColor="#1a1a1a"
+        android:textSize="@dimen/size_14"
+
+        />
+
+
+</LinearLayout>

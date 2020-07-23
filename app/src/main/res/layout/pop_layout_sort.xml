@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_45"
+            android:background="@drawable/bg_choice_box"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_default"
+                style="@style/color_17_size_14"
+                android:paddingBottom="@dimen/dimen_12"
+                android:paddingLeft="@dimen/dimen_8"
+                android:paddingRight="@dimen/dimen_8"
+                android:paddingTop="@dimen/dimen_12"
+                android:text="默认排序" />
+
+            <View style="@style/view_line_h" />
+
+            <TextView
+                android:id="@+id/tv_play_at_most"
+                style="@style/color_17_size_14"
+                android:paddingBottom="@dimen/dimen_12"
+                android:paddingLeft="@dimen/dimen_8"
+                android:paddingRight="@dimen/dimen_8"
+                android:paddingTop="@dimen/dimen_12"
+                android:text="最多播放" />
+
+            <View style="@style/view_line_h" />
+
+            <TextView
+                android:id="@+id/tv_newest"
+                style="@style/color_17_size_14"
+                android:paddingBottom="@dimen/dimen_12"
+                android:paddingLeft="@dimen/dimen_8"
+                android:paddingRight="@dimen/dimen_8"
+                android:paddingTop="@dimen/dimen_12"
+                android:text="最新发布" />
+
+            <View style="@style/view_line_h" />
+
+            <TextView
+                android:id="@+id/tv_at_most_comment"
+                style="@style/color_17_size_14"
+                android:paddingBottom="@dimen/dimen_12"
+                android:paddingLeft="@dimen/dimen_8"
+                android:paddingRight="@dimen/dimen_8"
+                android:paddingTop="@dimen/dimen_12"
+                android:text="最多评论" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

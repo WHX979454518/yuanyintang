@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/ll_upload_success"
+    android:layout_marginTop="@dimen/dimen_10"
+    android:visibility="gone"
+
+
+    >
+
+    <TextView
+        android:id="@+id/tv_success_musicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上传完成"
+        android:textColor="@color/base_red"
+        android:textSize="@dimen/size_11"
+        />
+
+    <TextView
+        android:id="@+id/tv_file_success_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxEms="16"
+        android:text="0M"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:textColor="@color/color_66_text"
+        android:textSize="@dimen/size_11"
+        />
+
+    <ImageView
+        android:id="@+id/img_reUpload_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/click_reupload"
+        android:padding="@dimen/dimen_10"
+        />
+</LinearLayout>

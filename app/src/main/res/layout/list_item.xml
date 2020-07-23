@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.ccflying.MultiLineRadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:child_layout="@layout/child"
+    app:child_margin_horizontal="6.0dip"
+    app:child_margin_vertical="2.0dip"
+    app:single_choice="true" >
+
+</org.ccflying.MultiLineRadioGroup>

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_real_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.mxkj.yuanyintang.mainui.myself.celebrity.RealInfoAuthStep1">
+
+    <include layout="@layout/real_info_title_layout" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:context="com.mxkj.yuanyintang.mainui.myself.celebrity.RealInfoAuthStep1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_15"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="@dimen/dimen_50">
+                <TextView
+                    android:text="真实姓名"
+                    android:textSize="@dimen/size_15"
+                    android:textColor="@color/color_17_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/et_realName"
+                    android:textColorHint="@color/codeColor"
+                    android:hint="输入真实姓名"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:background="@color/white"
+                    android:textSize="@dimen/size_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:background="@color/toolbar_botom_devicer"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"></LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/certificate_type_rl"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_15"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50">
+                <TextView
+                    android:id="@+id/certificate_type"
+                    android:text="证件类型"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/size_15"
+                    android:textColor="@color/color_17_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/certificate_type_ed"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/certificate_type"
+                    android:textColor="@color/codeColor"
+                    android:text="身份证"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:background="@color/white"
+                    android:textSize="@dimen/size_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_arrow_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <LinearLayout
+                android:background="@color/toolbar_botom_devicer"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"></LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_15"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="@dimen/dimen_50">
+                <TextView
+                    android:text="证件号码"
+                    android:textSize="@dimen/size_15"
+                    android:textColor="@color/color_17_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/et_IdCard"
+                    android:textColorHint="@color/codeColor"
+                    android:hint="输入有效证件号"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:background="@color/white"
+                    android:textSize="@dimen/size_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:background="@color/toolbar_botom_devicer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_10"></LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/type_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_15"
+                        android:layout_marginRight="@dimen/dimen_15"
+                        android:layout_marginTop="@dimen/dimen_15"
+                        android:gravity="center_vertical"
+                        android:text="上传证件照"
+                        android:textColor="#1a1717"
+                        android:textSize="@dimen/size_15" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_15"
+                        android:layout_marginRight="@dimen/dimen_15"
+                        android:layout_marginTop="@dimen/dimen_16"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/ll_idCard1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img_cardEg1"
+                                android:layout_width="165dp"
+                                android:layout_height="108dp"
+                                android:src="@mipmap/card1" />
+                            <ImageView
+                                android:id="@+id/im_example1"
+                                android:layout_width="@dimen/dimen_40"
+                                android:layout_height="@dimen/dimen_40"
+                                android:src="@mipmap/img_eg" />
+                            <LinearLayout
+                                android:id="@+id/img_mask1"
+                                android:orientation="vertical"
+                                android:alpha="0.25"
+                                android:background="@color/black"
+                                android:layout_width="@dimen/dimen_165"
+                                android:layout_height="@dimen/dimen_108"></LinearLayout>
+                            <TextView
+                                android:layout_below="@+id/img_cardEg1"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/cardeg1Text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_15"
+                                android:text="本人手持证件照"
+                                android:textColor="#616665"
+                                android:textSize="@dimen/size_14" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/ll_otherCard1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/size_17"
+                            android:layout_marginLeft="@dimen/size_17"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img_cardEg2"
+                                android:layout_width="165dp"
+                                android:layout_height="108dp"
+                                android:src="@drawable/card2" />
+                            <ImageView
+                                android:id="@+id/im_example2"
+                                android:layout_width="@dimen/dimen_40"
+                                android:layout_height="@dimen/dimen_40"
+                                android:src="@mipmap/img_eg" />
+                            <LinearLayout
+                                android:id="@+id/img_mask2"
+                                android:orientation="vertical"
+                                android:alpha="0.25"
+                                android:background="@color/black"
+                                android:layout_width="@dimen/dimen_165"
+                                android:layout_height="@dimen/dimen_108"></LinearLayout>
+                            <TextView
+                                android:layout_below="@+id/img_cardEg2"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/cardeg2Text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_15"
+                                android:text="证件照正面"
+                                android:textColor="#616665"
+                                android:textSize="@dimen/size_14" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:background="@color/white"
+                        android:lineSpacingMultiplier="1.6"
+                        android:paddingBottom="@dimen/dimen_20"
+                        android:paddingLeft="@dimen/dimen_15"
+                        android:paddingRight="@dimen/dimen_15"
+                        android:paddingTop="@dimen/dimen_20"
+                        android:text="●  按照示例提交证件原件或扫描件照片\n●  证件照要四角对齐、确保文字清晰、无反光无遮挡\n●  手持证件照要免冠、五官可见、完整露出耳朵、手臂"
+                        android:textColor="@color/color_66_text"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/tv_confirm_oneBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_button_red"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:text="提交"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size_14"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_15"
+                        android:layout_marginRight="@dimen/dimen_15"
+                        android:layout_marginTop="@dimen/dimen_15"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="#1a1717"
+                        android:textSize="@dimen/size_15" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/dimen_30"
+                            android:layout_marginTop="@dimen/dimen_20"
+                            android:layout_marginLeft="@dimen/dimen_15">
+
+                            <LinearLayout
+                                android:id="@+id/ll_card1"
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dimen_5"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/img_card1"
+                                    android:layout_width="@dimen/dimen_28"
+                                    android:layout_height="@dimen/dimen_20"
+                                    android:layout_marginTop="@dimen/dimen_15"
+                                    android:background="@mipmap/icon_shiming_updown"
+                                    android:scaleType="centerCrop" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dimen_10"
+                                    android:text=""
+                                    android:textColor="#616665"
+                                    android:textSize="@dimen/size_12" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/dimen_30"
+                            android:layout_marginTop="@dimen/dimen_20">
+                            <LinearLayout
+                                android:id="@+id/ll_card2"
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_5"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/img_card2"
+                                    android:layout_width="@dimen/dimen_28"
+                                    android:layout_height="@dimen/dimen_20"
+                                    android:layout_marginTop="@dimen/dimen_15"
+                                    android:background="@mipmap/icon_shiming_updown"
+                                    android:scaleType="centerCrop" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dimen_10"
+                                    android:text=""
+                                    android:textColor="#616665"
+                                    android:textSize="@dimen/size_12" />
+
+
+                            </LinearLayout>
+                            <ImageView
+                                android:layout_width="@dimen/dimen_28"
+                                android:layout_height="@dimen/dimen_108"
+                                android:layout_marginTop="@dimen/dimen_15"
+                                android:scaleType="centerCrop" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/scroll_view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:context="com.mxkj.yuanyintang.mainui.myself.celebrity.RealInfoAuthStep1">
+
+            <com.mxkj.yuanyintang.widget.MarqueTextView
+                android:id="@+id/mar_tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_32"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#fe8535"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_15">
+
+                <TextView
+                    android:id="@+id/ll_idCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_15"
+                    android:layout_weight="1"
+                    android:background="@color/bg_color"
+                    android:drawableBottom="@drawable/id_card"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/dimen_55"
+                    android:paddingTop="@dimen/dimen_55"
+                    android:text="身份证认证"
+                    android:textColor="@color/color_17_text"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/ll_otherCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/bg_color"
+                    android:drawableBottom="@drawable/other_card"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/dimen_55"
+                    android:paddingTop="@dimen/dimen_55"
+                    android:text="其他证件认证"
+                    android:textColor="@color/color_17_text"
+                    android:textSize="@dimen/size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_degree"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bckdynamic_music_item"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_10">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_s"
+                        style="@style/tv_blue_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="当前审核队列" />
+
+                    <TextView
+                        android:id="@+id/tv_review_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_toRightOf="@+id/tv_s"
+                        android:background="@drawable/shape_review_status"
+                        android:paddingBottom="@dimen/dimen_5"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_10"
+                        android:paddingTop="@dimen/dimen_5"
+                        android:text="畅通"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_review_time"
+                        style="@style/tv_blue_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="预计审核时间  小于1小时" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_tips_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="如果你害怕告白，就把爱意存进歌声里"
+                    android:textColor="@color/dynamic_nick_nosex"
+                    android:textSize="@dimen/size_13" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:drawableLeft="@drawable/notice"
+                android:drawablePadding="@dimen/dimen_5"
+                android:text="上传照片时候注意"
+                android:textColor="#1a1717"
+                android:textSize="@dimen/size_13" />
+
+            <WebView
+                android:id="@+id/wb_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_15"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:textColor="#616665"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_authIng"
+        android:layout_marginTop="99dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:src="@drawable/nothing" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_50"
+            android:layout_marginRight="@dimen/dimen_50"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="已提交"
+            android:textColor="#1a1717"
+            android:textSize="@dimen/size_15" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:gravity="center"
+            android:text="我们将在3个工作日内审核完成哟"
+            android:textColor="#616665"
+            android:textSize="@dimen/size_13" />
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_button_red"
+            android:clickable="true"
+            android:padding="@dimen/size_10"
+            android:text="朕知道了"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_15" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

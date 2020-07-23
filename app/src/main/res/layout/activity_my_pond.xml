@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_42"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_15"
+        android:paddingRight="@dimen/dimen_15">
+
+        <TextView
+            android:id="@+id/tv_label_title"
+            style="@style/color_17_size_14"
+            android:layout_marginRight="@dimen/dimen_6"
+            android:text="全部" />
+
+        <TextView
+            android:id="@+id/tv_label_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/icon_arrow_bottom"
+            android:gravity="center_vertical"
+            android:text="（共0条）"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_13" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_h" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.SuperSwipeRefreshLayout
+            android:id="@+id/superSwipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="none" />
+
+        </com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.SuperSwipeRefreshLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/layout_popupmenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+
+            >
+
+            <View
+                android:id="@+id/view_close"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#55444444" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/head_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

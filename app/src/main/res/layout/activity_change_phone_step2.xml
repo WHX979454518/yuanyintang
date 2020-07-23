@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:paddingTop="@dimen/dimen_25"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/llmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/show_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:text="绑定新手机号"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_18" />
+
+        <ImageView
+            android:id="@+id/show_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:src="@drawable/img_tel_update" />
+
+        <TextView
+            android:id="@+id/tv_type_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:inputType="textEmailAddress"
+            android:text="输入新的手机"
+            android:textColor="#616665"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/et_cout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:hint="新手机号"
+            android:background="@null"
+            android:inputType="number"
+            android:paddingLeft="@dimen/dimen_8"
+            android:paddingRight="@dimen/dimen_8"
+            android:text=""
+            android:textColor="@color/color_17_text"
+            android:textSize="@dimen/size_14" />
+
+        <TextView
+            android:id="@+id/et_cout_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:background="#ebebeb" />
+
+        <com.mxkj.yuanyintang.mainui.login_regist.EmailAutoCompleteTextView
+            android:hint="新邮箱号"
+            android:id="@+id/et_cout_act"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@color/white"
+            android:drawablePadding="@dimen/dimen_10"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dimen_8"
+            android:paddingRight="@dimen/dimen_8"
+            android:textColor="@color/text_color"
+            android:textColorHint="#b6bcbf"
+            android:textSize="@dimen/size_15"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_hint_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:text="请填写4位验证码"
+            android:textColor="#616665"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="验证码"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dimen_8"
+                android:paddingRight="@dimen/dimen_8"
+                android:text=""
+                android:textColor="@color/color_17_text"
+                android:textSize="@dimen/size_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:text="|"
+                android:textColor="@color/bckdynamic_music_item" />
+
+            <TextView
+                android:id="@+id/getCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dimen_10"
+                android:text="发送验证码"
+                android:textColor="@color/base_red" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:background="#ebebeb" />
+
+        <TextView
+            android:id="@+id/tvSure"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_37"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:background="@drawable/shape_btn_20_red"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_15"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bind_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_48">
+            <ImageView
+                android:id="@+id/success_back"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:src="@drawable/back"
+                android:layout_width="@dimen/dimen_10"
+                android:layout_height="@dimen/dimen_18" />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:text="绑定成功"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_18" />
+
+        <ImageView
+            android:id="@+id/show_email_or_phone_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:src="@drawable/img_tel_update" />
+
+        <TextView
+            android:id="@+id/show_email_or_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:gravity="center"
+            android:text="手机号绑定成功"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你可以用"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14" />
+
+            <TextView
+                android:id="@+id/tv_binded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="@dimen/dimen_10"
+                android:text="-"
+                android:textColor="@color/base_red"
+                android:textSize="@dimen/size_14"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登录源音塘"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_14" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSure2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_37"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:background="@drawable/shape_btn_20_red"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_15"
+
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

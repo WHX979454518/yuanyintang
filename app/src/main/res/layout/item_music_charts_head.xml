@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:paddingBottom="@dimen/dimen_20"
+    >
+
+    <!--2-->
+    <LinearLayout
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_score_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/charts_hat_second"
+            android:gravity="right|bottom"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="#92cbe5"
+            android:textSize="@dimen/size_16"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:background="@drawable/charts_shape_bck_second"
+            android:padding="@dimen/dimen_3">
+
+            <ImageView
+                android:id="@+id/img_second"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+
+            <ImageView
+                android:id="@+id/img_play_second"
+                android:padding="@dimen/dimen_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_music_player_white_normal_false"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_song_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_15" />
+
+        <TextView
+            android:id="@+id/tv_nick_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#9da6a4"
+            android:textSize="@dimen/size_12" />
+
+    </LinearLayout>
+    <!--1-->
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_score_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:drawableLeft="@drawable/chart_hat_first"
+            android:gravity="right|bottom"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="#f9d341"
+            android:textSize="@dimen/size_16"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:background="@drawable/charts_shape_bck_first"
+            android:padding="@dimen/dimen_3">
+
+            <ImageView
+                android:id="@+id/img_first"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:scaleType="centerCrop"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_play_first"
+                android:padding="@dimen/dimen_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_music_player_white_normal_false"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_song_first"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_15" />
+
+        <TextView
+            android:id="@+id/tv_nick_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#9da6a4"
+            android:textSize="@dimen/size_12" />
+    </LinearLayout>
+    <!--3-->
+    <LinearLayout
+        android:layout_marginRight="@dimen/dimen_20"
+        android:layout_alignParentBottom="true"
+
+        android:layout_alignParentRight="true"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_score_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/chart_hat_third"
+            android:gravity="right|bottom"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="#d0a181"
+            android:textSize="@dimen/size_16" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:background="@drawable/charts_shape_bck_third"
+            android:padding="@dimen/dimen_3">
+
+            <ImageView
+                android:id="@+id/img_third"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+
+                />
+            <ImageView
+                android:id="@+id/img_play_third"
+                android:padding="@dimen/dimen_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_music_player_white_normal_false"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_song_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_15" />
+
+        <TextView
+            android:id="@+id/tv_nick_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#9da6a4"
+            android:textSize="@dimen/size_12" />
+
+    </LinearLayout>
+
+</RelativeLayout>

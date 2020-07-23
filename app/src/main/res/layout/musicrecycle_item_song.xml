@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_like"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_5"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_10"
+    android:paddingLeft="@dimen/dimen_10"
+    android:paddingRight="@dimen/dimen_10"
+    android:paddingTop="@dimen/dimen_15">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dimen_100"
+        android:layout_height="@dimen/dimen_20"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_45"
+            android:layout_height="@dimen/dimen_5"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:src="@drawable/shape_txt_underline" />
+
+
+        <TextView
+            android:id="@+id/tv_reco_song"
+            style="@style/color_17_size_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="@dimen/dimen_5"
+            android:drawablePadding="@dimen/dimen_10"
+            android:gravity="center_horizontal"
+            android:text="相关歌单"
+            android:textColor="@color/color_17_text"
+            android:textSize="@dimen/size_16" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10">
+
+        <com.mxkj.yuanyintang.utils.photopicker.widget.NoScrollRecyclerView
+            android:id="@+id/song_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tv_icon"
+            style="@style/color_66_size_12"
+            android:layout_centerHorizontal="true"
+            android:drawableTop="@drawable/nothing_no_txt"
+            android:text="这首歌还没有加入过歌单哦" />
+
+        <TextView
+            android:id="@+id/tv_add_song"
+            style="@style/color_white_size_14"
+            android:layout_below="@id/tv_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:background="@drawable/login_button_red"
+            android:paddingBottom="@dimen/dimen_8"
+            android:paddingLeft="@dimen/dimen_28"
+            android:paddingRight="@dimen/dimen_28"
+            android:paddingTop="@dimen/dimen_8"
+            android:text="添加到歌单" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
+    <string name="app_name">源音塘</string>
+    <string name="quick_login">快捷登录</string>
+    <string name="default_hint"> </string>
+    <string name="at_your_in_group">%s在群聊中@了你</string>
+    <string name="msg_recall_by_self">您撤回了一条消息</string>
+    <string name="msg_recall_by_user">%1$s 撤回了一条消息</string>
+    <string name="refuse_join_group">%s拒绝加入群</string>
+    <string name="registration_failed_without_permission">注册失败，无权限！</string>
+    <string name="Registration_failed">注册失败</string>
+    <string name="recycler_behaiver">com.mxkj.yuanyintang.mainui.newapp.FlingBehavior</string>
+    <string name="test_music_json">{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "id": 3015,
+        "title": "测试测试测试测试测试测试测试测试测试测试",
+        "video": "88bcb89b8c4311e4482331f8ecc427dd51a4fb59",
+        "comment":10,
+        "counts": 7,
+        "shares": 0,
+        "downloads": 0,
+        "category": 20,
+        "coin": 0,
+        "collects": 2,
+        "event_id": 14,
+        "tag": "292",
+        "song": 0,
+        "imgpic": "0fc6cfff7991eafbfad95804c9ec30d1cb886185",
+        "original": "",
+        "lyrics": "测试测试",
+        "intro": "测试测试",
+        "playtime": "05:00",
+        "create_time": 1504753157,
+        "uid": 31065,
+        "nickname": "YY ",
+        "head": "bf8aa22297870df989701a527ecda1a9f15fed70",
+        "sex": 0,
+        "member_type": 2,
+        "is_music": 3,
+        "fans_num": 6,
+        "attention_num":1,
+        "ips_num": 2044,
+        "signature": "嚯嚯",
+        "status": 1,
+        "collection": 0,
+        "event_alias": "pets2017",
+        "event_head": "2726ecffd4f0b23ec190c5d0bd26d460e7b4e880",
+        "event_img": "a0cf3cab4b06e6148c3e8e8c515b76039a5e581c",
+        "lyrics_data": "",
+        "share_url": "1234563015",
+        "relation": 0,
+        "song_all": [
+            {
+                "id": 632,
+                "title": "JIJIJIJIJSAFOSHFSF",
+                "counts": 0,
+                "imgpic": "0fc6cfff7991eafbfad95804c9ec30d1cb886185",
+                "uid": 31065,
+                "nickname": "YY ",
+                "imgpic_link": "http://yyt.demo.com/image/0fc6cfff7991eafbfad95804c9ec30d1cb886185"
+            },
+            {
+                "id": 629,
+                "title": "123123",
+                "counts": 0,
+                "imgpic": "7336e32b537c129ffedafc6928a65a794349732e",
+                "uid": 31083,
+                "nickname": "你好",
+                "imgpic_link": "http://yyt.demo.com/image/7336e32b537c129ffedafc6928a65a794349732e"
+            }
+        ],
+        "tags": [
+            {
+                "id": 292,
+                "title": "男声"
+            }
+        ],
+        "likes": [
+            {
+                "id": 3036,
+                "title": "如果放到",
+                "imgpic": "e734d9d2b23313c5694e5057334ece6d1c2112af",
+                "uid": 31065,
+                "nickname": "YY ",
+                "counts": 1,
+                "video": "1e1cd642356a73d966c47a13c69db8021eb09fcc",
+                "playtime": "04:28",
+                "collection": 0,
+                "imgpic_link": "http://yyt.demo.com/image/e734d9d2b23313c5694e5057334ece6d1c2112af",
+                "video_link": "http://yyt.demo.com/music/1e1cd642356a73d966c47a13c69db8021eb09fcc"
+            },
+            {
+                "id": 3048,
+                "title": "HUANCHONGDALUHUANCHO",
+                "imgpic": "3a7a68f7f9a0844ad0c88cced73642da5179ca32",
+                "uid": 31171,
+                "nickname": "WWWLL",
+                "counts": 0,
+                "video": "324d837cc32bc6399a698b416b695b1b55d717bb",
+                "playtime": "04:44",
+                "collection": 0,
+                "imgpic_link": "http://yyt.demo.com/image/3a7a68f7f9a0844ad0c88cced73642da5179ca32",
+                "video_link": "http://yyt.demo.com/music/324d837cc32bc6399a698b416b695b1b55d717bb"
+            },
+            {
+                "id": 3031,
+                "title": "嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤",
+                "imgpic": "58e95a4ddd4fc8537b57c0e7e01ad6c2efbf5f1f",
+                "uid": 31065,
+                "nickname": "YY ",
+                "counts": 1,
+                "video": "fe6838504e5743e4d25cb43f2df30d29758ca1b5",
+                "playtime": "03:56",
+                "collection": 0,
+                "imgpic_link": "http://yyt.demo.com/image/58e95a4ddd4fc8537b57c0e7e01ad6c2efbf5f1f",
+                "video_link": "http://yyt.demo.com/music/fe6838504e5743e4d25cb43f2df30d29758ca1b5"
+            },
+            {
+                "id": 3052,
+                "title": "第三方孙菲菲的粉丝的防守打法是",
+                "imgpic": "0093d5d3b87330ae231fd644ed853e59e8ee4365",
+                "uid": 31184,
+                "nickname": "君禅是不是傻呀，哈哈哈哈",
+                "counts": 0,
+                "video": "1abb663c160be408a95d4efe8d1d84c241545894",
+                "playtime": "04:35",
+                "collection": 0,
+                "imgpic_link": "http://yyt.demo.com/image/0093d5d3b87330ae231fd644ed853e59e8ee4365",
+                "video_link": "http://yyt.demo.com/music/1abb663c160be408a95d4efe8d1d84c241545894"
+            }
+        ],
+        "topic": [],
+        "second": 240,
+        "related": [],
+        "video_link": "http://yyt.demo.com/music/88bcb89b8c4311e4482331f8ecc427dd51a4fb59",
+        "imgpic_link": "http://yyt.demo.com/image/0fc6cfff7991eafbfad95804c9ec30d1cb886185",
+        "head_link": "http://yyt.demo.com/image/bf8aa22297870df989701a527ecda1a9f15fed70",
+        "event_head_link": "http://yyt.demo.com/image/2726ecffd4f0b23ec190c5d0bd26d460e7b4e880",
+        "event_img_link": "http://yyt.demo.com/image/a0cf3cab4b06e6148c3e8e8c515b76039a5e581c"
+    }
+
+}</string>
+    <string name="title_activity_help_center">HelpCenterActivity</string>
+
+    <string name="duration_format" translatable="false"><xliff:g id="hours">%1$s</xliff:g> <xliff:g id="minutes">%2$s</xliff:g></string>
+    <string name="durationformatshort" translatable="false"><xliff:g id="format">%2$d:%3$02d</xliff:g></string>
+    <string name="durationformatlong" translatable="false"><xliff:g id="format">%1$d:%2$02d:%3$02d</xliff:g></string>
+
+
+</resources>

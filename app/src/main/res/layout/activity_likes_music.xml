@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_200"
+        android:clipChildren="false"
+        android:fitsSystemWindows="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:contentScrim="#00000000"
+            app:expandedTitleMarginEnd="0dp"
+            app:expandedTitleMarginStart="0dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <ImageView
+                android:id="@+id/iv_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_200"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_230"
+                android:background="#44000000" />
+
+            <RelativeLayout
+                android:id="@+id/layout_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_10"
+                android:paddingRight="@dimen/dimen_28"
+                android:paddingTop="@dimen/dimen_10">
+
+                <RelativeLayout
+                    android:id="@+id/layout_music_cover"
+                    android:layout_width="@dimen/dimen_110"
+                    android:layout_height="@dimen/dimen_110">
+
+                    <ImageView
+                        android:id="@+id/iv_music_cover"
+                        android:layout_width="@dimen/dimen_110"
+                        android:layout_height="@dimen/dimen_110"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/defualt_img" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/dimen_4"
+                        android:src="@drawable/icon_prompt_01" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_music_name"
+                    style="@style/color_white_size_15"
+                    android:layout_marginLeft="@dimen/dimen_120"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_player_num"
+                    style="@style/color_white_size_14"
+                    android:layout_alignBottom="@+id/layout_music_cover"
+                    android:layout_marginBottom="@dimen/dimen_12"
+                    android:layout_marginLeft="@dimen/dimen_120"
+                    android:drawableLeft="@drawable/icon_music_player_num"
+                    android:drawablePadding="@dimen/dimen_6"
+                    android:text="-" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:contentInsetLeft="0dp"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:padding="@dimen/dimen_15"
+                    android:src="@drawable/icon_back_white" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white_text"
+                    android:textSize="@dimen/size_15" />
+
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="@dimen/dimen_15"
+                    android:src="@drawable/icon_more_white"
+                    android:visibility="gone" />
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dimen_15"
+                android:paddingTop="@dimen/dimen_15">
+
+                <TextView
+                    android:id="@+id/tv_song_list_label"
+                    style="@style/color_17_size_14"
+                    android:layout_marginLeft="@dimen/dimen_15"
+                    android:layout_marginRight="@dimen/dimen_15"
+                    android:drawableLeft="@drawable/icon_song_list"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:text="歌曲列表" />
+
+            </FrameLayout>
+
+            <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

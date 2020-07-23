@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f3f3f3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dimen_8"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_8">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_5"
+            android:paddingBottom="@dimen/dimen_5"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back"
+
+                />
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/et_search_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bck_white"
+            android:cursorVisible="true"
+            android:drawableLeft="@drawable/home_icon_search"
+            android:drawablePadding="@dimen/dimen_11"
+            android:gravity="center_vertical"
+            android:hint="今天你想听什么呢"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/dimen_6"
+            android:paddingLeft="@dimen/dimen_11"
+            android:paddingRight="@dimen/dimen_11"
+            android:paddingTop="@dimen/dimen_6"
+            android:singleLine="true"
+            android:textColor="@color/color_17_text"
+            android:textColorHint="@color/grey_a6_text"
+            android:textCursorDrawable="@drawable/text_cursor"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="10dp"
+            android:text="搜索"
+            android:textColor="@color/text_color"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="搜索热词"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp"
+                    tools:ignore="RtlHardcoded" />
+
+                <com.mxkj.yuanyintang.mainui.pond.widget.FlowLayout
+                    android:id="@+id/search_hotWorld"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    app:child_layout="@layout/child_pond_tag"
+                    app:child_margin_horizontal="@dimen/dimen_5"
+                    app:child_margin_vertical="@dimen/dimen_5" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="搜索记录"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp"
+                        tools:ignore="RtlHardcoded" />
+
+                    <ImageView
+                        android:id="@+id/clear_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimen_5"
+                        android:clickable="true"
+                        android:padding="@dimen/dimen_10"
+                        android:src="@drawable/delet"
+                        tools:ignore="RtlHardcoded" />
+
+                </RelativeLayout>
+
+                <com.mxkj.yuanyintang.mainui.dynamic.widget.NoScrollListview
+                    android:id="@+id/lv_sousuojilu"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:divider="@null"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/layout_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#33000000"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_search_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:paddingBottom="@dimen/dimen_16"
+                android:paddingLeft="@dimen/dimen_18"
+                android:paddingRight="@dimen/dimen_18"
+                android:paddingTop="@dimen/dimen_16"
+                android:text="搜索"
+                android:textColor="@color/grey_a6_text"
+                android:textSize="@dimen/size_14" />
+
+            <View style="@style/view_line_h" />
+
+            <ListView
+                android:id="@+id/lv_keyword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+

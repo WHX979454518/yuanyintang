@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+    <!--main_ui-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_32"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:background="@drawable/help_search_bck"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="有问题，点我搜搜看"
+                android:paddingLeft="@dimen/dimen_10"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="@dimen/size_12" />
+
+            <RelativeLayout
+                android:id="@+id/rl_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+
+                >
+                <!--android:background="@drawable/help_search_icon_bck"-->
+                <ImageView
+                    android:visibility="gone"
+                    android:paddingLeft="@dimen/dimen_15"
+                    android:paddingRight="@dimen/dimen_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/home_icon_search" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <!--问题分类列表-->
+        <RelativeLayout
+            android:id="@+id/show_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45">
+            <TextView
+                android:text="相关结果"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <!--热门问题和搜索结果-->
+        <ListView
+            android:id="@+id/lv_hot_search_list"
+            android:divider="@null"
+            android:scrollbars="none"
+            android:background="@color/bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+    <!--no_data-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_not_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/no_data_view_help_center" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

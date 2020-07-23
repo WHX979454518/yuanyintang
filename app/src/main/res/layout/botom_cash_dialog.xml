@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/login_close"
+            android:padding="@dimen/dimen_10"
+            android:text="提现失败？"
+            android:textColor="#1a1717"
+            android:textSize="@dimen/size_16" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_205">
+
+            <TextView
+                android:id="@+id/tv_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/dimen_10"
+                android:padding="@dimen/dimen_10"
+                android:text="银行卡账号不存在或者账号填写错误，建议核对所选择银行和输入的银行账号是否一致，账号是否输入正确
+        2、银行卡账户信息错误或者银行账户状态异常，建议联系银行核实情况；
+        3、不支持提现到该类银行账户，比如是国际卡或者信用卡
+        4、提现时的网络或者系统繁忙，可以建议换时间段尝试再次提现。
+        链接：https://www.zhengjie.com/answer/2A76EF95
+
+
+        请核对您选择的银行和您输入的银行账号是否一致且输入正确，同时核实银行账户的状态，是否挂失、暂停或终止支付宝服务、销户、欠费、非结算户或需要激活等"
+                android:textColor="#616665"
+                android:textSize="@dimen/size_14" />
+
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>

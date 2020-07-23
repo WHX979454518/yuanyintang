@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCreate"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#f5f7fa"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_10"
+            android:text="创建的歌单(0)"
+            android:textColor="#616366"
+            android:textSize="@dimen/size_13"
+
+            />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyCerate"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:nestedScrollingEnabled="false"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tvCollect"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#f5f7fa"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_10"
+            android:text="收藏的歌单(0)"
+            android:textColor="#616366"
+            android:textSize="@dimen/size_13"
+
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyCollect"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            style="@style/color_66_size_12"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_100"
+            android:drawablePadding="@dimen/dimen_15"
+            android:drawableTop="@drawable/nothing"
+            android:gravity="center_horizontal"
+            android:text="什么都没有呢\n╮(๑•́ ₃•̀๑)╭"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

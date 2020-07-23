@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/v_statusbar"
+        android:background="@color/black_p50"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginTop="-5dp"
+            android:id="@+id/activity_charts_bgimg"
+            android:layout_width="match_parent"
+            android:layout_height="155dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_back"
+
+                android:src="@mipmap/icon_chart_back"
+                android:padding="@dimen/dimen_15"
+
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_share"
+                android:src="@mipmap/icon_share_white"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dimen_15"
+
+                />
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tab_charts"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_50"
+                app:tl_indicator_color="@color/base_red"
+                app:tl_indicator_corner_radius="1.5dp"
+                app:tl_indicator_height="0dp"
+                app:tl_indicator_margin_bottom="@dimen/dimen_3"
+                app:tl_indicator_width="18dp"
+                app:tl_indicator_width_equal_title="false"
+                app:tl_tab_padding="@dimen/dimen_18"
+                app:tl_tab_space_equal="true"
+                app:tl_textSelectColor="@color/base_red"
+                app:tl_textUnselectColor="@color/white"
+                app:tl_textsize="@dimen/size_16"
+                app:tl_underline_color="@color/text_color"
+                app:tl_underline_gravity="BOTTOM"
+                app:tl_underline_height="0dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_charts"
+        android:layout_below="@+id/activity_charts_bgimg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+
+
+</LinearLayout>

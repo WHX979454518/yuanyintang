@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/l_transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_flv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/dimen_15"
+                android:text="标清"
+                android:textColor="@color/color_17_text"
+                android:textSize="@dimen/size_14"
+                android:visibility="gone" />
+
+            <View style="@style/view_line_h" />
+
+            <Button
+                android:id="@+id/bt_hd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/dimen_15"
+                android:text="高清"
+                android:textColor="@color/color_17_text"
+                android:textSize="@dimen/size_14"
+                android:visibility="gone" />
+
+            <View style="@style/view_line_h" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/dimen_15"
+                android:text="取消"
+                android:textColor="@color/color_17_text"
+                android:textSize="@dimen/size_14" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

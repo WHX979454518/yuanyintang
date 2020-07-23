@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_login2"
+    tools:context="com.mxkj.yuanyintang.mainui.login_regist.QuickCodeActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:padding="@dimen/dimen_10"
+            android:src="@drawable/icon_back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="验证码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_16"
+
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_35"
+        android:gravity="center_horizontal"
+        android:text="我们已经发送了短信验证码到你的手机"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_13"
+        />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:gravity="center_horizontal"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/reget_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:background="@drawable/login_button_white"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/dimen_8"
+        android:paddingLeft="@dimen/dimen_15"
+        android:paddingRight="@dimen/dimen_15"
+        android:paddingTop="@dimen/dimen_8"
+        android:text="重新获取"
+        android:textColor="@color/base_red"
+        android:textSize="@dimen/size_13" />
+
+    <com.mxkj.yuanyintang.widget.IdentifyingCodeView
+        android:id="@+id/codeInput"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_45"
+        app:icv_et_bg_focus="@drawable/verification_edit_bg_focus"
+        app:icv_et_bg_normal="@drawable/verification_edit_bg_normal"
+        app:icv_et_divider_drawable="@drawable/verification_divider"
+        app:icv_et_number="4"
+        app:icv_et_text_color="@color/white"
+        app:icv_et_width="50dp" />
+
+    <TextView
+        android:id="@+id/fail_get_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="没有收到验证码？"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dimen_30"
+        />
+
+</LinearLayout>

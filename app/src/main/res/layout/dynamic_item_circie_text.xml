@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_item_music"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical"
+
+    android:background="@color/white"
+    >
+
+    <include layout="@layout/dynamic_common_top"/>
+
+    <com.mxkj.yuanyintang.widget.StretchyTextView
+        android:id="@+id/content"
+        android:clickable="false"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        tools:ignore="RtlHardcoded"/>
+
+    <include layout="@layout/dynamic_item_agree"/>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false"
+    >
+    <item
+        android:drawable="@drawable/music_detail_gif1"
+        android:duration="40"></item>
+    <item
+        android:drawable="@drawable/music_detail_gif2"
+        android:duration="40"></item>
+    <item
+        android:drawable="@drawable/music_detail_gif3"
+        android:duration="40"></item>
+    <item
+        android:drawable="@drawable/music_detail_gif4"
+        android:duration="40"></item>
+    <item
+        android:drawable="@drawable/music_detail_gif5"
+        android:duration="40"></item>
+    <item
+        android:drawable="@drawable/music_detail_gif6"
+        android:duration="40"></item>
+    <item
+        android:drawable="@drawable/music_detail_gif7"
+        android:duration="40"></item>
+    <item
+        android:drawable="@drawable/music_detail_gif8"
+        android:duration="40"></item>
+    <item
+        android:drawable="@drawable/music_detail_gif9"
+        android:duration="40"></item>
+    <item
+        android:drawable="@drawable/music_detail_gif10"
+        android:duration="40"></item>
+
+
+</animation-list>

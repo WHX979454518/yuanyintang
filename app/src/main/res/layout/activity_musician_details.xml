@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.mxkj.yuanyintang.mainui.home.activity.NestViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        app:layout_behavior="com.mxkj.yuanyintang.mainui.newapp.FlingBehavior"
+        android:focusableInTouchMode="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_230"
+            android:layout_weight="1"
+            app:contentScrim="#00000000"
+
+
+            android:clipChildren="true"
+            android:fitsSystemWindows="true"
+            app:statusBarScrim="#feaa33"
+            app:toolbarId="@+id/toolbar"
+
+
+            app:expandedTitleMarginEnd="0dp"
+            app:expandedTitleMarginStart="0dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_230"
+                android:background="#44000000" />
+
+            <LinearLayout
+                android:id="@+id/layout_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_46">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dimen_70"
+                    android:layout_height="@dimen/dimen_70">
+
+                    <ImageView
+                        android:id="@+id/circle_headimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/default_head_img"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/iv_is_vip"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/icon_headimg_vip" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        style="@style/color_white_size_16"
+                        android:text="源音塘" />
+
+                    <ImageView
+                        android:id="@+id/iv_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_6"
+                        android:background="@drawable/oval_3dp_blue_60_bg"
+                        android:padding="@dimen/dimen_4"
+                        android:src="@drawable/icon_male" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_follow_num"
+                        style="@style/color_white_size_11"
+                        android:text="0关注" />
+
+                    <View
+                        style="@style/view_line_v_details"
+                        android:layout_marginBottom="@dimen/dimen_2"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_2" />
+
+                    <TextView
+                        android:id="@+id/tv_fans_num"
+                        style="@style/color_white_size_11"
+                        android:text="0粉丝" />
+
+                    <View
+                        android:visibility="gone"
+                        style="@style/view_line_v_details"
+                        android:layout_marginBottom="@dimen/dimen_2"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_2" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_popularity_num"
+                        style="@style/color_white_size_11"
+                        android:text="0人气" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_edit_material"
+                    style="@style/color_white_size_14"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:drawableLeft="@drawable/icon_edit_material"
+                    android:drawablePadding="@dimen/dimen_8"
+                    android:paddingBottom="@dimen/dimen_8"
+                    android:paddingLeft="@dimen/dimen_11"
+                    android:paddingRight="@dimen/dimen_11"
+                    android:paddingTop="@dimen/dimen_8"
+                    android:text="编辑资料"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/layout_follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@drawable/oval_25dp_transparent_bg_eb_line"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_follow"
+                        style="@style/color_white_size_12"
+                        android:drawableLeft="@drawable/icon_musician_add"
+                        android:drawablePadding="@dimen/dimen_4"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/dimen_8"
+                        android:paddingLeft="@dimen/dimen_11"
+                        android:paddingRight="@dimen/dimen_11"
+                        android:paddingTop="@dimen/dimen_8"
+                        android:text="    关注" />
+
+                    <View style="@style/view_line_v" />
+
+                    <TextView
+                        android:id="@+id/tv_mail"
+                        style="@style/color_white_size_12"
+                        android:drawableLeft="@drawable/icon_mail"
+                        android:drawablePadding="@dimen/dimen_4"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/dimen_8"
+                        android:paddingLeft="@dimen/dimen_11"
+                        android:paddingRight="@dimen/dimen_11"
+                        android:paddingTop="@dimen/dimen_8"
+                        android:text="    私信" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_48"
+                android:layout_marginTop="@dimen/dimen_25"
+                android:contentInsetLeft="0dp"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:padding="@dimen/dimen_15"
+                    android:src="@drawable/icon_back_white" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxWidth="@dimen/dimen_220"
+                    android:textColor="@color/white_text"
+                    android:textSize="@dimen/size_15" />
+
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="@dimen/dimen_15"
+                    android:src="@drawable/icon_more_white" />
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tabs"
+            android:paddingTop="@dimen/dimen_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tl_indicator_color="@color/base_red"
+            app:tl_indicator_corner_radius="1.5dp"
+            app:tl_indicator_height="0dp"
+            app:tl_indicator_margin_bottom="@dimen/dimen_3"
+            app:tl_indicator_width="10dp"
+            app:tl_indicator_width_equal_title="false"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/base_red"
+            app:tl_textUnselectColor="@color/color_17_text"
+            app:tl_textsize="@dimen/size_14"
+            app:tl_underline_color="@color/dividing_line_color"
+            app:tl_underline_gravity="BOTTOM"
+            app:tl_underline_height="0.8dp" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>

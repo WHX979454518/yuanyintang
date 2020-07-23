@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bckdynamic_music_item"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="使用数据流量播放音乐"
+            android:textColor="#333333"
+            android:textSize="@dimen/size_14"
+            tools:ignore="RtlHardcoded" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switch_button_net_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            app:sb_background="@color/white"
+            app:sb_button_color="@color/white"
+            app:sb_checked_color="@color/base_red"
+            app:sb_checkline_color="@color/base_red"
+            app:sb_shadow_color="#ccc"
+            app:sb_checked="true"
+            app:sb_uncheckcircle_color="@color/white"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_devider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="使用数据流量下载音乐"
+            android:textColor="#333333"
+            android:textSize="@dimen/size_14"
+            tools:ignore="RtlHardcoded" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switch_button_net_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            app:sb_background="@color/white"
+            app:sb_button_color="@color/white"
+            app:sb_checked_color="@color/base_red"
+            app:sb_checkline_color="@color/base_red"
+            app:sb_shadow_color="#ccc"
+            app:sb_uncheckcircle_color="@color/white"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/view_devider_10" />
+
+    <RelativeLayout
+        android:id="@+id/rl_choosePlayType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="在线播放音质"
+            android:textColor="#333333"
+            android:textSize="@dimen/size_14"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/online_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="@dimen/dimen_10"
+            android:drawableRight="@drawable/to_next_layout"
+            android:text="自动"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_devider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_downloadType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="下载音质"
+            android:textColor="#333333"
+            android:textSize="@dimen/size_14"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/downloadtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="@dimen/dimen_10"
+            android:drawableRight="@drawable/to_next_layout"
+            android:text="高清"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_devider" />
+
+    <include
+        android:visibility="gone"
+        layout="@layout/view_devider_10" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="锁屏播放器"
+            android:textColor="#333333"
+            android:textSize="@dimen/size_14"
+            tools:ignore="RtlHardcoded" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switch_button_lock_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            app:sb_background="@color/white"
+            app:sb_button_color="@color/white"
+            app:sb_checked_color="@color/base_red"
+            app:sb_checkline_color="@color/base_red"
+            app:sb_shadow_color="#ccc"
+            app:sb_uncheckcircle_color="@color/white"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_devider" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="状态栏播放器"
+            android:textColor="#333333"
+            android:textSize="@dimen/size_14"
+            tools:ignore="RtlHardcoded" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switch_button_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            app:sb_background="@color/white"
+            app:sb_button_color="@color/white"
+            app:sb_checked_color="@color/base_red"
+            app:sb_checkline_color="@color/base_red"
+            app:sb_shadow_color="#ccc"
+            app:sb_uncheckcircle_color="@color/white"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_devider" />
+
+</LinearLayout>

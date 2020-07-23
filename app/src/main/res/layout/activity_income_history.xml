@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_no_data_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentInsetLeft="0dp"
+        android:paddingTop="@dimen/dimen_24"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="">
+
+        <ImageView
+            android:id="@+id/iv_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:padding="@dimen/dimen_15"
+            android:src="@drawable/icon_back_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="@dimen/dimen_220"
+            android:text="收益记录"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_16" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.VpSuperSwipeRefreshLayout
+        android:id="@+id/superSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.mxkj.yuanyintang.widget.superSwipeRefreshLayout.VpSuperSwipeRefreshLayout>
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_nodata"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:drawablePadding="@dimen/dimen_10"-->
+            <!--android:drawableTop="@drawable/nothing_no_txt"-->
+            <!--android:gravity="center"-->
+            <!--android:detailsactivity_item="暂无收益记录"-->
+            <!--android:textColor="#616665"-->
+            <!--android:textSize="@dimen/size_13" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="@dimen/dimen_10"
+            android:drawableTop="@drawable/noincome"
+            android:gravity="center"
+            android:text="快去发布音乐赚取音乐收益吧~"
+            android:textColor="#9da6a4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/back_nodata"
+            android:layout_width="@dimen/dimen_110"
+            android:layout_height="@dimen/dimen_35"
+            android:gravity="center"
+            android:background="@drawable/shape_button_red_incode"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:textColor="@color/white"
+            android:text="返回"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

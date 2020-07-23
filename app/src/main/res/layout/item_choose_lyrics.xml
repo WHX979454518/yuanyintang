@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_lyric_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    >
+
+    <CheckBox
+        android:id="@+id/ck_chooseLyric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+         />
+
+    <ImageView
+        android:id="@+id/img_choose"
+        android:layout_width="@dimen/dimen_14"
+        android:layout_height="@dimen/dimen_14"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_songlist_gou"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:textColor="#9da6a4"
+        android:textSize="13sp"
+        android:padding="15dp"
+        android:text="难缠的生产基地"
+
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_updata_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dimen_42"
+        android:layout_marginRight="@dimen/dimen_42">
+
+        <LinearLayout
+            android:id="@+id/layout_updata_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_85"
+            android:background="@drawable/oval_5dp_white_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_32"
+                android:text="甜甜圈鼓励"
+                android:textColor="@color/color_17_text"
+                android:textSize="@dimen/size_15" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_6"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_doughnut_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="1"
+                    android:textColor="@color/base_red"
+                    android:textSize="@dimen/size_18" />
+
+                <TextView
+                    style="@style/color_ping_99_size_11"
+                    android:layout_marginLeft="@dimen/dimen_4"
+                    android:text="个" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_my_doughnut_num"
+                    style="@style/color_a6_size_11"
+                    android:text="还没有甜甜圈，" />
+
+                <TextView
+                    android:id="@+id/tv_realize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dimen_6"
+                    android:paddingTop="@dimen/dimen_6"
+                    android:text="先了解一下"
+                    android:textColor="@color/blue_c4"
+                    android:textSize="@dimen/size_11" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_coin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_16"
+                android:layout_marginRight="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:background="@drawable/oval_5dp_red_bg"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_10"
+                android:text="鼓励"
+                android:textColor="@color/white_text"
+                android:textSize="@dimen/size_14" />
+
+            <TextView
+                style="@style/color_a6_size_11"
+                android:layout_marginBottom="@dimen/dimen_14"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:text="甜甜圈是对音乐人最好的支持" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/dimen_110"
+            android:layout_height="@dimen/dimen_110"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/bg_my_doughnut" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dimen_18"
+            android:src="@drawable/icon_update_app_close" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

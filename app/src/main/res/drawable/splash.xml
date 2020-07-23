@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 背景颜色 -->
+    <item android:drawable="@color/white"/>
+    <item android:bottom="@dimen/dimen_140">
+        <bitmap
+            android:gravity="clip_horizontal|clip_vertical"
+            android:src="@drawable/bg_welcome" />
+    </item>
+    <item android:height="@dimen/dimen_120" android:gravity="bottom">
+        <bitmap
+            android:gravity="bottom"
+            android:src="@drawable/bg_welcome_logo" />
+    </item>
+</layer-list>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_42"
+        android:background="@color/transparent">
+
+        <TextView
+            android:id="@+id/tv_start_all_tast"
+            style="@style/color_17_size_12"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/fullplay_pause_small"
+            android:drawablePadding="@dimen/dimen_6"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_10"
+            android:text="全部开始" />
+
+        <TextView
+            android:id="@+id/tv_clear_download_task"
+            style="@style/color_17_size_12"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/icon_delete_black"
+            android:drawablePadding="@dimen/dimen_4"
+            android:padding="@dimen/dimen_10"
+            android:text="清空" />
+
+    </RelativeLayout>
+
+    <View style="@style/view_line_h" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/include_not_data_view" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

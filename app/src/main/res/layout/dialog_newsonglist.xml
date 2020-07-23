@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_updata_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_5dp_white_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_confirm_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/view_devider" />
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:id="@+id/layout_new_songlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dimen_10">
+
+                            <ImageView
+                                android:id="@+id/image_songlist"
+                                android:layout_width="@dimen/dimen_60"
+                                android:layout_height="@dimen/dimen_60"
+                                android:src="@drawable/icon_xinjiangedan" />
+
+                            <TextView
+                                style="@style/color_17_size_14"
+                                android:layout_marginLeft="@dimen/dimen_15"
+                                android:text="新建歌单" />
+
+                        </LinearLayout>
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerviewlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_200"
+                            android:background="@color/white"
+                            android:overScrollMode="never"
+                            android:scrollbars="none" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_canclel"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_confirm_right"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:text=""
+                        android:textColor="@color/white_text"
+                        android:textSize="@dimen/size_14" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen_15"
+            android:paddingRight="@dimen/dimen_15">
+
+            <TextView
+                style="@style/color_a6_size_12"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="请选择您的意见类型" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:background="@color/white"
+                android:cursorVisible="true"
+                android:gravity="top"
+                android:hint="详细描述您遇到的问题，比如：\n\n1具体描述遇到了哪些问题？\n2问题出现前您做过什么操作？"
+                android:maxLength="1000"
+                android:minHeight="@dimen/dimen_120"
+                android:paddingBottom="@dimen/dimen_15"
+                android:paddingLeft="@dimen/dimen_10"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_15"
+                android:textColor="@color/color_17_text"
+                android:textColorHint="@color/grey_a6_text"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="@dimen/size_12" />
+
+            <TextView
+                android:id="@+id/tv_pic_count"
+                style="@style/color_a6_size_12"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="上传图片（0/5）" />
+
+            <!--选择的图片-->
+            <com.mxkj.yuanyintang.utils.photopicker.widget.BGASortableNinePhotoLayout
+                android:id="@+id/nineimg_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginTop="@dimen/dimen_16"
+                app:bga_snpl_deleteDrawable="@drawable/icon_clear"
+                app:bga_snpl_deleteDrawableOverlapQuarter="false"
+                app:bga_snpl_editable="true"
+                app:bga_snpl_itemCornerRadius="0dp"
+                app:bga_snpl_itemSpanCount="4"
+                app:bga_snpl_itemWhiteSpacing="0dp"
+                app:bga_snpl_itemWidth="0dp"
+                app:bga_snpl_maxItemCount="5"
+                app:bga_snpl_placeholderDrawable="@mipmap/bga_pp_ic_holder_dark"
+                app:bga_snpl_plusDrawable="@mipmap/bga_pp_ic_plus"
+                app:bga_snpl_plusEnable="true"
+                app:bga_snpl_sortable="true" />
+
+            <TextView
+                style="@style/color_66_size_12"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:text="如果您希望得到反馈，请留下您的联系方式:" />
+
+            <EditText
+                android:id="@+id/et_qq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@color/white"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:hint="QQ号码"
+                android:maxLength="1000"
+                android:minHeight="@dimen/dimen_38"
+                android:paddingBottom="@dimen/dimen_15"
+                android:paddingLeft="@dimen/dimen_10"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_15"
+                android:textColor="@color/color_17_text"
+                android:textColorHint="@color/grey_a6_text"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="@dimen/size_12" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@color/white"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:hint="手机号码或邮箱"
+                android:maxLength="1000"
+                android:minHeight="@dimen/dimen_38"
+                android:paddingBottom="@dimen/dimen_15"
+                android:paddingLeft="@dimen/dimen_10"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_15"
+                android:textColor="@color/color_17_text"
+                android:textColorHint="@color/grey_a6_text"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="@dimen/size_12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_80" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

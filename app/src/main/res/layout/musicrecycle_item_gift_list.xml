@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_15"
+    >
+
+    <TextView
+        android:id="@+id/tv_to_gift_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/music_detail_gift_list"
+        android:drawablePadding="@dimen/dimen_10"
+        android:drawableRight="@drawable/to_next_layout"
+        android:padding="@dimen/dimen_10"
+        android:text="收到的礼物"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/size_16" />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10">
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv_icon"
+            style="@style/color_66_size_12"
+            android:layout_centerHorizontal="true"
+            android:drawableTop="@drawable/nothing_no_txt"
+            android:text="TA还没有收到过礼物，快去送TA礼物吧~" />
+
+        <com.mxkj.yuanyintang.widget.recyclerview.AutoPollRecyclerView
+            android:id="@+id/auto_pull_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_75" />
+
+
+    </RelativeLayout>
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_give_gift"
+        style="@style/color_white_size_14"
+        android:layout_below="@id/tv_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:background="@drawable/login_button_red"
+        android:paddingBottom="@dimen/dimen_8"
+        android:paddingLeft="@dimen/dimen_28"
+        android:paddingRight="@dimen/dimen_28"
+        android:paddingTop="@dimen/dimen_8"
+        android:text="送礼物" />
+
+
+</LinearLayout>

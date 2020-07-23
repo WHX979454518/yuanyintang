@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--专辑-->
+    <LinearLayout
+        android:id="@+id/ll_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <!--默认播放布局-->
+            <!--专辑封面-->
+            <RelativeLayout
+                android:id="@+id/rl_default_lrcView"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_gravity="center_horizontal">
+
+                <com.mxkj.yuanyintang.widget.RadarLayout
+                    android:id="@+id/wv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.mxkj.yuanyintang.widget.MyCircleImageView
+                    android:id="@+id/img_music"
+                    android:layout_width="@dimen/dimen_200"
+                    android:layout_height="@dimen/dimen_200"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/play_none" />
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_below="@+id/img_music"
+                    android:textColor="@color/musicplayerColor"
+                    android:textSize="@dimen/size_14"
+                    android:text="暂无歌词"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+            <!--歌词-->
+            <com.mxkj.yuanyintang.musicplayer.lyric_remusic.LrcView
+                android:id="@+id/lrcview"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_marginLeft="@dimen/dimen_36"
+                android:layout_marginRight="@dimen/dimen_36"
+                android:layout_weight="1" />
+
+            <ScrollView
+                android:id="@+id/small_srcoll"
+                android:layout_width="250dp"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_32"
+                android:layout_marginRight="@dimen/dimen_32"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_small_lyric"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:maxEms="20"
+                    android:textColor="#9da6a4"
+                    android:textSize="@dimen/size_13"
+
+                    />
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_big_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#9000"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone">
+
+        <com.mxkj.yuanyintang.utils.photopicker.photoview.PhotoView
+            android:id="@+id/big_img_song"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/defualt_img" />
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bckdynamic_music_item"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_normal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10">
+
+        <TextView
+            android:id="@+id/tv_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="标准(128kbps)"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_normal"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:text="约3-5M每首，音质普通"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/size_11"
+
+            />
+
+        <ImageView
+            android:id="@+id/img_normal"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/check_downlod_type" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_devider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_high"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10">
+
+        <TextView
+            android:id="@+id/tv_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="高清(320kbps)"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_high"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:text="约7-10M每首，高清音质"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/size_11"
+
+            />
+
+        <ImageView
+            android:id="@+id/img_high"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/check_downlod_type"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

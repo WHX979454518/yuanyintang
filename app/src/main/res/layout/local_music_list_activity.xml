@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fram_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f2f5"
+                android:padding="@dimen/dimen_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_32"
+                    android:background="@drawable/shape_bck_white"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_search"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:hint="搜索本地音乐"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/text_cursor"
+                        android:textSize="@dimen/size_12" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/help_search_icon_bck">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:paddingLeft="@dimen/dimen_15"
+                            android:clickable="false"
+                            android:paddingRight="@dimen/dimen_15"
+                            android:src="@drawable/icon_saomiao_search" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/delect_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical">
+                        <!--android:background="@drawable/help_search_icon_bck"-->
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:paddingLeft="@dimen/dimen_15"
+                            android:clickable="false"
+                            android:paddingRight="@dimen/dimen_15"
+                            android:src="@drawable/icon_saomiao_search" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:paddingLeft="@dimen/dimen_15"
+                            android:clickable="false"
+                            android:paddingRight="@dimen/dimen_15"
+                            android:src="@drawable/dele_text"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+            <!--全部播放-->
+            <RelativeLayout
+                android:id="@+id/playall"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_play_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_all_playing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:background="#fafafa"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/song_detail_play_false" />
+
+                    <TextView
+                        android:id="@+id/tv_song_list_label"
+                        style="@style/color_17_size_14"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:drawablePadding="@dimen/dimen_6"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dimen_10"
+                        android:text="播放全部" />
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/check_song"
+                    style="@style/color_17_size_12"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_15"
+                    android:button="@drawable/selector_edit_song_check"
+                    android:paddingBottom="@dimen/dimen_4"
+                    android:paddingLeft="@dimen/dimen_15"
+                    android:paddingTop="@dimen/dimen_4"
+                    android:text="全选"
+                    android:visibility="gone"
+
+                    />
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/tv_edit_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/dimen_10"
+                    android:text="批量编辑"
+                    android:textColor="#616665"
+                    android:textSize="@dimen/size_12" />
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_weight="1"
+                android:divider="@null" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_no_data"
+            android:layout_gravity="center"
+            style="@style/color_66_size_12"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="@dimen/dimen_15"
+            android:drawableTop="@mipmap/img_help_nothing"
+            android:gravity="center_horizontal"
+            android:text="这里还什么都没有呢" />
+
+    </FrameLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/sousuo_tv_no_data"
+        android:layout_centerInParent="true"
+        style="@style/color_66_size_12"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="@dimen/dimen_15"
+        android:drawableTop="@mipmap/img_punglun_none3"
+        android:gravity="center_horizontal"
+        android:text="" />
+
+    <LinearLayout
+        android:id="@+id/layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/tv_add_song"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="加到歌单"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_13" />
+
+        <View
+            style="@style/view_line_v"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16" />
+
+        <TextView
+            android:id="@+id/tv_add_musicList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="加到播放列表"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_13" />
+
+        <View
+            style="@style/view_line_v"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16" />
+
+
+        <View
+            style="@style/view_line_v"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_download_music"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="下载"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="@dimen/size_13" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:panel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main_webview"
+    android:orientation="vertical">
+
+    <wendu.webviewjavascriptbridge.WVJBWebView
+        android:id="@+id/webView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+    <TextView
+        android:id="@+id/bck"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5000"
+        android:clickable="true"
+        android:visibility="gone" />
+    <com.mxkj.yuanyintang.widget.Panel
+        android:visibility="gone"
+        android:layout_below="@+id/moremore"
+        android:id="@+id/rightPanel2"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="@dimen/dimen_40"
+        panel:animationDuration="100"
+        panel:content="@+id/panelContent"
+        panel:handle="@+id/panelHandle"
+        panel:linearFlying="true"
+        panel:position="right">
+
+        <FrameLayout
+            android:id="@+id/panelHandle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="@dimen/dimen_20">
+
+            <ImageView
+                android:id="@+id/img_gift"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:src="@drawable/musicdetail_animation" />
+
+            <TextView
+                android:layout_width="@dimen/dimen_32"
+                android:layout_height="@dimen/dimen_90"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/switcher_bt_bck"
+                android:gravity="center"
+                android:text="打\n赏\n榜"
+                android:textColor="#ff8400"
+                android:textSize="@dimen/size_13" />
+        </FrameLayout>
+
+        <include
+            layout="@layout/right_switcher_list" />
+    </com.mxkj.yuanyintang.widget.Panel>
+
+
+    <FrameLayout
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/dimen_8"
+        android:paddingTop="10dp"
+        android:id="@+id/fl_emotionview_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
+    <LinearLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/white_text"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_comment_et"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/et_pinglun"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="#333333"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="12sp"
+                tools:ignore="RtlHardcoded" />
+
+
+            <ImageView
+                android:id="@+id/img_show_emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:padding="@dimen/dimen_10"
+                android:src="@drawable/emoji_icon" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_send_mvcomment"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/white"
+            android:text="发送"
+            android:textColor="@color/grey_a6_text"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF4081</color>
+    <color name="colorPrimaryDark">#FF4081</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white_text">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="normalC1">@color/theme_color_Primary</color>
+    <color name="theme_color_Primary">#ffce3d3e</color>
+    <color name="listTextColor">#ff333333</color>
+    <color name="listSubTextColor">#ff888888</color>
+    <color name="base_red">#ff6699</color>
+    <color name="showprompt">#FFB2D4</color>
+    <color name="zise">#fad8e7</color>
+    <color name="black">#000</color>
+    <color name="transparent">#00000000</color>
+    <color name="l_transparent">#44444444</color>
+
+    <color name="black_p50">#70000000</color>
+    <color name="bg_color">#F5F5F5</color>
+    <color name="bg_pond_divcolor">#edeef0</color>
+    <color name="pondbg_color">#ccc</color>
+    <color name="dividing_line_color">#F2F2F2</color>
+    <color name="circleimageview_line_color">#E8E6E6</color>
+
+    <color name="grey_e9_text">#f0f1f1</color>
+    <!-- textview color-->
+    <color name="time_tiker_color">#ffb2b6</color>
+    <color name="login_yellow">#ffc721</color>
+    <color name="pink_99_text">#ff9999</color>
+    <color name="male_blue">#7fd0ff</color>
+    <color name="female_pink">#ff9999</color>
+    <color name="grey_a6_text">#9da6a5</color>
+    <color name="grey_e8_text">#E6E8E8</color>
+    <color name="grey_cc_text">#c2ccca</color>
+    <color name="color_17_text">#2b2b2b</color>
+    <color name="color_15_text">#616366</color>
+    <color name="color_14_text">#1a1415</color>
+    <color name="color_66_text">#616366</color>
+    <color name="color_player_num">#272728</color>
+    <color name="color_99_text">#999999</color>
+    <color name="agreed">#ff4c55</color>
+    <color name="disagreed">#9da6a5</color>
+    <color name="dynamic_nick_nosex">#616665</color>
+    <color name="dynamic_nick_boy">#4bb6f3</color>
+    <color name="dynamic_nick_girl">#ff8585</color>
+    <color name="dynamic_agree_num">#c1c6c6</color>
+    <color name="dynamic_music_name">#1a1717</color>
+    <color name="dynamic_singer_name">#9da6a5</color>
+    <color name="dynamic_content">#1a1717</color>
+    <color name="fullplayer_time">#616665</color>
+    <color name="fullplayer_songname">#000000</color>
+    <color name="fullplayer_singer">#616665</color>
+    <color name="login_gray">#9da6a4</color>
+    <color name="pond_title">#1a1717</color>
+    <color name="tag_gray">#616666</color>
+    <color name="blue_c4">#39c4f7</color>
+    <color name="green_d1">#54D1BC</color>
+    <color name="green_cd">#8ACD33</color>
+    <color name="orange_8a">#F68A42</color>
+
+
+    <!--background  color-->
+    <color name="bckdynamic_music_item">#f5f7fa</color>
+    <color name="toolbar_botom_devicer">#ebebeb</color>
+    <color name="bck_vote_progress">#f5f7fa</color>
+
+
+    <!-- notification detailsactivity_item -->
+    <color name="bottom_text">#c1c0c0</color>
+    <color name="notification_bak">#47fafafa</color>
+    <color name="theme_color_primary_dark">#b85671</color>
+    <color name="primary_material_light_1">#3f51b5</color>
+    <color name="background_material_light_1">#fafafa</color>
+    <color name="background_material_light_2">#ed02fafa</color>
+    <color name="small_font">#FF757575</color>
+    <color name="text_color">#1a1717</color>
+    <color name="widget_background_color">#a0000000</color>
+    <color name="gray_normal">#a0ccc3c3</color>
+
+    <!--snackbar-->
+    <color name="prompt_success">#31c27c</color>
+    <color name="prompt_error">#ff0000</color>
+    <color name="prompt_warning">#f0633d</color>
+
+    <!--selector_button-->
+    <color name="selected_button_5500">#55000000</color>
+
+    <color name="rippelColor">#000000</color>
+
+
+    <color name="linerColor">#fafafa</color>
+    <color name="delectColor">#2b2b2b</color>
+    <color name="dividerColor">#ebe8e8</color>
+    <color name="phonebgColor">#fff</color>
+    <color name="titleColor">#919599</color>
+    <color name="musicplayerColor">#9da2a6</color>
+    <color name="basictexColor">#616366</color>
+    <color name="tiantianquanColor">#ffa526</color>
+    <color name="shouyijiluColor">#191717</color>
+    <color name="diglogEdtextColor">#666161</color>
+    <color name="diglogOKColor">#1a1919</color>
+    <color name="playlistColor">#c2c7cc</color>
+    <color name="edtxnumberColor">#9da3a6</color>
+    <color name="codeColor">#aab0b3</color>
+    <color name="diologColor">#191a19</color>
+
+</resources>

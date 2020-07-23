@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+
+    <LinearLayout
+        android:id="@+id/layout_updata_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dimen_60"
+        android:layout_marginRight="@dimen/dimen_60"
+        android:background="@drawable/oval_5dp_white_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/dimen_32"
+                android:text="输入邀请码"
+                android:textColor="@color/color_17_text"
+                android:textSize="@dimen/size_15" />
+
+            <ImageView
+                android:id="@+id/img_close_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:padding="@dimen/dimen_15"
+                android:src="@drawable/login_close" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/view_devider" />
+
+        <EditText
+            android:id="@+id/et_inviteCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_35"
+            android:layout_margin="@dimen/dimen_15"
+            android:background="@color/bg_color"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:gravity="center"
+            android:hint="请输入你的邀请码"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/grey_a6_text"
+            android:textSize="@dimen/size_12" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="邀请码输入错误"
+            android:textColor="@color/base_red"
+            android:textSize="@dimen/size_14" />
+
+        <TextView
+            android:id="@+id/tv_know"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@drawable/shape_button_red_incode"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_10"
+            android:text="确定"
+            android:textColor="@color/white_text"
+            android:textSize="@dimen/size_14" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+

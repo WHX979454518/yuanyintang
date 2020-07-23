@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_5"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_15"
+    android:paddingLeft="@dimen/dimen_5"
+    android:paddingRight="@dimen/dimen_5"
+    android:paddingTop="@dimen/dimen_10"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/dimen_65"
+                android:layout_height="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_25"
+                android:layout_marginLeft="@dimen/dimen_60"
+                android:src="@drawable/shape_txt_underline" />
+
+            <TextView
+                android:id="@+id/tv_reco_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_marginRight="@dimen/dimen_5"
+                android:drawableLeft="@drawable/icon_index_musician"
+                android:drawablePadding="@dimen/dimen_10"
+                android:gravity="bottom"
+                android:text="热门音乐人"
+                android:textColor="@color/color_17_text"
+                android:textSize="@dimen/size_17" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen_6"
+            android:id="@+id/tv_more_musician"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_22"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_bg_cg"
+            android:drawableRight="@drawable/icon_index_more_face"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimen_6"
+            android:paddingRight="@dimen/dimen_6"
+            android:text="更多"
+            android:textColor="#ff6699"
+            android:textSize="@dimen/dimen_12"/>
+
+    </RelativeLayout>
+
+    <com.mxkj.yuanyintang.utils.photopicker.widget.NoScrollRecyclerView
+        android:id="@+id/hot_musician_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dimen_5"
+        android:layout_marginBottom="@dimen/dimen_5"
+        android:id="@+id/title_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_45">
+        <TextView
+            android:id="@+id/title"
+            android:gravity="center_vertical"
+            android:text=""
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45" />
+        <ImageView
+            android:id="@+id/iv_expand_icon"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:src="@mipmap/icon_help_more3x" />
+
+    </RelativeLayout>
+
+
+
+    <com.mxkj.yuanyintang.mainui.newapp.ExpandTextView
+        android:visibility="gone"
+        android:id="@+id/exTvContent"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:layout_below="@+id/title_rl"
+        android:lineSpacingExtra="@dimen/dimen_5"
+        android:layout_marginTop="@dimen/dimen_11"
+        android:layout_marginBottom="@dimen/dimen_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="10"
+        android:textColor="#2b2b2b"
+        android:textSize="@dimen/size_14" />
+    <TextView
+        android:visibility="gone"
+        android:layout_marginTop="-25dp"
+        android:id="@+id/text_color"
+        android:layout_below="@+id/exTvContent"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:text="...查看更多"
+        android:textSize="@dimen/size_14"
+        android:textColor="@color/base_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_below="@+id/text_color"
+        android:background="@color/toolbar_botom_devicer"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+</RelativeLayout>

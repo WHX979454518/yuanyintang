@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_10"
+    android:layout_marginRight="@dimen/dimen_10"
+    android:paddingBottom="@dimen/dimen_20"
+
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_todetial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cimg_cover"
+                android:layout_width="@dimen/dimen_60"
+                android:layout_height="@dimen/dimen_60"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:background="@drawable/default_head_img"
+
+                />
+
+            <ImageView
+                android:id="@+id/iv_is_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/cimg_cover"
+                android:layout_alignRight="@id/cimg_cover"
+                android:src="@drawable/icon_headimg_vip_small"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_music_nickname"
+                style="@style/color_17_size_15"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="-"
+                android:textColor="#9da2a6"
+                android:textSize="@dimen/size_12" />
+
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/ck_follow"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_25"
+            android:background="@drawable/select_home_follow"
+            android:button="@null"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="+关注"
+            android:textColor="@drawable/home_follow_tv_color"
+            android:textSize="@dimen/size_12"
+
+            />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="@dimen/dimen_100"
+        android:layout_height="@dimen/dimen_20"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_20">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_45"
+            android:layout_height="@dimen/dimen_5"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:src="@drawable/shape_txt_underline" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="TA的作品"
+            android:textColor="#2b2b2b"
+            android:textSize="@dimen/size_17" />
+    </RelativeLayout>
+</LinearLayout>

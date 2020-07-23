@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fram_before"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/scan__bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_45"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <com.mxkj.yuanyintang.mainui.myself.my_release.up_load_music.scan_sd.CircleProgressView
+                android:layout_width="@dimen/dimen_165"
+                android:layout_height="@dimen/dimen_165"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/dimen_45"
+                app:roundProgressColorBar="#ffebf5"
+                app:roundProgressColorBar_in="#ffdbed"
+                app:roundWidthBar="17dp"
+                app:roundWidthBar_in="14dp"
+
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_scaning"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_45"
+            android:gravity="center"
+            android:text="扫描本地歌曲"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_16" />
+
+        <TextView
+            android:id="@+id/tv_begin"
+            android:layout_width="@dimen/dimen_200"
+            android:layout_height="@dimen/dimen_35"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_45"
+            android:background="@drawable/shape_button_red_incode"
+            android:gravity="center"
+            android:text="开始扫描"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_14" />
+
+        <CheckBox
+            android:id="@+id/ck_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:button="@drawable/selector_edit_song_check"
+            android:checked="false"
+            android:gravity="center"
+            android:padding="@dimen/dimen_10"
+            android:text="扫描长度60秒以下歌曲"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/size_13"
+
+            />
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
