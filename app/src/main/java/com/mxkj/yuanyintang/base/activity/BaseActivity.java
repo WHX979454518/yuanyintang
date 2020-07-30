@@ -57,6 +57,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements Screen
     private ScreenshotDetectionDelegate screenshotDetectionDelegate = new ScreenshotDetectionDelegate(this, this);
     public CoinDialog coinDialog;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
